@@ -1,31 +1,20 @@
-<div class="navbar fixed-top">
-    <div class="text-center">
-        <a class="navbar-brand text-center" href="#">
-            <img src="../assets/cart.png">
-        </a>
-    </div>
-    <span class="text-white ml-auto mr-3">Suyash Shukla</span>
-    <img class="rounded-circle mr-3" src="https://raw.githubusercontent.com/suyashshukla/Sherlock/master/Angular/Formal.jpg" width="50px" height="50px">
-
-</div>
-
 <div class="d-flex flex-row">
-    <div class="sidebar fixed-top">
+    <div class="sidebar">
         <ul class="menu-list">
-            <li class="text-center active">
-                <i class="material-icons">home</i>
-                <div>Home</div>
+            <li class="text-center active" [routerLink]="['/classifieds']">
+                <i class="material-icons">home_work</i>
+                <div>Classifieds</div>
             </li>
-            <li class="text-center">
-                <i class="material-icons">poll</i>
-                <div>Project</div>
+            <li class="text-center" [routerLink]="['/me/classifieds']">
+                <i class="material-icons">shopping_basket</i>
+                <div>My Classifieds</div>
             </li>
-            <li class="text-center">
+            <li class="text-center" [routerLink]="['/inbox']">
                 <i class="material-icons">message</i>
                 <div>Inbox</div>
             </li>
-            <li class="text-center">
-                <i class="material-icons">person</i>
+            <li class="text-center" [routerLink]="['/admin']">
+                <i class="material-icons">people_alt</i>
                 <div>Admin</div>
             </li>
         </ul>
@@ -33,4 +22,14 @@
     <div class="content-bar container-fluid bg-light p-0" style="height: 100vh;">
         <router-outlet></router-outlet>
     </div>
+</div>
+
+<div class="navbar fixed-top position-absolute">
+    <div class="text-center">
+        <a class="navbar-brand text-center" href="#">
+            <img src="../assets/cart.png" width="80px">
+        </a>
+    </div>
+    <span class="text-white ml-auto mr-3">Suyash Shukla</span>
+    <img class="rounded-circle mr-3" src="https://raw.githubusercontent.com/suyashshukla/Sherlock/master/Angular/Formal.jpg" width="36px" height="36px">
 </div>

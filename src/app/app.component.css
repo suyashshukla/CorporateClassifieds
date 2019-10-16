@@ -1,7 +1,8 @@
 .navbar {
     background-color: rgba(118, 97, 139, 0.9);
     padding: 0;
-    height: 75px;
+    height: 50px;
+    z-index: 1000;
 }
 
 .navbar-brand img {
@@ -13,16 +14,14 @@
 }
 
 .sidebar {
-    padding-top: 75px;
+    padding-top: 50px;
     height: 100vh;
     width: 100px;
-    z-index: -2;
     background-color: rgb(62, 66, 73);
 }
 
 .content-bar {
-    margin-left: 100px;
-    margin-top: 75px;
+    margin-top: 50px;
 }
 
 .menu-list {
