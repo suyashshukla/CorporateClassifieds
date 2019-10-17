@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AlertModule } from 'ngx-bootstrap';
+import { AlertModule,TabsModule } from 'ngx-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +23,8 @@ import { MyClassifiedsComponent } from './MyClassifieds/myClassifieds.component'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    TabsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

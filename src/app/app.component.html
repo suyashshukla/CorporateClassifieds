@@ -1,19 +1,19 @@
 <div class="d-flex flex-row">
     <div class="sidebar">
         <ul class="menu-list">
-            <li class="text-center active" [routerLink]="['/classifieds']">
+            <li class="text-center active" id="classifieds" [routerLink]="['/classifieds']" (click)="click('classifieds')">
                 <i class="material-icons">home_work</i>
                 <div>Classifieds</div>
             </li>
-            <li class="text-center" [routerLink]="['/me/classifieds']">
+            <li class="text-center" id="myclassifieds" [routerLink]="['/me/classifieds']" (click)="click('myclassifieds')">
                 <i class="material-icons">shopping_basket</i>
                 <div>My Classifieds</div>
             </li>
-            <li class="text-center" [routerLink]="['/inbox']">
+            <li class="text-center" id="inbox" [routerLink]="['/inbox']" (click)="click('inbox')">
                 <i class="material-icons">message</i>
                 <div>Inbox</div>
             </li>
-            <li class="text-center" [routerLink]="['/admin']">
+            <li class="text-center" id="admin" [routerLink]="['/admin']" (click)="click('admin')">
                 <i class="material-icons">people_alt</i>
                 <div>Admin</div>
             </li>
