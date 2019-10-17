@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<tabset>\r\n    <tab heading=\"FOR SALE/RENT\"></tab>\r\n    <tab heading=\"REQUIRED\"></tab>\r\n</tabset>");
+/* harmony default export */ __webpack_exports__["default"] = ("<tabset>\r\n    <tab heading=\"FOR SALE/RENT\">\r\n      <div class=\"p-3\">\r\n        <h1>For Sale/Rent</h1>\r\n        <p>Here you can go through the ads poted by users</p>\r\n        <div class=\"row\">\r\n          <!--<button id=\"button-first\"\r\n                  dropdownToggle type=\"button\"\r\n                  class=\"btn btn-default dropdown-toggle\"\r\n                  aria-controls=\"dropdown-first\">\r\n          HELLO</button>\r\n\r\n          <ul id=\"dropdown-first\"\r\n              aria-labelledby=\"dropdown-first\"\r\n              role=\"menu\"\r\n              dropdownMenu class=\"dropdown-menu\">\r\n\r\n            <li role=\"menuitem\"><a class=\"dropdown-item\">India</a></li>\r\n            <li role=\"menuitem\"><a class=\"dropdown-item\">Japan</a></li>\r\n            <li role=\"menuitem\"><a class=\"dropdown-item\">China</a></li>\r\n\r\n          </ul>-->\r\n\r\n\r\n\r\n        </div>\r\n      </div>\r\n    </tab>\r\n    <tab heading=\"REQUIRED\"></tab>\r\n</tabset>\r\n");
 
 /***/ }),
 
@@ -608,13 +608,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var _Inbox_inbox_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Inbox/inbox.component */ "./src/app/Inbox/inbox.component.ts");
-/* harmony import */ var _Classifieds_classifieds_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Classifieds/classifieds.component */ "./src/app/Classifieds/classifieds.component.ts");
-/* harmony import */ var _Admin_admin_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Admin/admin.component */ "./src/app/Admin/admin.component.ts");
-/* harmony import */ var _MyClassifieds_myClassifieds_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./MyClassifieds/myClassifieds.component */ "./src/app/MyClassifieds/myClassifieds.component.ts");
+/* harmony import */ var ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-bootstrap/dropdown */ "./node_modules/ngx-bootstrap/dropdown/fesm2015/ngx-bootstrap-dropdown.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+/* harmony import */ var _Inbox_inbox_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Inbox/inbox.component */ "./src/app/Inbox/inbox.component.ts");
+/* harmony import */ var _Classifieds_classifieds_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Classifieds/classifieds.component */ "./src/app/Classifieds/classifieds.component.ts");
+/* harmony import */ var _Admin_admin_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Admin/admin.component */ "./src/app/Admin/admin.component.ts");
+/* harmony import */ var _MyClassifieds_myClassifieds_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./MyClassifieds/myClassifieds.component */ "./src/app/MyClassifieds/myClassifieds.component.ts");
+
 
 
 
@@ -631,21 +633,22 @@ let AppModule = class AppModule {
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-            _Inbox_inbox_component__WEBPACK_IMPORTED_MODULE_7__["InboxComponent"],
-            _Classifieds_classifieds_component__WEBPACK_IMPORTED_MODULE_8__["ClassifiedsComponent"],
-            _Admin_admin_component__WEBPACK_IMPORTED_MODULE_9__["AdminComponent"],
-            _MyClassifieds_myClassifieds_component__WEBPACK_IMPORTED_MODULE_10__["MyClassifiedsComponent"]
+            _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+            _Inbox_inbox_component__WEBPACK_IMPORTED_MODULE_8__["InboxComponent"],
+            _Classifieds_classifieds_component__WEBPACK_IMPORTED_MODULE_9__["ClassifiedsComponent"],
+            _Admin_admin_component__WEBPACK_IMPORTED_MODULE_10__["AdminComponent"],
+            _MyClassifieds_myClassifieds_component__WEBPACK_IMPORTED_MODULE_11__["MyClassifiedsComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
             ngx_bootstrap__WEBPACK_IMPORTED_MODULE_3__["AlertModule"].forRoot(),
-            ngx_bootstrap__WEBPACK_IMPORTED_MODULE_3__["TabsModule"].forRoot()
+            ngx_bootstrap__WEBPACK_IMPORTED_MODULE_3__["TabsModule"].forRoot(),
+            ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_4__["BsDropdownModule"].forRoot(),
         ],
         providers: [],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
     })
 ], AppModule);
 
