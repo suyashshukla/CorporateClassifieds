@@ -12,13 +12,13 @@ const routes: Routes = [
 
 
 
-import { AdminComponent } from './Admin/admin.component';
+import { AdminComponent } from './Admin/Dashboard/admin.component';
 
-import { ClassifiedsComponent } from './Classifieds/classifieds.component';
+import { ClassifiedsComponent } from './Classifieds/Dashboard/classifieds.component';
 
-import { InboxComponent } from './Inbox/inbox.component';
+import { InboxComponent } from './Inbox/Dashboard/inbox.component';
 
-import { MyClassifiedsComponent } from './MyClassifieds/myClassifieds.component';
+import { MyClassifiedsComponent } from './MyClassifieds/Dashboard/myClassifieds.component';
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,{useHash : true})],

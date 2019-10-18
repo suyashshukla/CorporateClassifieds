@@ -1,35 +1,37 @@
 <div class="d-flex flex-row">
-    <div class="sidebar">
-        <ul class="menu-list">
-            <li class="text-center active" id="classifieds" [routerLink]="['/classifieds']" (click)="click('classifieds')">
+    <div class="sidebar pt-5">
+        <div class="menu-list text-white p-0 m-0">
+            <div class="menu-item text-center active" id="classifieds" [routerLink]="['/classifieds']" (click)="click('classifieds')">
                 <i class="material-icons">home_work</i>
                 <div>Classifieds</div>
-            </li>
-            <li class="text-center" id="myclassifieds" [routerLink]="['/me/classifieds']" (click)="click('myclassifieds')">
+            </div>
+            <div class="menu-item text-center" id="myclassifieds" [routerLink]="['/me/classifieds']" (click)="click('myclassifieds')">
                 <i class="material-icons">shopping_basket</i>
                 <div>My Classifieds</div>
-            </li>
-            <li class="text-center" id="inbox" [routerLink]="['/inbox']" (click)="click('inbox')">
+            </div>
+            <div class="menu-item text-center" id="inbox" [routerLink]="['/inbox']" (click)="click('inbox')">
                 <i class="material-icons">message</i>
                 <div>Inbox</div>
-            </li>
-            <li class="text-center" id="admin" [routerLink]="['/admin']" (click)="click('admin')">
+            </div>
+            <div class="menu-item text-center" id="admin" [routerLink]="['/admin']" (click)="click('admin')">
                 <i class="material-icons">people_alt</i>
                 <div>Admin</div>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
-    <div class="content-bar container-fluid bg-light p-0" style="height: 100vh;">
+    <div class="content-bar container-fluid bg-light p-0 mt-5" style="height: 100vh;">
         <router-outlet></router-outlet>
     </div>
 </div>
 
-<div class="navbar fixed-top position-absolute">
+<div class="navbar fixed-top text-center p-0">
     <div class="text-center">
         <a class="navbar-brand text-center" href="#">
-            <img src="website/assets/cart.png" width="80px">
+            <img class="text-center" src="website/assets/cart.png" width="80">
         </a>
     </div>
-    <span class="text-white ml-auto mr-3">Suyash Shukla</span>
-    <img class="rounded-circle mr-3" src="https://raw.githubusercontent.com/suyashshukla/Sherlock/master/Angular/Formal.jpg" width="36px" height="36px">
+    <span class="text-white">Corporate Classifieds</span>
+    <span class="text-white ml-auto mr-3">Random User</span>
+    <img class="rounded-circle mr-3"
+         src="https://m.media-amazon.com/images/M/MV5BMTM0ODU5Nzk2OV5BMl5BanBnXkFtZTcwMzI2ODgyNQ@@._V1_UY256_CR4,0,172,256_AL_.jpg" width="36" height="36">
 </div>

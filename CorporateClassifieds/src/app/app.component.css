@@ -1,44 +1,30 @@
 .navbar {
     background-color: rgba(118, 97, 139, 0.9);
-    padding: 0;
-    height: 50px;
-    z-index: 1000;
+    height:48px;
 }
 
 .navbar-brand img {
     padding: 10px;
 }
 
-.navbar-brand {
-    width: 100px;
-}
 
 .sidebar {
-    padding-top: 50px;
-    height: 100vh;
-    width: 100px;
     background-color: rgb(62, 66, 73);
 }
 
-.content-bar {
-    margin-top: 50px;
+.menu-list{
+  font-size : 12px;
 }
 
-.menu-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-list li {
+.menu-item {
     font-size: 12px;
-    cursor: pointer;
-    padding: 10px;
+    padding : 10px;
+    cursor : pointer;
     margin-bottom: 1px;
     color: lightgray;
 }
 
-.menu-list li:hover,
+.menu-item:hover,
 .active {
     background-color: rgba(128, 128, 128, 0.25);
     color: white;
