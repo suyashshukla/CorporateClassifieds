@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { ClassifiedsComponent } from './Dashboard/classifieds.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/classifieds', pathMatch: 'full' },
+  { path: '', redirectTo: 'classifieds', pathMatch: 'full' },
   { path: 'classifieds', component: ClassifiedsComponent }
 ]
 

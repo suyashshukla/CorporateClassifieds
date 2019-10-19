@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>Admin</h1>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("Admin\r\n");
 
 /***/ }),
 
@@ -381,7 +381,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', redirectTo: '/admin', pathMatch: 'full' },
+    { path: '', redirectTo: 'admin', pathMatch: 'full' },
     { path: 'admin', component: _Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"] }
 ];
 let AdminRoutingModule = class AdminRoutingModule {
@@ -495,7 +495,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', redirectTo: '/classifieds', pathMatch: 'full' },
+    { path: '', redirectTo: 'classifieds', pathMatch: 'full' },
     { path: 'classifieds', component: _Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_3__["ClassifiedsComponent"] }
 ];
 let ClassifiedsRoutingModule = class ClassifiedsRoutingModule {
@@ -609,7 +609,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [{
-        path: '', redirectTo: '/inbox', pathMatch: 'full'
+        path: '', redirectTo: 'inbox', pathMatch: 'full'
     },
     { path: 'inbox', component: ___WEBPACK_IMPORTED_MODULE_3__["InboxComponent"] }
 ];
@@ -824,7 +824,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', component: ___WEBPACK_IMPORTED_MODULE_3__["ActiveComponent"] },
+    { path: '', component: ___WEBPACK_IMPORTED_MODULE_3__["MyClassifiedsComponent"] },
     { path: 'active', component: ___WEBPACK_IMPORTED_MODULE_3__["ActiveComponent"] },
     { path: 'history', component: ___WEBPACK_IMPORTED_MODULE_3__["HistoryComponent"] }
 ];

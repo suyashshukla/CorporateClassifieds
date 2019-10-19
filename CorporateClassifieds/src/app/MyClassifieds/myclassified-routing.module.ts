@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 import { ActiveComponent, HistoryComponent, MyClassifiedsComponent } from './';
 
 const routes: Routes = [
-  { path: '', component: ActiveComponent },
+  { path: '', component: MyClassifiedsComponent },
   { path: 'active', component: ActiveComponent },
   { path: 'history', component: HistoryComponent }
 ]

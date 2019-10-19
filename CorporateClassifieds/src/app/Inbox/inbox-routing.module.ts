@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { InboxComponent } from './';
 
 const routes: Routes = [{
-  path: '', redirectTo: '/inbox', pathMatch : 'full'
+  path: '', redirectTo: 'inbox', pathMatch : 'full'
 },
   { path: 'inbox', component: InboxComponent }
 ]
