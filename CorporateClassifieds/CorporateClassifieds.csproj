@@ -581,6 +581,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="src\app\MyClassifieds\History\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="e2e\src\app.e2e-spec.ts" />
@@ -595,6 +596,7 @@
     <TypeScriptCompile Include="src\app\Classifieds\index.ts" />
     <TypeScriptCompile Include="src\app\Inbox\Dashboard\inbox.component.ts" />
     <TypeScriptCompile Include="src\app\Inbox\index.ts" />
+    <TypeScriptCompile Include="src\app\MyClassifieds\Active\active.component.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Dashboard\myClassifieds.component.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\index.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
