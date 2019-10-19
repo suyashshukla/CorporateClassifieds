@@ -595,7 +595,6 @@
     <TypeScriptCompile Include="src\app\Classifieds\index.ts" />
     <TypeScriptCompile Include="src\app\Inbox\Dashboard\inbox.component.ts" />
     <TypeScriptCompile Include="src\app\Inbox\index.ts" />
-    <TypeScriptCompile Include="src\app\Inbox\Dashboard\index.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Dashboard\myClassifieds.component.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\index.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />

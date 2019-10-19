@@ -3,11 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { InboxComponent } from './Inbox/Dashboard/inbox.component';
-import { ClassifiedsComponent } from './Classifieds/Dashboard/classifieds.component';
-import { AdminComponent } from './Admin/Dashboard/admin.component';
-import { MyClassifiedsComponent } from './MyClassifieds/Dashboard/myClassifieds.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { InboxComponent } from './Inbox';
+import { ClassifiedsComponent } from './Classifieds';
+import { AdminComponent } from './Admin';
+import { MyClassifiedsComponent } from './MyClassifieds';
 
 @NgModule({
   declarations: [
