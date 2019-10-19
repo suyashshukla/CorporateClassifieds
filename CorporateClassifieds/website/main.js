@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"d-flex flex-row\">\r\n    <div class=\"sidebar pt-5\">\r\n        <div class=\"menu-list text-white p-0 m-0\">\r\n            <div class=\"menu-item text-center active\" id=\"classifieds\" [routerLink]=\"['/classifieds']\" (click)=\"click('classifieds')\">\r\n                <i class=\"material-icons\">home_work</i>\r\n                <div>Classifieds</div>\r\n            </div>\r\n            <div class=\"menu-item text-center\" id=\"myclassifieds\" [routerLink]=\"['/me/classifieds']\" (click)=\"click('myclassifieds')\">\r\n                <i class=\"material-icons\">shopping_basket</i>\r\n                <div>My Classifieds</div>\r\n            </div>\r\n            <div class=\"menu-item text-center\" id=\"inbox\" [routerLink]=\"['/inbox']\" (click)=\"click('inbox')\">\r\n                <i class=\"material-icons\">message</i>\r\n                <div>Inbox</div>\r\n            </div>\r\n            <div class=\"menu-item text-center\" id=\"admin\" [routerLink]=\"['/admin']\" (click)=\"click('admin')\">\r\n                <i class=\"material-icons\">people_alt</i>\r\n                <div>Admin</div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"content-bar container-fluid bg-light p-0 mt-5\" style=\"height: 100vh;\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"navbar fixed-top text-center p-0\">\r\n    <div class=\"text-center\">\r\n        <a class=\"navbar-brand text-center\" href=\"#\">\r\n            <img class=\"text-center\" src=\"website/assets/cart.png\" width=\"80\">\r\n        </a>\r\n    </div>\r\n    <span class=\"text-white\">Corporate Classifieds</span>\r\n    <span class=\"text-white ml-auto mr-3\">Random User</span>\r\n    <img class=\"rounded-circle mr-3\"\r\n         src=\"https://m.media-amazon.com/images/M/MV5BMTM0ODU5Nzk2OV5BMl5BanBnXkFtZTcwMzI2ODgyNQ@@._V1_UY256_CR4,0,172,256_AL_.jpg\" width=\"36\" height=\"36\">\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"d-flex flex-row\">\r\n    <div class=\"sidebar pt-5\">\r\n        <div class=\"menu-list text-white p-0 m-0\">\r\n            <div class=\"menu-item text-center active\" id=\"classifieds\" [routerLink]=\"['/classifieds']\" (click)=\"click('classifieds')\">\r\n                <i class=\"material-icons\">home_work</i>\r\n                <div>Classifieds</div>\r\n            </div>\r\n            <div class=\"menu-item text-center\" id=\"myclassifieds\" [routerLink]=\"['/me/classifieds']\" (click)=\"click('myclassifieds')\">\r\n                <i class=\"material-icons\">shopping_basket</i>\r\n                <div>My Classifieds</div>\r\n            </div>\r\n            <div class=\"menu-item text-center\" id=\"inbox\" [routerLink]=\"['/inbox']\" (click)=\"click('inbox')\">\r\n                <i class=\"material-icons\">message</i>\r\n                <div>Inbox</div>\r\n            </div>\r\n            <div class=\"menu-item text-center\" id=\"admin\" [routerLink]=\"['/admin']\" (click)=\"click('admin')\">\r\n                <i class=\"material-icons\">people_alt</i>\r\n                <div>Admin</div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"content-bar container-fluid bg-light p-0 mt-5\" style=\"height: 100vh;\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"navbar fixed-top text-center p-0\">\r\n    <div class=\"text-center\">\r\n        <a class=\"navbar-brand text-center\" href=\"#\">\r\n            <img class=\"text-center\" src=\"website/assets/cart.png\" width=\"80\">\r\n        </a>\r\n    </div>\r\n    <span class=\"text-white\">Corporate Classifieds App</span>\r\n    <span class=\"text-white ml-auto mr-3\">Random User</span>\r\n    <img class=\"rounded-circle mr-3\"\r\n         src=\"https://m.media-amazon.com/images/M/MV5BMTM0ODU5Nzk2OV5BMl5BanBnXkFtZTcwMzI2ODgyNQ@@._V1_UY256_CR4,0,172,256_AL_.jpg\" width=\"36\" height=\"36\">\r\n</div>\r\n");
 
 /***/ }),
 
@@ -362,6 +362,25 @@ AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/Admin/index.ts":
+/*!********************************!*\
+  !*** ./src/app/Admin/index.ts ***!
+  \********************************/
+/*! exports provided: AdminComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard/admin.component */ "./src/app/Admin/Dashboard/admin.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AdminComponent", function() { return _Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_1__["AdminComponent"]; });
+
+
+
+
+
+/***/ }),
+
 /***/ "./src/app/Classifieds/Dashboard/classifieds.component.css":
 /*!*****************************************************************!*\
   !*** ./src/app/Classifieds/Dashboard/classifieds.component.css ***!
@@ -402,6 +421,25 @@ ClassifiedsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./classifieds.component.css */ "./src/app/Classifieds/Dashboard/classifieds.component.css")).default]
     })
 ], ClassifiedsComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Classifieds/index.ts":
+/*!**************************************!*\
+  !*** ./src/app/Classifieds/index.ts ***!
+  \**************************************/
+/*! exports provided: ClassifiedsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard/classifieds.component */ "./src/app/Classifieds/Dashboard/classifieds.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ClassifiedsComponent", function() { return _Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_1__["ClassifiedsComponent"]; });
+
+
 
 
 
@@ -452,6 +490,25 @@ InboxComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/Inbox/index.ts":
+/*!********************************!*\
+  !*** ./src/app/Inbox/index.ts ***!
+  \********************************/
+/*! exports provided: InboxComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _Dashboard_inbox_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard/inbox.component */ "./src/app/Inbox/Dashboard/inbox.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InboxComponent", function() { return _Dashboard_inbox_component__WEBPACK_IMPORTED_MODULE_1__["InboxComponent"]; });
+
+
+
+
+
+/***/ }),
+
 /***/ "./src/app/MyClassifieds/Dashboard/myClassifieds.component.css":
 /*!*********************************************************************!*\
   !*** ./src/app/MyClassifieds/Dashboard/myClassifieds.component.css ***!
@@ -497,6 +554,25 @@ MyClassifiedsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/MyClassifieds/index.ts":
+/*!****************************************!*\
+  !*** ./src/app/MyClassifieds/index.ts ***!
+  \****************************************/
+/*! exports provided: MyClassifiedsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _Dashboard_myClassifieds_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard/myClassifieds.component */ "./src/app/MyClassifieds/Dashboard/myClassifieds.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MyClassifiedsComponent", function() { return _Dashboard_myClassifieds_component__WEBPACK_IMPORTED_MODULE_1__["MyClassifiedsComponent"]; });
+
+
+
+
+
+/***/ }),
+
 /***/ "./src/app/app-routing.module.ts":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -510,19 +586,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _Admin_Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Admin/Dashboard/admin.component */ "./src/app/Admin/Dashboard/admin.component.ts");
-/* harmony import */ var _Classifieds_Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Classifieds/Dashboard/classifieds.component */ "./src/app/Classifieds/Dashboard/classifieds.component.ts");
-/* harmony import */ var _Inbox_Dashboard_inbox_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Inbox/Dashboard/inbox.component */ "./src/app/Inbox/Dashboard/inbox.component.ts");
-/* harmony import */ var _MyClassifieds_Dashboard_myClassifieds_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MyClassifieds/Dashboard/myClassifieds.component */ "./src/app/MyClassifieds/Dashboard/myClassifieds.component.ts");
+/* harmony import */ var _Admin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Admin */ "./src/app/Admin/index.ts");
+/* harmony import */ var _Classifieds__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Classifieds */ "./src/app/Classifieds/index.ts");
+/* harmony import */ var _Inbox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Inbox */ "./src/app/Inbox/index.ts");
+/* harmony import */ var _MyClassifieds__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MyClassifieds */ "./src/app/MyClassifieds/index.ts");
 
 
 
 const routes = [
     { path: '', redirectTo: 'classifieds', pathMatch: 'full' },
-    { path: 'classifieds', component: _Classifieds_Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_4__["ClassifiedsComponent"] },
-    { path: 'me/classifieds', component: _MyClassifieds_Dashboard_myClassifieds_component__WEBPACK_IMPORTED_MODULE_6__["MyClassifiedsComponent"] },
-    { path: 'inbox', component: _Inbox_Dashboard_inbox_component__WEBPACK_IMPORTED_MODULE_5__["InboxComponent"] },
-    { path: 'admin', component: _Admin_Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"] }
+    { path: 'classifieds', component: _Classifieds__WEBPACK_IMPORTED_MODULE_4__["ClassifiedsComponent"] },
+    { path: 'me/classifieds', component: _MyClassifieds__WEBPACK_IMPORTED_MODULE_6__["MyClassifiedsComponent"] },
+    { path: 'inbox', component: _Inbox__WEBPACK_IMPORTED_MODULE_5__["InboxComponent"] },
+    { path: 'admin', component: _Admin__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"] }
 ];
 
 
@@ -610,10 +686,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var _Inbox_Dashboard_inbox_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Inbox/Dashboard/inbox.component */ "./src/app/Inbox/Dashboard/inbox.component.ts");
-/* harmony import */ var _Classifieds_Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Classifieds/Dashboard/classifieds.component */ "./src/app/Classifieds/Dashboard/classifieds.component.ts");
-/* harmony import */ var _Admin_Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Admin/Dashboard/admin.component */ "./src/app/Admin/Dashboard/admin.component.ts");
-/* harmony import */ var _MyClassifieds_Dashboard_myClassifieds_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./MyClassifieds/Dashboard/myClassifieds.component */ "./src/app/MyClassifieds/Dashboard/myClassifieds.component.ts");
+/* harmony import */ var _Inbox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Inbox */ "./src/app/Inbox/index.ts");
+/* harmony import */ var _Classifieds__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Classifieds */ "./src/app/Classifieds/index.ts");
+/* harmony import */ var _Admin__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Admin */ "./src/app/Admin/index.ts");
+/* harmony import */ var _MyClassifieds__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./MyClassifieds */ "./src/app/MyClassifieds/index.ts");
 
 
 
@@ -630,10 +706,10 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-            _Inbox_Dashboard_inbox_component__WEBPACK_IMPORTED_MODULE_6__["InboxComponent"],
-            _Classifieds_Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_7__["ClassifiedsComponent"],
-            _Admin_Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_8__["AdminComponent"],
-            _MyClassifieds_Dashboard_myClassifieds_component__WEBPACK_IMPORTED_MODULE_9__["MyClassifiedsComponent"]
+            _Inbox__WEBPACK_IMPORTED_MODULE_6__["InboxComponent"],
+            _Classifieds__WEBPACK_IMPORTED_MODULE_7__["ClassifiedsComponent"],
+            _Admin__WEBPACK_IMPORTED_MODULE_8__["AdminComponent"],
+            _MyClassifieds__WEBPACK_IMPORTED_MODULE_9__["MyClassifiedsComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
