@@ -5,23 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { InboxComponent } from './Inbox';
-import { ClassifiedsComponent } from './Classifieds';
-import { AdminComponent } from './Admin';
-import { MyClassifiedsComponent } from './MyClassifieds';
+import { MyClassifiedsModule } from './MyClassifieds/myclassified.module';
+import { AdminModule } from './Admin/admin.module';
+import { InboxModule } from './Inbox/inbox.module';
+import { ClassifiedsModule } from './Classifieds/classifieds.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    InboxComponent,
-    ClassifiedsComponent,
-    AdminComponent,
-    MyClassifiedsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    MyClassifiedsModule,
+    AdminModule,
+    InboxModule,
+    ClassifiedsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,22 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {path : '', redirectTo : 'classifieds', pathMatch : 'full'},
-  {path : 'classifieds', component : ClassifiedsComponent},
-  {path : 'me/classifieds', component : MyClassifiedsComponent},
-  {path : 'inbox', component : InboxComponent},
-  {path : 'admin', component : AdminComponent}
+  { path: '', redirectTo: 'classifieds', pathMatch: 'full' },
+  { path: 'classifieds', loadChildren: () => import('./Classifieds/classifieds.module').then(m => m.ClassifiedsModule) },
+  { path: 'me/classifieds', loadChildren: () => import('./MyClassifieds/myclassified.module').then(m => m.MyClassifiedsModule) },
+  { path: 'inbox', loadChildren: () => import('./Inbox/inbox.module').then(m => m.InboxModule) },
+  { path: 'admin', loadChildren: () => import('./Admin/admin.module').then(m => m.AdminModule) }
   ];
 
 
-
-import { AdminComponent } from './Admin';
-
-import { ClassifiedsComponent } from './Classifieds';
-
-import { InboxComponent } from './Inbox';
-
-import { MyClassifiedsComponent } from './MyClassifieds';
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,{useHash : true})],

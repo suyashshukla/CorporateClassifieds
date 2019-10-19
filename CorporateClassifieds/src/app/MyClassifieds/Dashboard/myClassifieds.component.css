@@ -1,0 +1,10 @@
+.triangle{
+  border : 5px solid transparent;
+  height : 0;
+  width : 0;
+  border-bottom-color : lightgrey;
+}
+
+.nav-item{
+  cursor : pointer;
+}
