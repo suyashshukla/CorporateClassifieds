@@ -53,9 +53,6 @@ C:\Users\suyash.s\source\repos\CorporateClassifieds\obj\Debug\CorporateClassifie
 C:\Users\suyash.s\source\repos\CorporateClassifieds\obj\Debug\CorporateClassifieds.csproj.CopyComplete
 C:\Users\suyash.s\source\repos\CorporateClassifieds\obj\Debug\CorporateClassifieds.dll
 C:\Users\suyash.s\source\repos\CorporateClassifieds\obj\Debug\CorporateClassifieds.pdb
-C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.csprojAssemblyReference.cache
-C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.dll
-C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.pdb
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\CorporateClassifieds.dll.config
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\CorporateClassifieds.dll
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\CorporateClassifieds.pdb
@@ -105,6 +102,7 @@ C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\roslyn\vbc.e
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\roslyn\vbc.rsp
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\roslyn\VBCSCompiler.exe
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.csproj.CoreCompileInputs.cache
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.csproj.CopyComplete
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.pdb

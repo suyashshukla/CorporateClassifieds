@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 @Component(
   {
     selector: 'app-active',
-    template : "Active"
+    template: "History"
   }
 )
 
-export class ActiveComponent { }
+export class HistoryComponent { }
