@@ -1,11 +1,11 @@
 import { Routes, RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
-import { ActiveComponent, HistoryComponent, MyClassifiedsComponent } from './';
+import { ActiveComponent, HistoryComponent} from './';
 
 const routes: Routes = [
-  { path: '', component: MyClassifiedsComponent },
-  { path: 'active', component: ActiveComponent },
-  { path: 'history', component: HistoryComponent }
+  { path: '', redirectTo: 'active', pathMatch : 'full' },
+  { path: 'active', component: ActiveComponent},
+  { path: 'history', component: HistoryComponent}
 ]
 
 @NgModule(

@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 @Component(
   {
     selector: 'app-active',
-    template: "History"
+    templateUrl: './history.component.html',
+    styleUrls : ['./history.component.css']
   }
 )
 

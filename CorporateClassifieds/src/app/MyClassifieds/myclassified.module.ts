@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MyClassifiedsComponent, ActiveComponent, HistoryComponent} from './';
+import { ActiveComponent, HistoryComponent} from './';
 import { MyCLassifiedRoutingModule } from './myclassified-routing.module';
 
 @NgModule({
-  declarations: [MyClassifiedsComponent, ActiveComponent, HistoryComponent],
+  declarations: [ActiveComponent, HistoryComponent],
   imports: [CommonModule, MyCLassifiedRoutingModule],
-  bootstrap: [MyClassifiedsComponent]
+  bootstrap: [ActiveComponent]
 })
 
 export class MyClassifiedsModule { }
