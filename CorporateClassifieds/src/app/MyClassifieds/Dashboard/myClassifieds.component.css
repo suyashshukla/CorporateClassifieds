@@ -7,4 +7,9 @@
 
 .nav-item{
   cursor : pointer;
+  color : gray;
+}
+
+.active{
+  color : black;
 }

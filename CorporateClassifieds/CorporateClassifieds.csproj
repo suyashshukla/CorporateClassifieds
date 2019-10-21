@@ -128,6 +128,7 @@
     <Content Include="src\app\Classifieds\Dashboard\classifieds.component.html" />
     <Content Include="src\app\Inbox\Dashboard\inbox.component.css" />
     <Content Include="src\app\Inbox\Dashboard\inbox.component.html" />
+    <Content Include="src\app\MyClassifieds\Active\active.component.html" />
     <Content Include="src\app\MyClassifieds\Dashboard\myClassifieds.component.css" />
     <Content Include="src\app\MyClassifieds\Dashboard\myClassifieds.component.html" />
     <Content Include="assets\cart.png" />
