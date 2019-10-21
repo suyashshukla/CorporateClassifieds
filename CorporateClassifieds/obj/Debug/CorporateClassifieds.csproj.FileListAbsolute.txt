@@ -106,3 +106,4 @@ C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\Corpor
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.csproj.CopyComplete
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.dll
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.pdb
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.csprojAssemblyReference.cache
