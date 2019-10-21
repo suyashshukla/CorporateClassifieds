@@ -1,12 +1,18 @@
 import { Routes, RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
-import { ActiveComponent, HistoryComponent} from './';
+import { ActiveComponent, HistoryComponent, CreateComponent, HomeComponent } from './';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'active', pathMatch : 'full' },
-  { path: 'active', component: ActiveComponent},
-  { path: 'history', component: HistoryComponent}
-]
+  {
+    path: '', component: HomeComponent,
+    children: [
+      { path: '', redirectTo: 'active', pathMatch : 'full' },
+      { path: 'active', component: ActiveComponent },
+      { path: 'history', component: HistoryComponent },
+      { path: 'create', component: CreateComponent }
+    ]
+  },
+  ]
 
 @NgModule(
   {

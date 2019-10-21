@@ -1,0 +1,70 @@
+<div class="container-fluid pt-3">
+
+  <button class="btn btn-default bg-transaparent text-color" routerLink="/me/classifieds"><i class="material-icons align-bottom">arrow_back</i>&nbsp;Back to List</button>
+
+  <div class="d-flex">
+
+    <div class="card flex-grow-1 pl-3 pt-3">
+      <h5 class="text-dark">Item Details</h5>
+
+      <div class="form-group labels d-flex flex-column">
+        <div class="line-one d-flex flex-grow-2 px-3 py-2">
+
+          <div class="flex-grow-1 px-1">
+            <label for="type">Type</label>
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle w-100 text-left border border-dark" id="dropdownTypebutton" data-toggle="dropdown">
+                Select
+              </button>
+              <div class="dropdown-menu">
+                <div class="dropddown-item">Sale</div>
+                <div class="dropddown-item">Rent</div>
+                <div class="dropddown-item">Required</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-grow-1 px-1">
+            <label for="category">Category</label> <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle w-100 text-left border border-dark" id="dropdownTypebutton" data-toggle="dropdown">
+                Select
+              </button>
+              <div class="dropdown-menu">
+                <div class="dropddown-item">Vehicle</div>
+                <div class="dropddown-item">Property</div>
+                <div class="dropddown-item">Electronics</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-grow-1 px-1">
+            <label for="price">Price</label>
+            <div class="input-group d-flex">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">&#8377;</span>
+              </div>
+              <input type="text" class="border form-control flex-grow-1" aria-describedby="basic-addon1" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="line-two px-3 py-2">
+        <label for="title">Ad Title</label>
+        <input type="text" class="form-control w-100" />
+      </div>
+
+      <div class="line-three px-3 py-2">
+        <label for="description">Description</label>
+        <textarea class="form-control w-100" rows="3">Provide Item Details</textarea>
+      </div>
+    </div>
+    <div class="flex-grow-1 bg-dark">
+      World
+    </div>
+
+  </div>
+
+
+</div>

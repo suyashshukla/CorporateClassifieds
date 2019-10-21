@@ -1,27 +1,19 @@
 <!DOCTYPE html>
 
-<div class="navbar navbar-default bg-white p-0 pt-2">
 
-  <div class="navbar-nav d-flex flex-row">
+  <div>
+  <div class="content-header d-flex align-items-center">
+    <div class="text">
+      <div class="lead px-3 pt-3 text-black">Active Classifieds</div>
+      <div class="lead px-3 text-secondary">Here you can explore the Active Ads posted by you.</div>
+    </div>
+    <div class="pt-3 flex-grow-1 d-flex justify-content-end">
+      <button class="btn btn-default text-white py-2 bg-color" routerLink = "/create">CREATE AD</button>
+    </div>
+    </div>
 
-    <a class="d-flex flex-column align-items-center" routerLink ="/me/classifieds/active">
-      <span class="nav-item px-3 active">ACTIVE</span>
-      <span class="triangle"></span>
-    </a>
-
-    <a class="d-flex flex-column align-items-center" routerLink ="/me/classifieds/history">
-      <span class="nav-item px-3">HISTORY</span>
-      <span class="triangle d-none"></span>
-    </a>
+  <div class="d-flex flex-row justify-content-center fixed-bottom ml-5 pl-5">
+    <img class="img-fluid" src="../../../assets/nothing.png" />
 
   </div>
-
-
-</div>
-
-
-<div class="container-fluid d-flex flex-row align-items-end h-100">
-
-  <img class="w-100 align-bottom" src="../../../assets/nothing.png" />
-
 </div>

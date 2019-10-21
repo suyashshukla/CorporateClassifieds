@@ -58,20 +58,33 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("Inbox\r\nOutbox\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("Inbox\r\nOutbox\r\nMessaging\r\n");
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/Dashboard/myClassifieds.component.html":
-/*!************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/Dashboard/myClassifieds.component.html ***!
-  \************************************************************************************************************/
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/Active/active.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/Active/active.component.html ***!
+  \**************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"navbar navbar-default bg-white p-0 pt-2\">\r\n\r\n  <div class=\"navbar-nav d-flex flex-row\">\r\n\r\n    <a class=\"d-flex flex-column align-items-center\">\r\n      <span class=\"nav-item px-3 active\">ACTIVE</span>\r\n      <span class=\"triangle\"></span>\r\n    </a>\r\n\r\n    <a class=\"d-flex flex-column align-items-center\">\r\n      <span class=\"nav-item px-3\">HISTORY</span>\r\n      <span class=\"triangle\"></span>\r\n    </a>\r\n\r\n    </div>\r\n\r\n  <router-outlet name=\"mclassifieds\"></router-outlet>\r\n\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!DOCTYPE html>\r\n\r\n<div class=\"navbar navbar-default bg-white p-0 pt-2\">\r\n\r\n  <div class=\"navbar-nav d-flex flex-row\">\r\n\r\n    <a class=\"d-flex flex-column align-items-center\" routerLink =\"/me/classifieds/active\">\r\n      <span class=\"nav-item px-3 active\">ACTIVE</span>\r\n      <span class=\"triangle\"></span>\r\n    </a>\r\n\r\n    <a class=\"d-flex flex-column align-items-center\" routerLink =\"/me/classifieds/history\">\r\n      <span class=\"nav-item px-3\">HISTORY</span>\r\n      <span class=\"triangle d-none\"></span>\r\n    </a>\r\n\r\n  </div>\r\n\r\n\r\n</div>\r\n\r\n\r\n<div class=\"container-fluid d-flex flex-row align-items-end h-100\">\r\n\r\n  <img class=\"w-100 align-bottom\" src=\"../../../assets/nothing.png\" />\r\n\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/History/history.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/History/history.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!DOCTYPE html>\r\n\r\n<div class=\"navbar navbar-default bg-white p-0 pt-2\">\r\n\r\n  <div class=\"navbar-nav d-flex flex-row\">\r\n\r\n    <a class=\"d-flex flex-column align-items-center\" routerLink =\"/me/classifieds/active\">\r\n      <span class=\"nav-item px-3\">ACTIVE</span>\r\n      <span class=\"triangle d-none\"></span>\r\n    </a>\r\n\r\n    <a class=\"d-flex flex-column align-items-center\" routerLink =\"/me/classifieds/history\">\r\n      <span class=\"nav-item px-3 active\">HISTORY</span>\r\n      <span class=\"triangle\"></span>\r\n    </a>\r\n\r\n  </div>\r\n\r\n\r\n</div>\r\n\r\n\r\n");
 
 /***/ }),
 
@@ -679,6 +692,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/app/MyClassifieds/Active/active.component.css":
+/*!***********************************************************!*\
+  !*** ./src/app/MyClassifieds/Active/active.component.css ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".triangle {\r\n  border: 5px solid transparent;\r\n  height: 0;\r\n  width: 0;\r\n  border-bottom-color: lightgrey;\r\n}\r\n\r\n.nav-item {\r\n  cursor: pointer;\r\n  color: gray;\r\n}\r\n\r\n.active {\r\n  color: black;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvTXlDbGFzc2lmaWVkcy9BY3RpdmUvYWN0aXZlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSw2QkFBNkI7RUFDN0IsU0FBUztFQUNULFFBQVE7RUFDUiw4QkFBOEI7QUFDaEM7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsV0FBVztBQUNiOztBQUVBO0VBQ0UsWUFBWTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvTXlDbGFzc2lmaWVkcy9BY3RpdmUvYWN0aXZlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudHJpYW5nbGUge1xyXG4gIGJvcmRlcjogNXB4IHNvbGlkIHRyYW5zcGFyZW50O1xyXG4gIGhlaWdodDogMDtcclxuICB3aWR0aDogMDtcclxuICBib3JkZXItYm90dG9tLWNvbG9yOiBsaWdodGdyZXk7XHJcbn1cclxuXHJcbi5uYXYtaXRlbSB7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG4gIGNvbG9yOiBncmF5O1xyXG59XHJcblxyXG4uYWN0aXZlIHtcclxuICBjb2xvcjogYmxhY2s7XHJcbn1cclxuIl19 */");
+
+/***/ }),
+
 /***/ "./src/app/MyClassifieds/Active/active.component.ts":
 /*!**********************************************************!*\
   !*** ./src/app/MyClassifieds/Active/active.component.ts ***!
@@ -698,7 +724,8 @@ let ActiveComponent = class ActiveComponent {
 ActiveComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-active',
-        template: "Active"
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./active.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/Active/active.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./active.component.css */ "./src/app/MyClassifieds/Active/active.component.css")).default]
     })
 ], ActiveComponent);
 
@@ -706,48 +733,16 @@ ActiveComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/MyClassifieds/Dashboard/myClassifieds.component.css":
-/*!*********************************************************************!*\
-  !*** ./src/app/MyClassifieds/Dashboard/myClassifieds.component.css ***!
-  \*********************************************************************/
+/***/ "./src/app/MyClassifieds/History/history.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/MyClassifieds/History/history.component.css ***!
+  \*************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".triangle{\r\n  border : 5px solid transparent;\r\n  height : 0;\r\n  width : 0;\r\n  border-bottom-color : lightgrey;\r\n}\r\n\r\n.nav-item{\r\n  cursor : pointer;\r\n  color : gray;\r\n}\r\n\r\n.active{\r\n  color : black;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvTXlDbGFzc2lmaWVkcy9EYXNoYm9hcmQvbXlDbGFzc2lmaWVkcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsOEJBQThCO0VBQzlCLFVBQVU7RUFDVixTQUFTO0VBQ1QsK0JBQStCO0FBQ2pDOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGFBQWE7QUFDZiIsImZpbGUiOiJzcmMvYXBwL015Q2xhc3NpZmllZHMvRGFzaGJvYXJkL215Q2xhc3NpZmllZHMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50cmlhbmdsZXtcclxuICBib3JkZXIgOiA1cHggc29saWQgdHJhbnNwYXJlbnQ7XHJcbiAgaGVpZ2h0IDogMDtcclxuICB3aWR0aCA6IDA7XHJcbiAgYm9yZGVyLWJvdHRvbS1jb2xvciA6IGxpZ2h0Z3JleTtcclxufVxyXG5cclxuLm5hdi1pdGVte1xyXG4gIGN1cnNvciA6IHBvaW50ZXI7XHJcbiAgY29sb3IgOiBncmF5O1xyXG59XHJcblxyXG4uYWN0aXZle1xyXG4gIGNvbG9yIDogYmxhY2s7XHJcbn1cclxuIl19 */");
-
-/***/ }),
-
-/***/ "./src/app/MyClassifieds/Dashboard/myClassifieds.component.ts":
-/*!********************************************************************!*\
-  !*** ./src/app/MyClassifieds/Dashboard/myClassifieds.component.ts ***!
-  \********************************************************************/
-/*! exports provided: MyClassifiedsComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyClassifiedsComponent", function() { return MyClassifiedsComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-
-
-let MyClassifiedsComponent = class MyClassifiedsComponent {
-    constructor() {
-    }
-    ngOnInit() {
-    }
-};
-MyClassifiedsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'myClassifieds-component',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./myClassifieds.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/Dashboard/myClassifieds.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./myClassifieds.component.css */ "./src/app/MyClassifieds/Dashboard/myClassifieds.component.css")).default]
-    })
-], MyClassifiedsComponent);
-
-
+/* harmony default export */ __webpack_exports__["default"] = (".triangle {\r\n  border: 5px solid transparent;\r\n  height: 0;\r\n  width: 0;\r\n  border-bottom-color: lightgrey;\r\n}\r\n\r\n.nav-item {\r\n  cursor: pointer;\r\n  color: gray;\r\n}\r\n\r\n.active {\r\n  color: black;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvTXlDbGFzc2lmaWVkcy9IaXN0b3J5L2hpc3RvcnkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLDZCQUE2QjtFQUM3QixTQUFTO0VBQ1QsUUFBUTtFQUNSLDhCQUE4QjtBQUNoQzs7QUFFQTtFQUNFLGVBQWU7RUFDZixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxZQUFZO0FBQ2QiLCJmaWxlIjoic3JjL2FwcC9NeUNsYXNzaWZpZWRzL0hpc3RvcnkvaGlzdG9yeS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRyaWFuZ2xlIHtcclxuICBib3JkZXI6IDVweCBzb2xpZCB0cmFuc3BhcmVudDtcclxuICBoZWlnaHQ6IDA7XHJcbiAgd2lkdGg6IDA7XHJcbiAgYm9yZGVyLWJvdHRvbS1jb2xvcjogbGlnaHRncmV5O1xyXG59XHJcblxyXG4ubmF2LWl0ZW0ge1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxuICBjb2xvcjogZ3JheTtcclxufVxyXG5cclxuLmFjdGl2ZSB7XHJcbiAgY29sb3I6IGJsYWNrO1xyXG59XHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -770,7 +765,8 @@ let HistoryComponent = class HistoryComponent {
 HistoryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-active',
-        template: "History"
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./history.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/History/history.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./history.component.css */ "./src/app/MyClassifieds/History/history.component.css")).default]
     })
 ], HistoryComponent);
 
@@ -782,21 +778,17 @@ HistoryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!****************************************!*\
   !*** ./src/app/MyClassifieds/index.ts ***!
   \****************************************/
-/*! exports provided: ActiveComponent, HistoryComponent, MyClassifiedsComponent */
+/*! exports provided: ActiveComponent, HistoryComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _Dashboard_myClassifieds_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard/myClassifieds.component */ "./src/app/MyClassifieds/Dashboard/myClassifieds.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MyClassifiedsComponent", function() { return _Dashboard_myClassifieds_component__WEBPACK_IMPORTED_MODULE_1__["MyClassifiedsComponent"]; });
+/* harmony import */ var _Active_active_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Active/active.component */ "./src/app/MyClassifieds/Active/active.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ActiveComponent", function() { return _Active_active_component__WEBPACK_IMPORTED_MODULE_1__["ActiveComponent"]; });
 
-/* harmony import */ var _Active_active_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Active/active.component */ "./src/app/MyClassifieds/Active/active.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ActiveComponent", function() { return _Active_active_component__WEBPACK_IMPORTED_MODULE_2__["ActiveComponent"]; });
-
-/* harmony import */ var _History_history_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./History/history.component */ "./src/app/MyClassifieds/History/history.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "HistoryComponent", function() { return _History_history_component__WEBPACK_IMPORTED_MODULE_3__["HistoryComponent"]; });
-
+/* harmony import */ var _History_history_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./History/history.component */ "./src/app/MyClassifieds/History/history.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "HistoryComponent", function() { return _History_history_component__WEBPACK_IMPORTED_MODULE_2__["HistoryComponent"]; });
 
 
 
@@ -824,7 +816,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', component: ___WEBPACK_IMPORTED_MODULE_3__["MyClassifiedsComponent"] },
+    { path: '', redirectTo: 'active', pathMatch: 'full' },
     { path: 'active', component: ___WEBPACK_IMPORTED_MODULE_3__["ActiveComponent"] },
     { path: 'history', component: ___WEBPACK_IMPORTED_MODULE_3__["HistoryComponent"] }
 ];
@@ -865,9 +857,9 @@ let MyClassifiedsModule = class MyClassifiedsModule {
 };
 MyClassifiedsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [___WEBPACK_IMPORTED_MODULE_3__["MyClassifiedsComponent"], ___WEBPACK_IMPORTED_MODULE_3__["ActiveComponent"], ___WEBPACK_IMPORTED_MODULE_3__["HistoryComponent"]],
+        declarations: [___WEBPACK_IMPORTED_MODULE_3__["ActiveComponent"], ___WEBPACK_IMPORTED_MODULE_3__["HistoryComponent"]],
         imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _myclassified_routing_module__WEBPACK_IMPORTED_MODULE_4__["MyCLassifiedRoutingModule"]],
-        bootstrap: [___WEBPACK_IMPORTED_MODULE_3__["MyClassifiedsComponent"]]
+        bootstrap: [___WEBPACK_IMPORTED_MODULE_3__["ActiveComponent"]]
     })
 ], MyClassifiedsModule);
 
