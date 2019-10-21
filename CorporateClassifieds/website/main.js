@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>Admin</h1>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("Admin\r\n");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"navbar navbar-default bg-white p-0 pt-2\">\r\n\r\n  <div class=\"navbar-nav d-flex flex-row\">\r\n\r\n    <span class=\"nav-item d-flex flex-column align-items-center\">\r\n      <a class=\"px-3\">ACTIVE</a>\r\n      <span class=\"triangle\"></span>\r\n    </span>\r\n\r\n    <span class=\"nav-item d-flex flex-column align-items-center\">\r\n      <a class=\"px-3\">HISTORY</a>\r\n      <span class=\"triangle\"></span>\r\n    </span>\r\n    </div>\r\n\r\n  <router-outlet name=\"mclassifieds\"></router-outlet>\r\n\r\n\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"navbar navbar-default bg-white p-0 pt-2\">\r\n\r\n  <div class=\"navbar-nav d-flex flex-row\">\r\n\r\n    <a class=\"d-flex flex-column align-items-center\">\r\n      <span class=\"nav-item px-3 active\">ACTIVE</span>\r\n      <span class=\"triangle\"></span>\r\n    </a>\r\n\r\n    <a class=\"d-flex flex-column align-items-center\">\r\n      <span class=\"nav-item px-3\">HISTORY</span>\r\n      <span class=\"triangle\"></span>\r\n    </a>\r\n\r\n    </div>\r\n\r\n  <router-outlet name=\"mclassifieds\"></router-outlet>\r\n\r\n</div>\r\n");
 
 /***/ }),
 
@@ -381,7 +381,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', redirectTo: '/admin', pathMatch: 'full' },
+    { path: '', redirectTo: 'admin', pathMatch: 'full' },
     { path: 'admin', component: _Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"] }
 ];
 let AdminRoutingModule = class AdminRoutingModule {
@@ -495,7 +495,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', redirectTo: '/classifieds', pathMatch: 'full' },
+    { path: '', redirectTo: 'classifieds', pathMatch: 'full' },
     { path: 'classifieds', component: _Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_3__["ClassifiedsComponent"] }
 ];
 let ClassifiedsRoutingModule = class ClassifiedsRoutingModule {
@@ -609,7 +609,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [{
-        path: '', redirectTo: '/inbox', pathMatch: 'full'
+        path: '', redirectTo: 'inbox', pathMatch: 'full'
     },
     { path: 'inbox', component: ___WEBPACK_IMPORTED_MODULE_3__["InboxComponent"] }
 ];
@@ -715,7 +715,7 @@ ActiveComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".triangle{\r\n  border : 5px solid transparent;\r\n  height : 0;\r\n  width : 0;\r\n  border-bottom-color : lightgrey;\r\n}\r\n\r\n.nav-item{\r\n  cursor : pointer;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvTXlDbGFzc2lmaWVkcy9EYXNoYm9hcmQvbXlDbGFzc2lmaWVkcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsOEJBQThCO0VBQzlCLFVBQVU7RUFDVixTQUFTO0VBQ1QsK0JBQStCO0FBQ2pDOztBQUVBO0VBQ0UsZ0JBQWdCO0FBQ2xCIiwiZmlsZSI6InNyYy9hcHAvTXlDbGFzc2lmaWVkcy9EYXNoYm9hcmQvbXlDbGFzc2lmaWVkcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRyaWFuZ2xle1xyXG4gIGJvcmRlciA6IDVweCBzb2xpZCB0cmFuc3BhcmVudDtcclxuICBoZWlnaHQgOiAwO1xyXG4gIHdpZHRoIDogMDtcclxuICBib3JkZXItYm90dG9tLWNvbG9yIDogbGlnaHRncmV5O1xyXG59XHJcblxyXG4ubmF2LWl0ZW17XHJcbiAgY3Vyc29yIDogcG9pbnRlcjtcclxufVxyXG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".triangle{\r\n  border : 5px solid transparent;\r\n  height : 0;\r\n  width : 0;\r\n  border-bottom-color : lightgrey;\r\n}\r\n\r\n.nav-item{\r\n  cursor : pointer;\r\n  color : gray;\r\n}\r\n\r\n.active{\r\n  color : black;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvTXlDbGFzc2lmaWVkcy9EYXNoYm9hcmQvbXlDbGFzc2lmaWVkcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsOEJBQThCO0VBQzlCLFVBQVU7RUFDVixTQUFTO0VBQ1QsK0JBQStCO0FBQ2pDOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGFBQWE7QUFDZiIsImZpbGUiOiJzcmMvYXBwL015Q2xhc3NpZmllZHMvRGFzaGJvYXJkL215Q2xhc3NpZmllZHMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50cmlhbmdsZXtcclxuICBib3JkZXIgOiA1cHggc29saWQgdHJhbnNwYXJlbnQ7XHJcbiAgaGVpZ2h0IDogMDtcclxuICB3aWR0aCA6IDA7XHJcbiAgYm9yZGVyLWJvdHRvbS1jb2xvciA6IGxpZ2h0Z3JleTtcclxufVxyXG5cclxuLm5hdi1pdGVte1xyXG4gIGN1cnNvciA6IHBvaW50ZXI7XHJcbiAgY29sb3IgOiBncmF5O1xyXG59XHJcblxyXG4uYWN0aXZle1xyXG4gIGNvbG9yIDogYmxhY2s7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -782,7 +782,7 @@ HistoryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!****************************************!*\
   !*** ./src/app/MyClassifieds/index.ts ***!
   \****************************************/
-/*! exports provided: MyClassifiedsComponent, ActiveComponent, HistoryComponent */
+/*! exports provided: ActiveComponent, HistoryComponent, MyClassifiedsComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -824,7 +824,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', component: ___WEBPACK_IMPORTED_MODULE_3__["ActiveComponent"] },
+    { path: '', component: ___WEBPACK_IMPORTED_MODULE_3__["MyClassifiedsComponent"] },
     { path: 'active', component: ___WEBPACK_IMPORTED_MODULE_3__["ActiveComponent"] },
     { path: 'history', component: ___WEBPACK_IMPORTED_MODULE_3__["HistoryComponent"] }
 ];

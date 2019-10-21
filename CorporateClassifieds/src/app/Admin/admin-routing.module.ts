@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './Dashboard/admin.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/admin', pathMatch: 'full' },
+  { path: '', redirectTo: 'admin', pathMatch: 'full' },
   { path: 'admin', component: AdminComponent }
 ]
 
