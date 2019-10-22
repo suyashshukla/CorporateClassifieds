@@ -9,3 +9,29 @@
 .font-normal{
   font-size : 14px;
 }
+
+.pointer{
+  cursor : pointer;
+}
+
+body{
+  height : 100vh;
+}
+
+.fit{
+  object-fit :cover;
+}
+
+.img-box{
+  height : 400px;
+  width : 600px;
+}
+
+.highlight{
+  height : 100px;
+  width : 150px;
+}
+
+.scroll-box{
+  overflow : scroll;
+}
