@@ -138,6 +138,8 @@
     <Content Include="src\app\MyClassifieds\History\history.component.html" />
     <Content Include="src\app\MyClassifieds\Home\home.component.css" />
     <Content Include="src\app\MyClassifieds\Home\home.component.html" />
+    <Content Include="src\app\MyClassifieds\Slider\slider.component.css" />
+    <Content Include="src\app\MyClassifieds\Slider\slider.component.html" />
     <Content Include="src\assets\svg\alert.svg" />
     <Content Include="src\assets\svg\archive.svg" />
     <Content Include="src\assets\svg\arrow-both.svg" />
@@ -608,12 +610,18 @@
     <TypeScriptCompile Include="src\app\Inbox\inbox.module.ts" />
     <TypeScriptCompile Include="src\app\Inbox\index.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Active\active.component.ts" />
+    <TypeScriptCompile Include="src\app\MyClassifieds\Active\index.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Create\create.component.ts" />
+    <TypeScriptCompile Include="src\app\MyClassifieds\Create\index.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\History\history.component.ts" />
+    <TypeScriptCompile Include="src\app\MyClassifieds\History\index.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Home\home.component.ts" />
+    <TypeScriptCompile Include="src\app\MyClassifieds\Home\index.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\index.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\myclassified-routing.module.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\myclassified.module.ts" />
+    <TypeScriptCompile Include="src\app\MyClassifieds\Slider\index.ts" />
+    <TypeScriptCompile Include="src\app\MyClassifieds\Slider\slider.component.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />

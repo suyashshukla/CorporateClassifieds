@@ -5,3 +5,7 @@
 .text-color {
   color: rgb(118, 97, 139);
 }
+
+.font-normal{
+  font-size : 14px;
+}
