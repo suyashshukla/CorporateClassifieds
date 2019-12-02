@@ -9,10 +9,12 @@ import { MyClassifiedsModule } from './MyClassifieds/myclassified.module';
 import { AdminModule } from './Admin/admin.module';
 import { InboxModule } from './Inbox/inbox.module';
 import { ClassifiedsModule } from './Classifieds/classifieds.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

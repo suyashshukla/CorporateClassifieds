@@ -9,13 +9,13 @@
       <div class="card flex-grow-1 px-3 pt-3">
         <h5 class="text-dark">Item Details</h5>
       
-        <div class="form-group labels d-flex flex-column">
+        <form class="form-group labels d-flex flex-column" [formGroup]="adData">
           <div class="line-one d-flex flex-grow-2 py-2">
 
             <div class="flex-grow-1 px-1">
               <label for="type">Type</label>
               <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle w-100 text-left border border-dark" id="dropdownTypebutton" data-toggle="dropdown">
+                <button class="btn btn-default dropdown-toggle w-100 text-left border border-dark type-button" id="dropdownTypebutton" (click)="typeChange()" data-toggle="dropdown">
                   Select
                 </button>
                 <div class="dropdown-menu px-1">
@@ -50,7 +50,7 @@
             </div>
 
           </div>
-        </div>
+        </form>
 
         <div class="line-two py-2">
           <label for="title">Ad Title</label>

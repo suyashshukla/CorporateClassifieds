@@ -128,6 +128,8 @@
     <Content Include="src\app\Classifieds\Dashboard\classifieds.component.html" />
     <Content Include="src\app\Inbox\Dashboard\inbox.component.css" />
     <Content Include="src\app\Inbox\Dashboard\inbox.component.html" />
+    <Content Include="src\app\Login\login.component.css" />
+    <Content Include="src\app\Login\login.component.html" />
     <Content Include="src\app\MyClassifieds\Active\active.component.css" />
     <Content Include="src\app\MyClassifieds\Active\active.component.html" />
     <Content Include="assets\cart.png" />
@@ -609,6 +611,7 @@
     <TypeScriptCompile Include="src\app\Inbox\inbox-routing.module.ts" />
     <TypeScriptCompile Include="src\app\Inbox\inbox.module.ts" />
     <TypeScriptCompile Include="src\app\Inbox\index.ts" />
+    <TypeScriptCompile Include="src\app\Login\login.component.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Active\active.component.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Active\index.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Create\create.component.ts" />
