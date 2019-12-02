@@ -9,11 +9,24 @@
 
 
 .sidebar {
-    background-color: rgb(62, 66, 73);
+  width : 96px;
+  position : fixed;
+  height : 100vh;
+  background-color: rgb(62, 66, 73);
 }
+
+.content-bar{
+  margin-left : 96px;
+}
+
+
 
 .menu-list{
   font-size : 12px;
+}
+
+.screen{
+  flex:1;
 }
 
 .menu-item {
