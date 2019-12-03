@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+.bg-color {
+  background-color: rgb(118, 97, 139);
+}
+
+.text-color {
+  color: rgb(118, 97, 139);
+}
+
+.font-normal{
+  font-size : 14px;
+}
+
+.full-height{
+  height : 100vh;
+}
+
+.pointer{
+  cursor : pointer;
+}
+
+body{
+  height : 100vh;
+}
+
+.fit{
+  object-fit :cover;
+}
+
+.img-box{
+  height : 400px;
+  width : 600px;
+}
+
+.highlight{
+  height : 100px;
+  width : 150px;
+}
+
+.scroll-box{
+  overflow : scroll;
+}

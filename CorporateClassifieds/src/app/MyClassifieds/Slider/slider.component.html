@@ -1,0 +1,21 @@
+<div class="card mt-3 mb-5">
+
+  <div class="text-center">
+    <img class="img-fluid fit pointer img-box w-100" src="{{display}}"/>
+  </div>
+
+  <div class="carousel py-2">
+
+    <div class="scroll-box d-flex align-items-center">
+      <i class="material-icons p-2 pointer" (click)="decrement()">keyboard_arrow_left</i>
+      <div *ngFor="let pic of pics; index as id">
+        <div class="tiles">
+          <i class="material-icons text-center text-color w-100" *ngIf="index==id">arrow_drop_down</i>
+          <img class="pointer px-2" src="{{pic.url}}" height="100" width="150" (click)="picClick(pic)" />
+        </div>
+      </div>
+      <i class="material-icons p-2 pointer" (click)="increment()">keyboard_arrow_right</i>
+    </div>
+
+  </div>
+</div>

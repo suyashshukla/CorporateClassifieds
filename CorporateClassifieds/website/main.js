@@ -23,55 +23,68 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Admin/admin.component.html":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Admin/admin.component.html ***!
-  \**********************************************************************************/
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Admin/Dashboard/admin.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Admin/Dashboard/admin.component.html ***!
+  \********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<tabset>\r\n    <tab heading=\"REPORTED ADS\"></tab>\r\n    <tab heading=\"CATEGORIES\"></tab>\r\n</tabset>");
+/* harmony default export */ __webpack_exports__["default"] = ("Admin\r\n");
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Classifieds/classifieds.component.html":
-/*!**********************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Classifieds/classifieds.component.html ***!
-  \**********************************************************************************************/
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Classifieds/Dashboard/classifieds.component.html":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Classifieds/Dashboard/classifieds.component.html ***!
+  \********************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<tabset>\r\n    <tab heading=\"FOR SALE/RENT\">\r\n      <div class=\"p-3\">\r\n        <h1>For Sale/Rent</h1>\r\n        <p>Here you can go through the ads poted by users</p>\r\n        <div class=\"row\">\r\n\r\n          <div class=\"dropdown\">\r\n\r\n            <button id=\"dropdown-button-first\"\r\n                    data-toggle=\"dropdown\"\r\n                    class=\"btn btn-default dropdown-toggle\"\r\n                    aria-controls=\"dropdown-first\">\r\n              HELLO\r\n            </button>\r\n\r\n            <ul id=\"dropdown-first\"\r\n                aria-labelledby=\"dropdown-button-first\"\r\n                class=\"dropdown-menu\">\r\n\r\n              <li><a class=\"dropdown-item\">India</a></li>\r\n              <li><a class=\"dropdown-item\">Japan</a></li>\r\n              <li><a class=\"dropdown-item\">China</a></li>\r\n\r\n            </ul>\r\n          </div>\r\n\r\n\r\n        </div>\r\n      </div>\r\n    </tab>\r\n    <tab heading=\"REQUIRED\"></tab>\r\n</tabset>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("Classifieds\r\n");
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Inbox/inbox.component.html":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Inbox/inbox.component.html ***!
-  \**********************************************************************************/
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Inbox/Dashboard/inbox.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Inbox/Dashboard/inbox.component.html ***!
+  \********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<tabset>\r\n    <tab heading=\"INBOX\"></tab>\r\n</tabset>");
+/* harmony default export */ __webpack_exports__["default"] = ("Inbox\r\nOutbox\r\nMessaging\r\n");
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/myClassifieds.component.html":
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/Active/active.component.html":
 /*!**************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/myClassifieds.component.html ***!
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/Active/active.component.html ***!
   \**************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<tabset>\r\n    <tab heading=\"ACTIVE CLASSIFIEDS\"></tab>\r\n    <tab heading=\"HISTORY\"></tab>\r\n</tabset>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!DOCTYPE html>\r\n\r\n<div class=\"navbar navbar-default bg-white p-0 pt-2\">\r\n\r\n  <div class=\"navbar-nav d-flex flex-row\">\r\n\r\n    <a class=\"d-flex flex-column align-items-center\" routerLink =\"/me/classifieds/active\">\r\n      <span class=\"nav-item px-3 active\">ACTIVE</span>\r\n      <span class=\"triangle\"></span>\r\n    </a>\r\n\r\n    <a class=\"d-flex flex-column align-items-center\" routerLink =\"/me/classifieds/history\">\r\n      <span class=\"nav-item px-3\">HISTORY</span>\r\n      <span class=\"triangle d-none\"></span>\r\n    </a>\r\n\r\n  </div>\r\n\r\n\r\n</div>\r\n\r\n\r\n<div class=\"container-fluid d-flex flex-row align-items-end h-100\">\r\n\r\n  <img class=\"w-100 align-bottom\" src=\"../../../assets/nothing.png\" />\r\n\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/History/history.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/History/history.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!DOCTYPE html>\r\n\r\n<div class=\"navbar navbar-default bg-white p-0 pt-2\">\r\n\r\n  <div class=\"navbar-nav d-flex flex-row\">\r\n\r\n    <a class=\"d-flex flex-column align-items-center\" routerLink =\"/me/classifieds/active\">\r\n      <span class=\"nav-item px-3\">ACTIVE</span>\r\n      <span class=\"triangle d-none\"></span>\r\n    </a>\r\n\r\n    <a class=\"d-flex flex-column align-items-center\" routerLink =\"/me/classifieds/history\">\r\n      <span class=\"nav-item px-3 active\">HISTORY</span>\r\n      <span class=\"triangle\"></span>\r\n    </a>\r\n\r\n  </div>\r\n\r\n\r\n</div>\r\n\r\n\r\n");
 
 /***/ }),
 
@@ -84,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"d-flex flex-row\">\n    <div class=\"sidebar\">\n        <ul class=\"menu-list\">\n            <li class=\"text-center active\" id=\"classifieds\" [routerLink]=\"['/classifieds']\" (click)=\"click('classifieds')\">\n                <i class=\"material-icons\">home_work</i>\n                <div>Classifieds</div>\n            </li>\n            <li class=\"text-center\" id=\"myclassifieds\" [routerLink]=\"['/me/classifieds']\" (click)=\"click('myclassifieds')\">\n                <i class=\"material-icons\">shopping_basket</i>\n                <div>My Classifieds</div>\n            </li>\n            <li class=\"text-center\" id=\"inbox\" [routerLink]=\"['/inbox']\" (click)=\"click('inbox')\">\n                <i class=\"material-icons\">message</i>\n                <div>Inbox</div>\n            </li>\n            <li class=\"text-center\" id=\"admin\" [routerLink]=\"['/admin']\" (click)=\"click('admin')\">\n                <i class=\"material-icons\">people_alt</i>\n                <div>Admin</div>\n            </li>\n        </ul>\n    </div>\n    <div class=\"content-bar container-fluid bg-light p-0\" style=\"height: 100vh;\">\n        <router-outlet></router-outlet>\n    </div>\n</div>\n\n<div class=\"navbar fixed-top position-absolute\">\n    <div class=\"text-center\">\n        <a class=\"navbar-brand text-center\" href=\"#\">\n            <img src=\"website/assets/cart.png\" width=\"80px\">\n        </a>\n    </div>\n    <span class=\"text-white ml-auto mr-3\">Suyash Shukla</span>\n    <img class=\"rounded-circle mr-3\" src=\"https://raw.githubusercontent.com/suyashshukla/Sherlock/master/Angular/Formal.jpg\" width=\"36px\" height=\"36px\">\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"d-flex flex-row\">\r\n    <div class=\"sidebar pt-5\">\r\n        <div class=\"menu-list text-white p-0 m-0\">\r\n            <div class=\"menu-item text-center active\" id=\"classifieds\" [routerLink]=\"['/classifieds']\" (click)=\"click('classifieds')\">\r\n                <i class=\"material-icons\">home_work</i>\r\n                <div>Classifieds</div>\r\n            </div>\r\n            <div class=\"menu-item text-center\" id=\"myclassifieds\" [routerLink]=\"['/me/classifieds']\" (click)=\"click('myclassifieds')\">\r\n                <i class=\"material-icons\">shopping_basket</i>\r\n                <div>My Classifieds</div>\r\n            </div>\r\n            <div class=\"menu-item text-center\" id=\"inbox\" [routerLink]=\"['/inbox']\" (click)=\"click('inbox')\">\r\n                <i class=\"material-icons\">message</i>\r\n                <div>Inbox</div>\r\n            </div>\r\n            <div class=\"menu-item text-center\" id=\"admin\" [routerLink]=\"['/admin']\" (click)=\"click('admin')\">\r\n                <i class=\"material-icons\">people_alt</i>\r\n                <div>Admin</div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"content-bar container-fluid bg-light p-0 mt-5\" style=\"height: 100vh;\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"navbar fixed-top text-center p-0\">\r\n    <div class=\"text-center\">\r\n        <a class=\"navbar-brand text-center\" href=\"#\">\r\n            <img class=\"text-center\" src=\"website/assets/cart.png\" width=\"80\">\r\n        </a>\r\n    </div>\r\n    <span class=\"text-white\">Corporate Classifieds App</span>\r\n    <span class=\"text-white ml-auto mr-3\">Random User</span>\r\n    <img class=\"rounded-circle mr-3\"\r\n         src=\"https://m.media-amazon.com/images/M/MV5BMTM0ODU5Nzk2OV5BMl5BanBnXkFtZTcwMzI2ODgyNQ@@._V1_UY256_CR4,0,172,256_AL_.jpg\" width=\"36\" height=\"36\">\r\n</div>\r\n");
 
 /***/ }),
 
@@ -317,23 +330,23 @@ function __importDefault(mod) {
 
 /***/ }),
 
-/***/ "./src/app/Admin/admin.component.css":
-/*!*******************************************!*\
-  !*** ./src/app/Admin/admin.component.css ***!
-  \*******************************************/
+/***/ "./src/app/Admin/Dashboard/admin.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/Admin/Dashboard/admin.component.css ***!
+  \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0FkbWluL2FkbWluLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0FkbWluL0Rhc2hib2FyZC9hZG1pbi5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
-/***/ "./src/app/Admin/admin.component.ts":
-/*!******************************************!*\
-  !*** ./src/app/Admin/admin.component.ts ***!
-  \******************************************/
+/***/ "./src/app/Admin/Dashboard/admin.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/Admin/Dashboard/admin.component.ts ***!
+  \****************************************************/
 /*! exports provided: AdminComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -353,8 +366,8 @@ let AdminComponent = class AdminComponent {
 AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'admin-component',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./admin.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Admin/admin.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./admin.component.css */ "./src/app/Admin/admin.component.css")).default]
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./admin.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Admin/Dashboard/admin.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./admin.component.css */ "./src/app/Admin/Dashboard/admin.component.css")).default]
     })
 ], AdminComponent);
 
@@ -362,23 +375,92 @@ AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/Classifieds/classifieds.component.css":
-/*!*******************************************************!*\
-  !*** ./src/app/Classifieds/classifieds.component.css ***!
-  \*******************************************************/
+/***/ "./src/app/Admin/admin-routing.module.ts":
+/*!***********************************************!*\
+  !*** ./src/app/Admin/admin-routing.module.ts ***!
+  \***********************************************/
+/*! exports provided: AdminRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminRoutingModule", function() { return AdminRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Dashboard/admin.component */ "./src/app/Admin/Dashboard/admin.component.ts");
+
+
+
+
+const routes = [
+    { path: '', redirectTo: 'admin', pathMatch: 'full' },
+    { path: 'admin', component: _Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"] }
+];
+let AdminRoutingModule = class AdminRoutingModule {
+};
+AdminRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+    })
+], AdminRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Admin/admin.module.ts":
+/*!***************************************!*\
+  !*** ./src/app/Admin/admin.module.ts ***!
+  \***************************************/
+/*! exports provided: AdminModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminModule", function() { return AdminModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Dashboard/admin.component */ "./src/app/Admin/Dashboard/admin.component.ts");
+/* harmony import */ var _admin_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./admin-routing.module */ "./src/app/Admin/admin-routing.module.ts");
+
+
+
+
+
+let AdminModule = class AdminModule {
+};
+AdminModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _admin_routing_module__WEBPACK_IMPORTED_MODULE_4__["AdminRoutingModule"]],
+        declarations: [_Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"]],
+        bootstrap: [_Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"]]
+    })
+], AdminModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Classifieds/Dashboard/classifieds.component.css":
+/*!*****************************************************************!*\
+  !*** ./src/app/Classifieds/Dashboard/classifieds.component.css ***!
+  \*****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0NsYXNzaWZpZWRzL2NsYXNzaWZpZWRzLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0NsYXNzaWZpZWRzL0Rhc2hib2FyZC9jbGFzc2lmaWVkcy5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
-/***/ "./src/app/Classifieds/classifieds.component.ts":
-/*!******************************************************!*\
-  !*** ./src/app/Classifieds/classifieds.component.ts ***!
-  \******************************************************/
+/***/ "./src/app/Classifieds/Dashboard/classifieds.component.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/Classifieds/Dashboard/classifieds.component.ts ***!
+  \****************************************************************/
 /*! exports provided: ClassifiedsComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -398,8 +480,8 @@ let ClassifiedsComponent = class ClassifiedsComponent {
 ClassifiedsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'classifieds-component',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./classifieds.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Classifieds/classifieds.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./classifieds.component.css */ "./src/app/Classifieds/classifieds.component.css")).default]
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./classifieds.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Classifieds/Dashboard/classifieds.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./classifieds.component.css */ "./src/app/Classifieds/Dashboard/classifieds.component.css")).default]
     })
 ], ClassifiedsComponent);
 
@@ -407,23 +489,92 @@ ClassifiedsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/Inbox/inbox.component.css":
-/*!*******************************************!*\
-  !*** ./src/app/Inbox/inbox.component.css ***!
-  \*******************************************/
+/***/ "./src/app/Classifieds/classifieds-routing.module.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/Classifieds/classifieds-routing.module.ts ***!
+  \***********************************************************/
+/*! exports provided: ClassifiedsRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClassifiedsRoutingModule", function() { return ClassifiedsRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Dashboard/classifieds.component */ "./src/app/Classifieds/Dashboard/classifieds.component.ts");
+
+
+
+
+const routes = [
+    { path: '', redirectTo: 'classifieds', pathMatch: 'full' },
+    { path: 'classifieds', component: _Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_3__["ClassifiedsComponent"] }
+];
+let ClassifiedsRoutingModule = class ClassifiedsRoutingModule {
+};
+ClassifiedsRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+    })
+], ClassifiedsRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Classifieds/classifieds.module.ts":
+/*!***************************************************!*\
+  !*** ./src/app/Classifieds/classifieds.module.ts ***!
+  \***************************************************/
+/*! exports provided: ClassifiedsModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClassifiedsModule", function() { return ClassifiedsModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Dashboard/classifieds.component */ "./src/app/Classifieds/Dashboard/classifieds.component.ts");
+/* harmony import */ var _classifieds_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./classifieds-routing.module */ "./src/app/Classifieds/classifieds-routing.module.ts");
+
+
+
+
+
+let ClassifiedsModule = class ClassifiedsModule {
+};
+ClassifiedsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _classifieds_routing_module__WEBPACK_IMPORTED_MODULE_4__["ClassifiedsRoutingModule"]],
+        declarations: [_Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_3__["ClassifiedsComponent"]],
+        bootstrap: [_Dashboard_classifieds_component__WEBPACK_IMPORTED_MODULE_3__["ClassifiedsComponent"]]
+    })
+], ClassifiedsModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Inbox/Dashboard/inbox.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/Inbox/Dashboard/inbox.component.css ***!
+  \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0luYm94L2luYm94LmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0luYm94L0Rhc2hib2FyZC9pbmJveC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
-/***/ "./src/app/Inbox/inbox.component.ts":
-/*!******************************************!*\
-  !*** ./src/app/Inbox/inbox.component.ts ***!
-  \******************************************/
+/***/ "./src/app/Inbox/Dashboard/inbox.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/Inbox/Dashboard/inbox.component.ts ***!
+  \****************************************************/
 /*! exports provided: InboxComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -443,8 +594,8 @@ let InboxComponent = class InboxComponent {
 InboxComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'inbox-component',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./inbox.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Inbox/inbox.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./inbox.component.css */ "./src/app/Inbox/inbox.component.css")).default]
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./inbox.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Inbox/Dashboard/inbox.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./inbox.component.css */ "./src/app/Inbox/Dashboard/inbox.component.css")).default]
     })
 ], InboxComponent);
 
@@ -452,46 +603,265 @@ InboxComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/MyClassifieds/myClassifieds.component.css":
+/***/ "./src/app/Inbox/inbox-routing.module.ts":
+/*!***********************************************!*\
+  !*** ./src/app/Inbox/inbox-routing.module.ts ***!
+  \***********************************************/
+/*! exports provided: InboxRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InboxRoutingModule", function() { return InboxRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ */ "./src/app/Inbox/index.ts");
+
+
+
+
+const routes = [{
+        path: '', redirectTo: 'inbox', pathMatch: 'full'
+    },
+    { path: 'inbox', component: ___WEBPACK_IMPORTED_MODULE_3__["InboxComponent"] }
+];
+let InboxRoutingModule = class InboxRoutingModule {
+};
+InboxRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+    })
+], InboxRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Inbox/inbox.module.ts":
+/*!***************************************!*\
+  !*** ./src/app/Inbox/inbox.module.ts ***!
+  \***************************************/
+/*! exports provided: InboxModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InboxModule", function() { return InboxModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ */ "./src/app/Inbox/index.ts");
+/* harmony import */ var _inbox_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./inbox-routing.module */ "./src/app/Inbox/inbox-routing.module.ts");
+
+
+
+
+
+let InboxModule = class InboxModule {
+};
+InboxModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _inbox_routing_module__WEBPACK_IMPORTED_MODULE_4__["InboxRoutingModule"]],
+        declarations: [___WEBPACK_IMPORTED_MODULE_3__["InboxComponent"]],
+        bootstrap: [___WEBPACK_IMPORTED_MODULE_3__["InboxComponent"]]
+    })
+], InboxModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/Inbox/index.ts":
+/*!********************************!*\
+  !*** ./src/app/Inbox/index.ts ***!
+  \********************************/
+/*! exports provided: InboxComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _Dashboard_inbox_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard/inbox.component */ "./src/app/Inbox/Dashboard/inbox.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InboxComponent", function() { return _Dashboard_inbox_component__WEBPACK_IMPORTED_MODULE_1__["InboxComponent"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/Active/active.component.css":
 /*!***********************************************************!*\
-  !*** ./src/app/MyClassifieds/myClassifieds.component.css ***!
+  !*** ./src/app/MyClassifieds/Active/active.component.css ***!
   \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL015Q2xhc3NpZmllZHMvbXlDbGFzc2lmaWVkcy5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".triangle {\r\n  border: 5px solid transparent;\r\n  height: 0;\r\n  width: 0;\r\n  border-bottom-color: lightgrey;\r\n}\r\n\r\n.nav-item {\r\n  cursor: pointer;\r\n  color: gray;\r\n}\r\n\r\n.active {\r\n  color: black;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvTXlDbGFzc2lmaWVkcy9BY3RpdmUvYWN0aXZlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSw2QkFBNkI7RUFDN0IsU0FBUztFQUNULFFBQVE7RUFDUiw4QkFBOEI7QUFDaEM7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsV0FBVztBQUNiOztBQUVBO0VBQ0UsWUFBWTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvTXlDbGFzc2lmaWVkcy9BY3RpdmUvYWN0aXZlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudHJpYW5nbGUge1xyXG4gIGJvcmRlcjogNXB4IHNvbGlkIHRyYW5zcGFyZW50O1xyXG4gIGhlaWdodDogMDtcclxuICB3aWR0aDogMDtcclxuICBib3JkZXItYm90dG9tLWNvbG9yOiBsaWdodGdyZXk7XHJcbn1cclxuXHJcbi5uYXYtaXRlbSB7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG4gIGNvbG9yOiBncmF5O1xyXG59XHJcblxyXG4uYWN0aXZlIHtcclxuICBjb2xvcjogYmxhY2s7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
-/***/ "./src/app/MyClassifieds/myClassifieds.component.ts":
+/***/ "./src/app/MyClassifieds/Active/active.component.ts":
 /*!**********************************************************!*\
-  !*** ./src/app/MyClassifieds/myClassifieds.component.ts ***!
+  !*** ./src/app/MyClassifieds/Active/active.component.ts ***!
   \**********************************************************/
-/*! exports provided: MyClassifiedsComponent */
+/*! exports provided: ActiveComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyClassifiedsComponent", function() { return MyClassifiedsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActiveComponent", function() { return ActiveComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
 
-let MyClassifiedsComponent = class MyClassifiedsComponent {
-    constructor() {
-    }
-    ngOnInit() {
-    }
+let ActiveComponent = class ActiveComponent {
 };
-MyClassifiedsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+ActiveComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'myClassifieds-component',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./myClassifieds.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/myClassifieds.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./myClassifieds.component.css */ "./src/app/MyClassifieds/myClassifieds.component.css")).default]
+        selector: 'app-active',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./active.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/Active/active.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./active.component.css */ "./src/app/MyClassifieds/Active/active.component.css")).default]
     })
-], MyClassifiedsComponent);
+], ActiveComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/History/history.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/MyClassifieds/History/history.component.css ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".triangle {\r\n  border: 5px solid transparent;\r\n  height: 0;\r\n  width: 0;\r\n  border-bottom-color: lightgrey;\r\n}\r\n\r\n.nav-item {\r\n  cursor: pointer;\r\n  color: gray;\r\n}\r\n\r\n.active {\r\n  color: black;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvTXlDbGFzc2lmaWVkcy9IaXN0b3J5L2hpc3RvcnkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLDZCQUE2QjtFQUM3QixTQUFTO0VBQ1QsUUFBUTtFQUNSLDhCQUE4QjtBQUNoQzs7QUFFQTtFQUNFLGVBQWU7RUFDZixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxZQUFZO0FBQ2QiLCJmaWxlIjoic3JjL2FwcC9NeUNsYXNzaWZpZWRzL0hpc3RvcnkvaGlzdG9yeS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRyaWFuZ2xlIHtcclxuICBib3JkZXI6IDVweCBzb2xpZCB0cmFuc3BhcmVudDtcclxuICBoZWlnaHQ6IDA7XHJcbiAgd2lkdGg6IDA7XHJcbiAgYm9yZGVyLWJvdHRvbS1jb2xvcjogbGlnaHRncmV5O1xyXG59XHJcblxyXG4ubmF2LWl0ZW0ge1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxuICBjb2xvcjogZ3JheTtcclxufVxyXG5cclxuLmFjdGl2ZSB7XHJcbiAgY29sb3I6IGJsYWNrO1xyXG59XHJcbiJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/History/history.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/MyClassifieds/History/history.component.ts ***!
+  \************************************************************/
+/*! exports provided: HistoryComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HistoryComponent", function() { return HistoryComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let HistoryComponent = class HistoryComponent {
+};
+HistoryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-active',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./history.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/History/history.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./history.component.css */ "./src/app/MyClassifieds/History/history.component.css")).default]
+    })
+], HistoryComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/index.ts":
+/*!****************************************!*\
+  !*** ./src/app/MyClassifieds/index.ts ***!
+  \****************************************/
+/*! exports provided: ActiveComponent, HistoryComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _Active_active_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Active/active.component */ "./src/app/MyClassifieds/Active/active.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ActiveComponent", function() { return _Active_active_component__WEBPACK_IMPORTED_MODULE_1__["ActiveComponent"]; });
+
+/* harmony import */ var _History_history_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./History/history.component */ "./src/app/MyClassifieds/History/history.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "HistoryComponent", function() { return _History_history_component__WEBPACK_IMPORTED_MODULE_2__["HistoryComponent"]; });
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/myclassified-routing.module.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/MyClassifieds/myclassified-routing.module.ts ***!
+  \**************************************************************/
+/*! exports provided: MyCLassifiedRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyCLassifiedRoutingModule", function() { return MyCLassifiedRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ */ "./src/app/MyClassifieds/index.ts");
+
+
+
+
+const routes = [
+    { path: '', redirectTo: 'active', pathMatch: 'full' },
+    { path: 'active', component: ___WEBPACK_IMPORTED_MODULE_3__["ActiveComponent"] },
+    { path: 'history', component: ___WEBPACK_IMPORTED_MODULE_3__["HistoryComponent"] }
+];
+let MyCLassifiedRoutingModule = class MyCLassifiedRoutingModule {
+};
+MyCLassifiedRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+    })
+], MyCLassifiedRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/myclassified.module.ts":
+/*!******************************************************!*\
+  !*** ./src/app/MyClassifieds/myclassified.module.ts ***!
+  \******************************************************/
+/*! exports provided: MyClassifiedsModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyClassifiedsModule", function() { return MyClassifiedsModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ */ "./src/app/MyClassifieds/index.ts");
+/* harmony import */ var _myclassified_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./myclassified-routing.module */ "./src/app/MyClassifieds/myclassified-routing.module.ts");
+
+
+
+
+
+let MyClassifiedsModule = class MyClassifiedsModule {
+};
+MyClassifiedsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [___WEBPACK_IMPORTED_MODULE_3__["ActiveComponent"], ___WEBPACK_IMPORTED_MODULE_3__["HistoryComponent"]],
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _myclassified_routing_module__WEBPACK_IMPORTED_MODULE_4__["MyCLassifiedRoutingModule"]],
+        bootstrap: [___WEBPACK_IMPORTED_MODULE_3__["ActiveComponent"]]
+    })
+], MyClassifiedsModule);
 
 
 
@@ -510,24 +880,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _Admin_admin_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Admin/admin.component */ "./src/app/Admin/admin.component.ts");
-/* harmony import */ var _Classifieds_classifieds_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Classifieds/classifieds.component */ "./src/app/Classifieds/classifieds.component.ts");
-/* harmony import */ var _Inbox_inbox_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Inbox/inbox.component */ "./src/app/Inbox/inbox.component.ts");
-/* harmony import */ var _MyClassifieds_myClassifieds_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MyClassifieds/myClassifieds.component */ "./src/app/MyClassifieds/myClassifieds.component.ts");
 
 
 
 const routes = [
     { path: '', redirectTo: 'classifieds', pathMatch: 'full' },
-    { path: 'classifieds', component: _Classifieds_classifieds_component__WEBPACK_IMPORTED_MODULE_4__["ClassifiedsComponent"] },
-    { path: 'me/classifieds', component: _MyClassifieds_myClassifieds_component__WEBPACK_IMPORTED_MODULE_6__["MyClassifiedsComponent"] },
-    { path: 'inbox', component: _Inbox_inbox_component__WEBPACK_IMPORTED_MODULE_5__["InboxComponent"] },
-    { path: 'admin', component: _Admin_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"] }
+    { path: 'classifieds', loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./Classifieds/classifieds.module */ "./src/app/Classifieds/classifieds.module.ts")).then(m => m.ClassifiedsModule) },
+    { path: 'me/classifieds', loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./MyClassifieds/myclassified.module */ "./src/app/MyClassifieds/myclassified.module.ts")).then(m => m.MyClassifiedsModule) },
+    { path: 'inbox', loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./Inbox/inbox.module */ "./src/app/Inbox/inbox.module.ts")).then(m => m.InboxModule) },
+    { path: 'admin', loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./Admin/admin.module */ "./src/app/Admin/admin.module.ts")).then(m => m.AdminModule) }
 ];
-
-
-
-
 let AppRoutingModule = class AppRoutingModule {
 };
 AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -550,7 +912,7 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".navbar {\r\n    background-color: rgba(118, 97, 139, 0.9);\r\n    padding: 0;\r\n    height: 50px;\r\n    z-index: 1000;\r\n}\r\n\r\n.navbar-brand img {\r\n    padding: 10px;\r\n}\r\n\r\n.navbar-brand {\r\n    width: 100px;\r\n}\r\n\r\n.sidebar {\r\n    padding-top: 50px;\r\n    height: 100vh;\r\n    width: 100px;\r\n    background-color: rgb(62, 66, 73);\r\n}\r\n\r\n.content-bar {\r\n    margin-top: 50px;\r\n}\r\n\r\n.menu-list {\r\n    list-style-type: none;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.menu-list li {\r\n    font-size: 12px;\r\n    cursor: pointer;\r\n    padding: 10px;\r\n    margin-bottom: 1px;\r\n    color: lightgray;\r\n}\r\n\r\n.menu-list li:hover,\r\n.active {\r\n    background-color: rgba(128, 128, 128, 0.25);\r\n    color: white;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx5Q0FBeUM7SUFDekMsVUFBVTtJQUNWLFlBQVk7SUFDWixhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksYUFBYTtBQUNqQjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsYUFBYTtJQUNiLFlBQVk7SUFDWixpQ0FBaUM7QUFDckM7O0FBRUE7SUFDSSxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxxQkFBcUI7SUFDckIsVUFBVTtJQUNWLFNBQVM7QUFDYjs7QUFFQTtJQUNJLGVBQWU7SUFDZixlQUFlO0lBQ2YsYUFBYTtJQUNiLGtCQUFrQjtJQUNsQixnQkFBZ0I7QUFDcEI7O0FBRUE7O0lBRUksMkNBQTJDO0lBQzNDLFlBQVk7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZiYXIge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgxMTgsIDk3LCAxMzksIDAuOSk7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgaGVpZ2h0OiA1MHB4O1xyXG4gICAgei1pbmRleDogMTAwMDtcclxufVxyXG5cclxuLm5hdmJhci1icmFuZCBpbWcge1xyXG4gICAgcGFkZGluZzogMTBweDtcclxufVxyXG5cclxuLm5hdmJhci1icmFuZCB7XHJcbiAgICB3aWR0aDogMTAwcHg7XHJcbn1cclxuXHJcbi5zaWRlYmFyIHtcclxuICAgIHBhZGRpbmctdG9wOiA1MHB4O1xyXG4gICAgaGVpZ2h0OiAxMDB2aDtcclxuICAgIHdpZHRoOiAxMDBweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYig2MiwgNjYsIDczKTtcclxufVxyXG5cclxuLmNvbnRlbnQtYmFyIHtcclxuICAgIG1hcmdpbi10b3A6IDUwcHg7XHJcbn1cclxuXHJcbi5tZW51LWxpc3Qge1xyXG4gICAgbGlzdC1zdHlsZS10eXBlOiBub25lO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIG1hcmdpbjogMDtcclxufVxyXG5cclxuLm1lbnUtbGlzdCBsaSB7XHJcbiAgICBmb250LXNpemU6IDEycHg7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMXB4O1xyXG4gICAgY29sb3I6IGxpZ2h0Z3JheTtcclxufVxyXG5cclxuLm1lbnUtbGlzdCBsaTpob3ZlcixcclxuLmFjdGl2ZSB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDEyOCwgMTI4LCAxMjgsIDAuMjUpO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".navbar {\r\n    background-color: rgba(118, 97, 139, 0.9);\r\n    height:48px;\r\n}\r\n\r\n.navbar-brand img {\r\n    padding: 10px;\r\n}\r\n\r\n.sidebar {\r\n    background-color: rgb(62, 66, 73);\r\n}\r\n\r\n.menu-list{\r\n  font-size : 12px;\r\n}\r\n\r\n.menu-item {\r\n    font-size: 12px;\r\n    padding : 10px;\r\n    cursor : pointer;\r\n    margin-bottom: 1px;\r\n    color: lightgray;\r\n}\r\n\r\n.menu-item:hover,\r\n.active {\r\n    background-color: rgba(128, 128, 128, 0.25);\r\n    color: white;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx5Q0FBeUM7SUFDekMsV0FBVztBQUNmOztBQUVBO0lBQ0ksYUFBYTtBQUNqQjs7QUFHQTtJQUNJLGlDQUFpQztBQUNyQzs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQixnQkFBZ0I7QUFDcEI7O0FBRUE7O0lBRUksMkNBQTJDO0lBQzNDLFlBQVk7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZiYXIge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgxMTgsIDk3LCAxMzksIDAuOSk7XHJcbiAgICBoZWlnaHQ6NDhweDtcclxufVxyXG5cclxuLm5hdmJhci1icmFuZCBpbWcge1xyXG4gICAgcGFkZGluZzogMTBweDtcclxufVxyXG5cclxuXHJcbi5zaWRlYmFyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYig2MiwgNjYsIDczKTtcclxufVxyXG5cclxuLm1lbnUtbGlzdHtcclxuICBmb250LXNpemUgOiAxMnB4O1xyXG59XHJcblxyXG4ubWVudS1pdGVtIHtcclxuICAgIGZvbnQtc2l6ZTogMTJweDtcclxuICAgIHBhZGRpbmcgOiAxMHB4O1xyXG4gICAgY3Vyc29yIDogcG9pbnRlcjtcclxuICAgIG1hcmdpbi1ib3R0b206IDFweDtcclxuICAgIGNvbG9yOiBsaWdodGdyYXk7XHJcbn1cclxuXHJcbi5tZW51LWl0ZW06aG92ZXIsXHJcbi5hY3RpdmUge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgxMjgsIDEyOCwgMTI4LCAwLjI1KTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxufVxyXG4iXX0= */");
 
 /***/ }),
 
@@ -607,17 +969,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
-/* harmony import */ var ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-bootstrap/dropdown */ "./node_modules/ngx-bootstrap/dropdown/fesm2015/ngx-bootstrap-dropdown.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var _Inbox_inbox_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Inbox/inbox.component */ "./src/app/Inbox/inbox.component.ts");
-/* harmony import */ var _Classifieds_classifieds_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Classifieds/classifieds.component */ "./src/app/Classifieds/classifieds.component.ts");
-/* harmony import */ var _Admin_admin_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Admin/admin.component */ "./src/app/Admin/admin.component.ts");
-/* harmony import */ var _MyClassifieds_myClassifieds_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./MyClassifieds/myClassifieds.component */ "./src/app/MyClassifieds/myClassifieds.component.ts");
-
-
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+/* harmony import */ var _MyClassifieds_myclassified_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MyClassifieds/myclassified.module */ "./src/app/MyClassifieds/myclassified.module.ts");
+/* harmony import */ var _Admin_admin_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Admin/admin.module */ "./src/app/Admin/admin.module.ts");
+/* harmony import */ var _Inbox_inbox_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Inbox/inbox.module */ "./src/app/Inbox/inbox.module.ts");
+/* harmony import */ var _Classifieds_classifieds_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Classifieds/classifieds.module */ "./src/app/Classifieds/classifieds.module.ts");
 
 
 
@@ -633,22 +991,19 @@ let AppModule = class AppModule {
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
-            _Inbox_inbox_component__WEBPACK_IMPORTED_MODULE_8__["InboxComponent"],
-            _Classifieds_classifieds_component__WEBPACK_IMPORTED_MODULE_9__["ClassifiedsComponent"],
-            _Admin_admin_component__WEBPACK_IMPORTED_MODULE_10__["AdminComponent"],
-            _MyClassifieds_myClassifieds_component__WEBPACK_IMPORTED_MODULE_11__["MyClassifiedsComponent"]
+            _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
-            ngx_bootstrap__WEBPACK_IMPORTED_MODULE_3__["AlertModule"].forRoot(),
-            ngx_bootstrap__WEBPACK_IMPORTED_MODULE_3__["TabsModule"].forRoot(),
-            ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_4__["BsDropdownModule"].forRoot(),
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"],
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
+            _MyClassifieds_myclassified_module__WEBPACK_IMPORTED_MODULE_6__["MyClassifiedsModule"],
+            _Admin_admin_module__WEBPACK_IMPORTED_MODULE_7__["AdminModule"],
+            _Inbox_inbox_module__WEBPACK_IMPORTED_MODULE_8__["InboxModule"],
+            _Classifieds_classifieds_module__WEBPACK_IMPORTED_MODULE_9__["ClassifiedsModule"]
         ],
         providers: [],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })
 ], AppModule);
 
@@ -721,7 +1076,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\suyash.s\source\repos\CorporateClassifieds\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\suyash.s\source\repos\Classifieds\CorporateClassifieds\src\main.ts */"./src/main.ts");
 
 
 /***/ })
