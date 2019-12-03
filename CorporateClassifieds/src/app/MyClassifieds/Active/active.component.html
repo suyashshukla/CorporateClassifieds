@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 
 
-  <div>
+<div>
+
+
   <div class="content-header d-flex align-items-center">
     <div class="text">
       <div class="lead px-3 pt-3 text-black">Active Classifieds</div>
       <div class="lead px-3 text-secondary">Here you can explore the Active Ads posted by you.</div>
     </div>
     <div class="pt-3 flex-grow-1 d-flex justify-content-end">
-      <button class="btn btn-default text-white py-2 bg-color" routerLink = "/create">CREATE AD</button>
+      <button class="btn btn-default text-white py-2 bg-color" routerLink="/create">CREATE AD</button>
     </div>
-    </div>
+  </div>
 
+  <!--
   <div class="d-flex flex-row justify-content-center align-items-bottom ml-5 pl-5">
-    
       <img class="img-fluid" src="../../../assets/nothing.png" />
-   
       </div>
+    -->
+
+  <div class="grid ml-5">
+    <div *ngFor="let ad of ads">
+      <div class="ad m-1">
+        <app-advertisement [ad]="ad"></app-advertisement>
+      </div>
+    </div>
+  </div>
+
 </div>

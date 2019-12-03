@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AppService } from '../AppService';
+import { Ad } from '../AdModel';
 
 @Component(
   {
@@ -8,4 +10,20 @@ import { Component } from '@angular/core';
   }
 )
 
-export class ActiveComponent { }
+export class ActiveComponent implements OnInit {
+
+  ads: Ad[];
+
+  constructor(private service: AppService) {}
+
+  ngOnInit() {
+
+    this.service.getClassifieds().subscribe((res:Ad[])=> {
+      this.ads = res;
+    });
+
+
+  }
+
+
+}
