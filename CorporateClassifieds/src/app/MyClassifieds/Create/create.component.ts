@@ -12,19 +12,34 @@ export class CreateComponent implements OnInit {
   constructor() { }
 
   adData = new FormGroup({
-    type: new FormControl(''),
-    category: new FormControl(''),
-    price: new FormControl(''),
-    title: new FormControl(''),
-    decription: new FormControl('')
+    price: new FormControl('0'),
+    title: new FormControl('Title Of Ad'),
+    description: new FormControl('Description of Ad')
   });
 
+  formData = {
+    type: 'Select',
+    category: 'Select',
+    price: '',
+    title: '',
+    description : ''
+  }
+
  
-  typeChange() {
-    var button = document.getElementById("typeButton");
+  typeChange(id) {
+
+    var button = document.getElementsByClassName("dropdown-item")[id];
+
+    if (id < 3)
+      this.formData.type = button.innerHTML;
+    else
+      this.formData.category = button.innerHTML;
 
   }
 
+  submitData() {
+
+  }
   
 
 

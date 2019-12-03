@@ -10,42 +10,47 @@
         <h5 class="text-dark">Item Details</h5>
       
         <form class="form-group labels d-flex flex-column" [formGroup]="adData">
-          <div class="line-one d-flex flex-grow-2 py-2">
 
-            <div class="flex-grow-1 px-1">
+          <div class="line-one d-flex flex-grow-2 py-2 row">
+            <div class="col-sm-4 px-1">
               <label for="type">Type</label>
+
               <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle w-100 text-left border border-dark type-button" id="dropdownTypebutton" (click)="typeChange()" data-toggle="dropdown">
-                  Select
+                <button class="btn btn-default d-flex w-100 text-left border border-dark type-button"
+                        id="dropdownTypebutton" data-toggle="dropdown">
+                  {{formData.type}}
+                  <i class="material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
                 </button>
-                <div class="dropdown-menu px-1">
-                  <div class="dropddown-item px-1">Sale</div>
-                  <div class="dropddown-item">Rent</div>
-                  <div class="dropddown-item">Required</div>
+
+                <div class="dropdown-menu w-100">
+                  <div class="dropdown-item" (click)="typeChange(0)">Sale</div>
+                  <div class="dropdown-item" (click)="typeChange(1)">Rent</div>
+                  <div class="dropdown-item" (click)="typeChange(2)">Required</div>
                 </div>
               </div>
             </div>
 
-            <div class="flex-grow-1 px-1">
+            <div class="col-sm-4 px-1">
               <label for="category">Category</label> <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle w-100 text-left border border-dark" id="dropdownTypebutton" data-toggle="dropdown">
-                  Select
+                <button class="btn btn-default d-flex w-100 text-left border border-dark" id="dropdownTypebutton" data-toggle="dropdown">
+                 {{formData.category}}
+                  <i class="material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
                 </button>
-                <div class="dropdown-menu">
-                  <div class="dropddown-item">Vehicle</div>
-                  <div class="dropddown-item">Property</div>
-                  <div class="dropddown-item">Electronics</div>
+                <div class="dropdown-menu w-100">
+                  <div class="dropdown-item"(click)="typeChange(3)">Vehicle</div>
+                  <div class="dropdown-item"(click)="typeChange(4)">Property</div>
+                  <div class="dropdown-item"(click)="typeChange(5)">Electronics</div>
                 </div>
               </div>
             </div>
 
-            <div class="flex-grow-1 px-1">
+            <div class="col-sm-4 px-1">
               <label for="price">Price</label>
               <div class="input-group d-flex">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">&#8377;</span>
                 </div>
-                <input type="text" class="border form-control flex-grow-1" aria-describedby="basic-addon1" />
+                <input type="text" class="border flex-grow-1 pl-1" aria-describedby="basic-addon1" formControlName = "price" />
               </div>
             </div>
 
@@ -54,14 +59,13 @@
 
         <div class="line-two py-2">
           <label for="title">Ad Title</label>
-          <input type="text" class="form-control w-100" />
+          <input type="text" class="form-control w-100" formControlName = "title"/>
         </div>
 
         <div class="line-three py-2 mb-3">
           <label for="description">Description</label>
-          <textarea class="form-control w-100" rows="3">Provide Item Details</textarea>
+          <textarea class="form-control w-100" rows="3" formControlName = "description">Provide Item Details</textarea>
         </div>
-
         </div>
 
 
