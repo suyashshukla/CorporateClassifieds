@@ -55,8 +55,8 @@ export class CreateComponent implements OnInit {
         this.formData.title = this.adData.value.title;
         this.formData.description = this.adData.value.description;
         this.formData.offers = 0;
-        this.formData.comments = "";
-        this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.description+"/200/300";
+        this.formData.comments = "0";
+        this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.description+"/300/400";
 
         this.service.postClassifieds(this.formData);
 

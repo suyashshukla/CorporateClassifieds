@@ -1,4 +1,5 @@
 using AppLibrary;
+using AppLibrary.DI;
 using classifieds;
 using System;
 using System.Collections.Generic;
@@ -12,26 +13,32 @@ namespace CorporateClassifieds.Controllers
   public class ClassifiedsController : ApiController
   {
 
-    DBLibrary db = new DBLibrary();
+    IDataAccess dataAccess;
+
+    public ClassifiedsController(IDataAccess dataAccess)
+    {
+      this.dataAccess = dataAccess;
+    }
 
     public IHttpActionResult Post(advertisement ad)
     {
-      return Ok(db.Post(ad));
+      return Ok(dataAccess.insert(ad));
     }
 
     public IEnumerable<advertisement> Get()
     {
-      return db.Get(); 
+      return dataAccess.get(); 
     }
 
     public advertisement Get(int id)
     {
-      return db.Get(id); 
+      return dataAccess.get(id); 
     }
 
     public int Delete(int id)
     {
-      return db.Delete(id);
+      return dataAccess.delete(id);
+    
     }
 
   }

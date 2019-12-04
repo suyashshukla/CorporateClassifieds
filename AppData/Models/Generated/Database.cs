@@ -27,7 +27,7 @@
 //     Connection String Name: `classifieds`
 //     Provider:               `System.Data.SqlClient`
 //     Connection String:      `Data Source=(LocalDB)\MSSQLLocalDB;
-         //AttachDbFilename=C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\App_Data\corporate.mdf;`
+        // AttachDbFilename=C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\App_Data\corporate.mdf;`
 //     Schema:                 ``
 //     Include Views:          `False`
 
@@ -182,7 +182,7 @@ namespace classifieds
 
 
 
-		[Column] public int? timetamp { get; set; }
+		[Column] public int? timestamp { get; set; }
 
 
 

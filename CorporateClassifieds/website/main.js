@@ -23,6 +23,19 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/AdList/ad-list.component.html":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/AdList/ad-list.component.html ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row m-1 p-1 border border-black overflow-hidden bg-white\">\r\n\r\n  <div class=\"col-1 d-flex align-items-center \">\r\n\r\n    <img src={{ad.thumbnail}} class=\"fit thumbnail\">\r\n\r\n  </div>\r\n\r\n  <div class=\"col-3 d-flex flex-column\">\r\n\r\n    <div class=\"d-flex\">\r\n      <i class=\"material-icons d-flex align-items-center\">home</i>\r\n      {{ad.title}}\r\n    </div>\r\n\r\n    {{ad.description}}\r\n\r\n    </div>\r\n\r\n  <div class=\"col-1\">\r\n    {{ad.price}}\r\n  </div>\r\n\r\n  <div class=\"col-2\">\r\n    {{ad.username}}\r\n  </div>\r\n\r\n  <div class=\"col-2\">\r\n    {{ad.timestamp}}\r\n  </div>\r\n\r\n  <div class=\"col-1\">\r\n    {{ad.offers}}\r\n  </div>\r\n\r\n  <div class=\"col-1\">\r\n    {{ad.comments}}\r\n  </div>\r\n\r\n</div>\r\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Admin/Dashboard/admin.component.html":
 /*!********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Admin/Dashboard/admin.component.html ***!
@@ -45,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card d-flex flex-column ad-width overflow-hidden\">\n\n  <div class=\"row ad-width pl-1\">\n    <span class=\"col-sm-2 \"><img class=\"rounded-circle fit\" src={{ad.userpic}} style=\"height:24px;width:24px\"></span>\n    <span class=\"col-sm-6\"> {{ad.username}}</span>\n    <span class=\"col-m-4\"> {{ad.timestamp}}</span>\n  </div>\n\n  <div class=\"position-relative\">\n    <img src={{ad.thumbnail}} class=\"ad-box\"/>\n    <div class=\"position-absolute black-desc ad-width\">\n      <div class=\"row pl-1 pr-1 text-white\">\n        <i class=\"col-sm-2 material-icons\">home</i>\n        <div class=\"col-sm-6\">{{ad.title}}</div>\n        <div class=\"col-sm-4 d-flex flex-row justify-content-end\">&#8377; {{ad.price}}</div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"w-100 pl-1 overflow-hidden d-flex align-items-center\" style=\"height:75px\">{{ad.description}}</div>\n\n  <div class=\"row pl-3\">\n    <i class=\"material-icons pr-3\">phone</i>\n    <i class=\"material-icons px-3\">messages</i>\n  </div>\n\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card d-flex flex-column ad-width overflow-hidden\">\n\n  <div class=\"row ad-width pl-1 py-1\">\n    <span class=\"col-sm-2 \"><img class=\"rounded-circle fit\" src={{ad.userpic}} style=\"height:24px;width:24px\"></span>\n    <span class=\"col-sm-6\"> {{ad.username}}</span>\n    <span class=\"col-sm-4 text-secondary d-flex align-items-end\"> {{ad.timestamp}}</span>\n  </div>\n\n  <div class=\"position-relative\">\n    <img src={{ad.thumbnail}} class=\"ad-box\"/>\n    <div class=\"position-absolute black-desc ad-width py-2\">\n      <div class=\"row pl-1 pr-1 text-white\">\n        <i class=\"col-sm-2 material-icons\">home</i>\n        <div class=\"col-sm-6\">{{ad.title}}</div>\n        <div class=\"col-sm-4 d-flex flex-row justify-content-end\">&#8377; {{ad.price}}</div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"w-100 pl-1 overflow-hidden d-flex align-items-center ellipse\" style=\"height:75px\">{{ad.description}}</div>\n\n  <div class=\"row pl-3 text-secondary\">\n    <i class=\"material-icons pr-3\">phone</i>\n    {{ad.offers}}\n    <i class=\"material-icons px-3\">messages</i>\n    {{ad.comments}}\n  </div>\n\n</div>\n");
 
 /***/ }),
 
@@ -84,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!DOCTYPE html>\r\n\r\n\r\n<div>\r\n\r\n\r\n  <div class=\"content-header d-flex align-items-center\">\r\n    <div class=\"text\">\r\n      <div class=\"lead px-3 pt-3 text-black\">Active Classifieds</div>\r\n      <div class=\"lead px-3 text-secondary\">Here you can explore the Active Ads posted by you.</div>\r\n    </div>\r\n    <div class=\"pt-3 flex-grow-1 d-flex justify-content-end\">\r\n      <button class=\"btn btn-default text-white py-2 bg-color\" routerLink=\"/create\">CREATE AD</button>\r\n    </div>\r\n  </div>\r\n\r\n  <!--\r\n  <div class=\"d-flex flex-row justify-content-center align-items-bottom ml-5 pl-5\">\r\n      <img class=\"img-fluid\" src=\"../../../assets/nothing.png\" />\r\n      </div>\r\n    -->\r\n\r\n  <div class=\"grid ml-5\">\r\n    <div *ngFor=\"let ad of ads\">\r\n      <div class=\"ad m-1\">\r\n        <app-advertisement [ad]=\"ad\"></app-advertisement>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!DOCTYPE html>\r\n\r\n\r\n<div>\r\n\r\n\r\n  <div class=\"content-header d-flex align-items-center\">\r\n    <div class=\"text\">\r\n      <div class=\"lead px-3 pt-3 text-black\">Active Classifieds</div>\r\n      <div class=\"lead px-3 text-secondary\">Here you can explore the Active Ads posted by you.</div>\r\n    </div>\r\n    <div class=\"pt-3 flex-grow-1 d-flex justify-content-end\">\r\n      <button class=\"btn btn-default p-2 text-white py-2 bg-color\" routerLink=\"/create\">CREATE AD</button>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <div class=\"row m-0 ml-3 mt-3\" style=\"height:50px\">\r\n\r\n    <div class=\"col-6 row\">\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100 filter\" data-toggle=\"dropdown\">\r\n          Ad Type\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change()\">Sale</div>\r\n          <div class=\"dropdown-item\" (click)=\"change()\">Rent</div>\r\n          <div class=\"dropdown-item\" (click)=\"change()\">Required</div>\r\n\r\n        </div>\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          Category\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change()\">Vehicle</div>\r\n          <div class=\"dropdown-item\" (click)=\"change()\">Electronics</div>\r\n          <div class=\"dropdown-item\" (click)=\"change()\">Property</div>\r\n\r\n        </div>\r\n\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          Posted\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change()\">Last Week</div>\r\n          <div class=\"dropdown-item\" (click)=\"change()\">Last Month</div>\r\n          <div class=\"dropdown-item\" (click)=\"change()\">Last Year</div>\r\n\r\n        </div>\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          Location\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change()\">Madhapur</div>\r\n          <div class=\"dropdown-item\" (click)=\"change()\">Gachibowli</div>\r\n          <div class=\"dropdown-item\" (click)=\"change()\">Kukatpally</div>\r\n\r\n        </div>\r\n\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-6 row\">\r\n\r\n      <div class=\"col-6 p-0\">\r\n\r\n        <input type=\"text\" class=\"form-control p-2  h-100\" placeholder=\"Search\" />\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 d-flex align-items-center justify-content-center\">\r\n\r\n        <button class=\"btn btn-default bg-white border border-black h-100 w-100 d-flex align-items-center justify-content-center\">\r\n          <i class=\"material-icons\">refresh</i>\r\n          Reset\r\n        </button>\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 d-flex align-items-center justify-content-center bg-white border border-black\">\r\n\r\n        <i class=\"material-icons text-color flex-grow-1 d-flex justify-content-center pointer\"\r\n           id=\"grid\"\r\n           (click)=\"grid()\">grid_on</i>\r\n\r\n        <i class=\"material-icons flex-grow-1 d-flex justify-content-center pointer\"\r\n           id=\"list\"\r\n           (click)=\"list()\">list</i>\r\n\r\n      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n  \r\n  <div *ngIf=\"ads.length==0\" class=\"d-flex flex-row justify-content-center align-items-bottom ml-5 pl-5\">\r\n      <img class=\"img-fluid\" src=\"../../../assets/nothing.png\" />\r\n      </div>\r\n   \r\n  <div *ngIf=\"ads.length!=0\">\r\n\r\n    <div class=\"grid ml-3 mt-3\" *ngIf=\"!view\">\r\n      <div *ngFor=\"let ad of ads\">\r\n        <div class=\"ad m-1\">\r\n          <app-advertisement [ad]=\"ad\"></app-advertisement>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n      <div *ngIf=\"view\">\r\n        <div *ngFor=\"let ad of ads\">\r\n          <app-ad-list [ad]=\"ad\"></app-ad-list>\r\n        </div>\r\n      </div>\r\n\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -391,6 +404,53 @@ function __importStar(mod) {
 function __importDefault(mod) {
     return (mod && mod.__esModule) ? mod : { default: mod };
 }
+
+
+/***/ }),
+
+/***/ "./src/app/AdList/ad-list.component.css":
+/*!**********************************************!*\
+  !*** ./src/app/AdList/ad-list.component.css ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0FkTGlzdC9hZC1saXN0LmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/AdList/ad-list.component.ts":
+/*!*********************************************!*\
+  !*** ./src/app/AdList/ad-list.component.ts ***!
+  \*********************************************/
+/*! exports provided: AdListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdListComponent", function() { return AdListComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let AdListComponent = class AdListComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], AdListComponent.prototype, "ad", void 0);
+AdListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-ad-list',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./ad-list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/AdList/ad-list.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./ad-list.component.css */ "./src/app/AdList/ad-list.component.css")).default]
+    })
+], AdListComponent);
+
 
 
 /***/ }),
@@ -841,6 +901,24 @@ let ActiveComponent = class ActiveComponent {
         this.service.getClassifieds().subscribe((res) => {
             this.ads = res;
         });
+        this.view = false;
+    }
+    list() {
+        var list = document.getElementById("list");
+        var grid = document.getElementById("grid");
+        grid.className = grid.className.replace("text-color", " ");
+        list.className = list.className + " text-color";
+        this.view = true;
+    }
+    grid() {
+        var list = document.getElementById("list");
+        var grid = document.getElementById("grid");
+        list.className = list.className.replace("text-color", " ");
+        grid.className = grid.className + " text-color";
+        this.view = false;
+    }
+    change() {
+        var dropdown = document.getElementsByClassName("filter");
     }
 };
 ActiveComponent.ctorParameters = () => [
@@ -1005,8 +1083,8 @@ let CreateComponent = class CreateComponent {
                 this.formData.title = this.adData.value.title;
                 this.formData.description = this.adData.value.description;
                 this.formData.offers = 0;
-                this.formData.comments = "";
-                this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.description + "/200/300";
+                this.formData.comments = "0";
+                this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.description + "/300/400";
                 this.service.postClassifieds(this.formData);
                 console.log(this.formData);
                 this.formData = new _AdModel__WEBPACK_IMPORTED_MODULE_3__["Ad"]();
@@ -1268,7 +1346,7 @@ SliderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!****************************************!*\
   !*** ./src/app/MyClassifieds/index.ts ***!
   \****************************************/
-/*! exports provided: ActiveComponent, HistoryComponent, CreateComponent, HomeComponent */
+/*! exports provided: HistoryComponent, CreateComponent, HomeComponent, ActiveComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1354,9 +1432,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ */ "./src/app/MyClassifieds/index.ts");
 /* harmony import */ var _myclassified_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./myclassified-routing.module */ "./src/app/MyClassifieds/myclassified-routing.module.ts");
 /* harmony import */ var _Advertisement_advertisement_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Advertisement/advertisement.component */ "./src/app/Advertisement/advertisement.component.ts");
-/* harmony import */ var _Slider_slider_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Slider/slider.component */ "./src/app/MyClassifieds/Slider/slider.component.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _AppService__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./AppService */ "./src/app/MyClassifieds/AppService.ts");
+/* harmony import */ var _AdList_ad_list_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../AdList/ad-list.component */ "./src/app/AdList/ad-list.component.ts");
+/* harmony import */ var _Slider_slider_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Slider/slider.component */ "./src/app/MyClassifieds/Slider/slider.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _AppService__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./AppService */ "./src/app/MyClassifieds/AppService.ts");
+
 
 
 
@@ -1371,9 +1451,9 @@ let MyClassifiedsModule = class MyClassifiedsModule {
 };
 MyClassifiedsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [___WEBPACK_IMPORTED_MODULE_4__["ActiveComponent"], ___WEBPACK_IMPORTED_MODULE_4__["HistoryComponent"], ___WEBPACK_IMPORTED_MODULE_4__["CreateComponent"], ___WEBPACK_IMPORTED_MODULE_4__["HomeComponent"], _Slider_slider_component__WEBPACK_IMPORTED_MODULE_7__["SliderComponent"], _Advertisement_advertisement_component__WEBPACK_IMPORTED_MODULE_6__["Advertisement"]],
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _myclassified_routing_module__WEBPACK_IMPORTED_MODULE_5__["MyCLassifiedRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]],
-        providers: [_AppService__WEBPACK_IMPORTED_MODULE_9__["AppService"]],
+        declarations: [___WEBPACK_IMPORTED_MODULE_4__["ActiveComponent"], ___WEBPACK_IMPORTED_MODULE_4__["HistoryComponent"], ___WEBPACK_IMPORTED_MODULE_4__["CreateComponent"], ___WEBPACK_IMPORTED_MODULE_4__["HomeComponent"], _Slider_slider_component__WEBPACK_IMPORTED_MODULE_8__["SliderComponent"], _Advertisement_advertisement_component__WEBPACK_IMPORTED_MODULE_6__["Advertisement"], _AdList_ad_list_component__WEBPACK_IMPORTED_MODULE_7__["AdListComponent"]],
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _myclassified_routing_module__WEBPACK_IMPORTED_MODULE_5__["MyCLassifiedRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]],
+        providers: [_AppService__WEBPACK_IMPORTED_MODULE_10__["AppService"]],
         bootstrap: [___WEBPACK_IMPORTED_MODULE_4__["ActiveComponent"]]
     })
 ], MyClassifiedsModule);

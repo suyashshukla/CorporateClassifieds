@@ -107,3 +107,16 @@ C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\Corpor
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.dll
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.pdb
 C:\Users\suyash.s\source\repos\Classifieds\CorporateClassifieds\obj\Debug\CorporateClassifieds.csprojAssemblyReference.cache
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AppLibrary.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AppLibrary.pdb
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AppLibrary.dll.config
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\SimpleInjector.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\SimpleInjector.Integration.WebApi.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\WebActivator.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\SimpleInjector.xml
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\SimpleInjector.Integration.WebApi.xml
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AppCore.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AppData.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AppCore.pdb
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AppData.pdb
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AppData.dll.config
