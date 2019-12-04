@@ -1,20 +1,148 @@
 <!DOCTYPE html>
 
 
-  <div>
+<div>
+
+
   <div class="content-header d-flex align-items-center">
     <div class="text">
       <div class="lead px-3 pt-3 text-black">Active Classifieds</div>
       <div class="lead px-3 text-secondary">Here you can explore the Active Ads posted by you.</div>
     </div>
     <div class="pt-3 flex-grow-1 d-flex justify-content-end">
-      <button class="btn btn-default text-white py-2 bg-color" routerLink = "/create">CREATE AD</button>
+      <button class="btn btn-default p-2 text-white py-2 bg-color" routerLink="/create">CREATE AD</button>
     </div>
+  </div>
+
+
+  <div class="row m-0 ml-3 mt-3" style="height:50px">
+
+    <div class="col-6 row">
+      <div class="col-3 p-0 dropdown">
+
+        <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100 filter" data-toggle="dropdown">
+          Ad Type
+          <i class="text-secondary material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
+        </button>
+
+        <div class="dropdown-menu">
+
+          <div class="dropdown-item" (click)="change()">Sale</div>
+          <div class="dropdown-item" (click)="change()">Rent</div>
+          <div class="dropdown-item" (click)="change()">Required</div>
+
+        </div>
+
+      </div>
+
+      <div class="col-3 p-0 dropdown">
+
+        <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100" data-toggle="dropdown">
+          Category
+          <i class="text-secondary material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
+        </button>
+
+        <div class="dropdown-menu">
+
+          <div class="dropdown-item" (click)="change()">Vehicle</div>
+          <div class="dropdown-item" (click)="change()">Electronics</div>
+          <div class="dropdown-item" (click)="change()">Property</div>
+
+        </div>
+
+
+      </div>
+
+      <div class="col-3 p-0 dropdown">
+
+        <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100" data-toggle="dropdown">
+          Posted
+          <i class="text-secondary material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
+        </button>
+
+        <div class="dropdown-menu">
+
+          <div class="dropdown-item" (click)="change()">Last Week</div>
+          <div class="dropdown-item" (click)="change()">Last Month</div>
+          <div class="dropdown-item" (click)="change()">Last Year</div>
+
+        </div>
+
+      </div>
+
+      <div class="col-3 p-0 dropdown">
+
+        <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100" data-toggle="dropdown">
+          Location
+          <i class="text-secondary material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
+        </button>
+
+        <div class="dropdown-menu">
+
+          <div class="dropdown-item" (click)="change()">Madhapur</div>
+          <div class="dropdown-item" (click)="change()">Gachibowli</div>
+          <div class="dropdown-item" (click)="change()">Kukatpally</div>
+
+        </div>
+
+      </div>
+
     </div>
 
-  <div class="d-flex flex-row justify-content-center align-items-bottom ml-5 pl-5">
-    
-      <img class="img-fluid" src="../../../assets/nothing.png" />
-   
+    <div class="col-6 row">
+
+      <div class="col-6 p-0">
+
+        <input type="text" class="form-control p-2  h-100" placeholder="Search" />
+
       </div>
+
+      <div class="col-3 p-0 d-flex align-items-center justify-content-center">
+
+        <button class="btn btn-default bg-white border border-black h-100 w-100 d-flex align-items-center justify-content-center">
+          <i class="material-icons">refresh</i>
+          Reset
+        </button>
+
+      </div>
+
+      <div class="col-3 p-0 d-flex align-items-center justify-content-center bg-white border border-black">
+
+        <i class="material-icons text-color flex-grow-1 d-flex justify-content-center pointer"
+           id="grid"
+           (click)="grid()">grid_on</i>
+
+        <i class="material-icons flex-grow-1 d-flex justify-content-center pointer"
+           id="list"
+           (click)="list()">list</i>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  
+  <div *ngIf="ads.length==0" class="d-flex flex-row justify-content-center align-items-bottom ml-5 pl-5">
+      <img class="img-fluid" src="../../../assets/nothing.png" />
+      </div>
+   
+  <div *ngIf="ads.length!=0">
+
+    <div class="grid ml-3 mt-3" *ngIf="!view">
+      <div *ngFor="let ad of ads">
+        <div class="ad m-1">
+          <app-advertisement [ad]="ad"></app-advertisement>
+        </div>
+      </div>
+    </div>
+
+      <div *ngIf="view">
+        <div *ngFor="let ad of ads">
+          <app-ad-list [ad]="ad"></app-ad-list>
+        </div>
+      </div>
+
+  </div>
 </div>

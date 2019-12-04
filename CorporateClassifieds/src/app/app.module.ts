@@ -10,6 +10,7 @@ import { AdminModule } from './Admin/admin.module';
 import { InboxModule } from './Inbox/inbox.module';
 import { ClassifiedsModule } from './Classifieds/classifieds.module';
 import { LoginComponent } from './login/login.component';
+import { AppService } from './MyClassifieds/AppService';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { LoginComponent } from './login/login.component';
     InboxModule,
     ClassifiedsModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

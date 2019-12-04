@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule} from '@angular/common';
+import { HttpClientModule } from '@angular/common/http'
 import { ActiveComponent, HistoryComponent, CreateComponent, HomeComponent} from './';
 import { MyCLassifiedRoutingModule } from './myclassified-routing.module';
+import { Advertisement } from '../Advertisement/advertisement.component';
+import { AdListComponent } from '../AdList/ad-list.component';
 import { SliderComponent } from './Slider/slider.component';
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { AppService } from './AppService';
 
 @NgModule({
-  declarations: [ActiveComponent, HistoryComponent, CreateComponent, HomeComponent, SliderComponent],
-  imports: [CommonModule, MyCLassifiedRoutingModule, ReactiveFormsModule],
+  declarations: [ActiveComponent, HistoryComponent, CreateComponent, HomeComponent, SliderComponent, Advertisement, AdListComponent],
+  imports: [CommonModule, MyCLassifiedRoutingModule, ReactiveFormsModule, FormsModule, HttpClientModule],
+  providers: [AppService],
   bootstrap: [ActiveComponent]
 })
 

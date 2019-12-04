@@ -46,23 +46,23 @@
 
             <div class="col-sm-4 px-1">
               <label for="price">Price</label>
-              <div class="input-group d-flex">
+              <div class="input-group d-flex" [formGroup]="adData">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">&#8377;</span>
                 </div>
-                <input type="text" class="border flex-grow-1 pl-1" aria-describedby="basic-addon1" formControlName = "price" />
+                <input type="text" class="border flex-grow-1 pl-1" aria-describedby="basic-addon1" formControlName="price" />
               </div>
             </div>
 
           </div>
         </form>
 
-        <div class="line-two py-2">
+        <div class="line-two py-2" [formGroup]="adData">
           <label for="title">Ad Title</label>
           <input type="text" class="form-control w-100" formControlName = "title"/>
         </div>
 
-        <div class="line-three py-2 mb-3">
+        <div class="line-three py-2 mb-3" [formGroup]="adData">
           <label for="description">Description</label>
           <textarea class="form-control w-100" rows="3" formControlName = "description">Provide Item Details</textarea>
         </div>
@@ -112,14 +112,14 @@
         <div class="mt-2">
           <label for="expiry">Ad Expires in</label>
           <div class="input-group">
-            <input type="text" class="form-control" aria-describedby="basic-addon2" />
+            <input type="text" class="form-control" aria-describedby="basic-addon2" [(ngModel)]="formData.validity" />
             <span class="input-group-append"><span class="input-group-text" id="basic-addon2">days</span></span>
           </div>
         </div>
 
         <div class="d-flex justify-content-end mt-5">
           <button class="btn btn-secondary text-white ml-2">CANCEL</button>
-          <button class="btn btn-default bg-color text-white ml-2">POST AD</button>
+          <button class="btn btn-default bg-color text-white ml-2" (click)="submitData()">POST AD</button>
         </div>
 
       </div>

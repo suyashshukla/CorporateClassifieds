@@ -1,0 +1,6 @@
+C:\Users\suyash.s\Source\Repos\Classifieds\AppCore\bin\Debug\AppCore.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\AppCore\bin\Debug\AppCore.pdb
+C:\Users\suyash.s\Source\Repos\Classifieds\AppCore\obj\Debug\AppCore.csprojAssemblyReference.cache
+C:\Users\suyash.s\Source\Repos\Classifieds\AppCore\obj\Debug\AppCore.csproj.CoreCompileInputs.cache
+C:\Users\suyash.s\Source\Repos\Classifieds\AppCore\obj\Debug\AppCore.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\AppCore\obj\Debug\AppCore.pdb
