@@ -11,12 +11,12 @@
       
         <form class="form-group labels d-flex flex-column" [formGroup]="adData">
 
-          <div class="line-one d-flex flex-grow-2 py-2 row">
+          <div class="line-one d-flex flex-grow-2 py-2 m-0 row">
             <div class="col-sm-4 px-1">
               <label for="type">Type</label>
 
               <div class="dropdown">
-                <button class="btn btn-default d-flex w-100 text-left border border-dark type-button"
+                <button class="btn btn-default d-flex w-100 text-left border border-gray type-button"
                         id="dropdownTypebutton" data-toggle="dropdown">
                   {{formData.type}}
                   <i class="material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
@@ -31,16 +31,23 @@
             </div>
 
             <div class="col-sm-4 px-1">
-              <label for="category">Category</label> <div class="dropdown">
-                <button class="btn btn-default d-flex w-100 text-left border border-dark" id="dropdownTypebutton" data-toggle="dropdown">
+              <label for="category">Category</label>
+              <div class="dropdown">
+                <button class="btn btn-default d-flex w-100 text-left border border-gray" id="dropdownTypebutton" data-toggle="dropdown">
                  {{formData.category}}
                   <i class="material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
                 </button>
                 <div class="dropdown-menu w-100">
-                  <div class="dropdown-item"(click)="typeChange(3)">Vehicle</div>
-                  <div class="dropdown-item"(click)="typeChange(4)">Property</div>
-                  <div class="dropdown-item"(click)="typeChange(5)">Electronics</div>
-                </div>
+
+                  <div *ngFor="let cat of category">
+                    <div class="dropdown-item d-flex" (click)="dropChange(cat)">
+                      <i class="material-icons text-secondary mr-2 d-flex align-items-center">
+                        {{cat.icon}}
+                      </i>
+                      {{cat.name}}
+                    </div>
+                  </div>              
+              </div>
               </div>
             </div>
 
@@ -50,7 +57,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">&#8377;</span>
                 </div>
-                <input type="text" class="border flex-grow-1 pl-1" aria-describedby="basic-addon1" formControlName="price" />
+                <input type="text" class="border flex-grow-1 pl-1 border border-gray" aria-describedby="basic-addon1" formControlName="price" />
               </div>
             </div>
 
@@ -59,12 +66,12 @@
 
         <div class="line-two py-2" [formGroup]="adData">
           <label for="title">Ad Title</label>
-          <input type="text" class="form-control w-100" formControlName = "title"/>
+          <input type="text" class="form-control w-100 border border-gray" formControlName = "title"/>
         </div>
 
         <div class="line-three py-2 mb-3" [formGroup]="adData">
           <label for="description">Description</label>
-          <textarea class="form-control w-100" rows="3" formControlName = "description">Provide Item Details</textarea>
+          <textarea class="form-control w-100 border border-gray" rows="3" formControlName = "description">Provide Item Details</textarea>
         </div>
         </div>
 
@@ -80,7 +87,7 @@
         <h5>Publishing Details</h5>
 
         <div class="d-flex align-items-center mt-2">
-          <img class="rounded-circle mr-2" src="https://static.diverseui.com/male-32.jpg" height="36" width="36" />
+          <img class="rounded-circle mr-2" src="https://raw.githubusercontent.com/suyashshukla/Sherlock/master/Angular/Formal.jpg" height="36" width="36" />
           Random User
         </div>
 

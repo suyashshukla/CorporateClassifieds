@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Ad } from "../AdModel";
+import { ViewModel } from "../Models/ViewModel";
 import { AppService } from "../AppService";
+import { CategoryModel } from '../Models/CategoryModel';
 
 @Component({
   selector: 'app-create',
@@ -21,7 +22,8 @@ export class CreateComponent implements OnInit {
     description: new FormControl('Description for the Classified')
   });
 
-  formData = new Ad();
+  formData = new ViewModel();
+  category : CategoryModel[];
  
   typeChange(id) {
 
@@ -34,6 +36,12 @@ export class CreateComponent implements OnInit {
 
   }
 
+  dropChange(category: CategoryModel) {
+
+    this.formData.category = category.name;
+
+  }
+
   submitData() {
 
     var date = new Date();
@@ -43,7 +51,7 @@ export class CreateComponent implements OnInit {
       (date.getDate() < 10 ? "0" + date.getDate() : date.getDate());
 
 
-    this.service.getClassifieds().subscribe((res:Ad[]) => {
+    this.service.getClassifieds().subscribe((res:ViewModel[]) => {
       //this.formData.Id = date.getTime().toString();
       this.formData.Id = res.length.toString();
 
@@ -62,7 +70,7 @@ export class CreateComponent implements OnInit {
 
         console.log(this.formData);
 
-        this.formData = new Ad();
+        this.formData = new ViewModel();
 
         this.adData.reset();
     })
@@ -74,6 +82,14 @@ export class CreateComponent implements OnInit {
   }
   
   ngOnInit() {
+
+    this.service.getCategories().subscribe((res: CategoryModel[]) => {
+
+      this.category = res;
+
+    });
+
+
   }
 
 }

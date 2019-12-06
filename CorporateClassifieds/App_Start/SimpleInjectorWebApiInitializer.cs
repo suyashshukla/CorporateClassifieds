@@ -7,6 +7,12 @@ namespace CorporateClassifieds.App_Start
     using SimpleInjector.Integration.WebApi;
     using SimpleInjector.Lifestyles;
   using AppLibrary.DI;
+  using AppLibrary.DataLayer;
+  using AppLibrary;
+  using AutoMapper;
+  using classifieds;
+  using AppCore;
+  using DataModel;
 
   public static class SimpleInjectorWebApiInitializer
     {
@@ -29,7 +35,19 @@ namespace CorporateClassifieds.App_Start
         private static void InitializeContainer(Container container)
         {
 
-            container.Register<IDataAccess, DataAccess>(Lifestyle.Scoped);
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<DataModel, CoreModel>()
+            .ForMember(destination => destination.expiry,
+            map => map.MapFrom(
+              source => DataTransformation.getExpiry(source.timestamp.ToString(), int.Parse(source.validity.ToString())))
+            )
+            .ForMember(destination=>destination.timestamp,
+            map => map.MapFrom(
+              source => DataTransformation.getDate(source.timestamp.ToString()))
+            ));
+
+            container.Register<IDataAccess, DataAccess>();
+            container.Register<ICategoryAccess, CategoryAccess>();
+            container.Register<IMapper>(()=>new Mapper(config));
         }
     }
 }

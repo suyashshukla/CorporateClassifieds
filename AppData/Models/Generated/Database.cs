@@ -27,7 +27,7 @@
 //     Connection String Name: `classifieds`
 //     Provider:               `System.Data.SqlClient`
 //     Connection String:      `Data Source=(LocalDB)\MSSQLLocalDB;
-        // AttachDbFilename=C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\App_Data\corporate.mdf;`
+         //AttachDbFilename=C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\App_Data\corporate.mdf;`
 //     Schema:                 ``
 //     Include Views:          `False`
 
@@ -147,7 +147,7 @@ namespace classifieds
 
 	[ExplicitColumns]
 
-    public partial class advertisement : classifiedsDB.Record<advertisement>  
+    public partial class DataModel : classifiedsDB.Record<DataModel>  
     {
 
 
@@ -225,6 +225,40 @@ namespace classifieds
 
 
 		[Column] public string thumbnail { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.category")]
+
+
+
+	[PrimaryKey("Id", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class CategoryModel : classifiedsDB.Record<CategoryModel>  
+    {
+
+
+
+		[Column] public int Id { get; set; }
+
+
+
+
+
+		[Column] public string name { get; set; }
+
+
+
+
+
+		[Column] public string icon { get; set; }
 
 
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../AppService';
-import { Ad } from '../AdModel';
+import { ViewModel } from '../Models/ViewModel';
+import { CategoryModel } from "../Models/CategoryModel";
 
 @Component(
   {
@@ -12,21 +13,37 @@ import { Ad } from '../AdModel';
 
 export class ActiveComponent implements OnInit {
 
-  ads: Ad[];
+  ads: ViewModel[];
+  universal: ViewModel[];
+  category: CategoryModel[];
+  dropdata;
   view;
-
-
-
+   
   constructor(private service: AppService) {}
 
   ngOnInit() {
 
-    this.service.getClassifieds().subscribe((res:Ad[])=> {
+
+    this.service.getCategories().subscribe((res: CategoryModel[]) => {
+
+      this.category = res;
+
+    });
+
+    this.service.getClassifieds().subscribe((res: ViewModel[]) => {
       this.ads = res;
+      this.universal = res;
     });
 
     this.view = false;
-    
+
+    this.dropdata = {
+      type: 'Ad Type',
+      category: 'Category',
+      location: 'Location',
+      posted: 'Posted'
+    }
+
   }
 
   list() {
@@ -52,8 +69,41 @@ export class ActiveComponent implements OnInit {
 
   }
 
-  change() {
-    var dropdown = document.getElementsByClassName("filter");
+  change(id) {
+    var dropdown = document.getElementsByClassName("dropdown-item");
+
+    var query = dropdown[id].innerHTML;
+
+    if (id < 3) {
+      this.dropdata.type = query;
+      this.ads = this.universal.filter((ad) => ad.type == query);
+    }
+    
+    else if (id >= 6 && id < 9) {
+      this.dropdata.posted = query;
+    }
+    else
+      this.dropdata.location =query;
+  }
+
+  reset() {
+    this.dropdata = {
+      type: 'Ad Type',
+      category: 'Category',
+      location: 'Location',
+      posted: 'Posted'
+    }
+
+    this.ads = this.universal;
+  }
+
+
+  dropChange(category: CategoryModel) {
+
+    this.dropdata.category = category.name;
+
+    this.ads = this.universal.filter((ad) => ad.category == category.Id.toString());
+
   }
 
 
