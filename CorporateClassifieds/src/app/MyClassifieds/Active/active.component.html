@@ -15,21 +15,21 @@
   </div>
 
 
-  <div class="row m-0 ml-3 mt-3" style="height:50px">
+  <div class="row m-0 ml-2 mt-3" style="height:50px">
 
     <div class="col-6 row">
       <div class="col-3 p-0 dropdown">
 
-        <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100 filter" data-toggle="dropdown">
-          Ad Type
+        <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100" data-toggle="dropdown">
+          {{dropdata.type}}
           <i class="text-secondary material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
         </button>
 
         <div class="dropdown-menu">
 
-          <div class="dropdown-item" (click)="change()">Sale</div>
-          <div class="dropdown-item" (click)="change()">Rent</div>
-          <div class="dropdown-item" (click)="change()">Required</div>
+          <div class="dropdown-item" (click)="change(0)">Sale</div>
+          <div class="dropdown-item" (click)="change(1)">Rent</div>
+          <div class="dropdown-item" (click)="change(2)">Required</div>
 
         </div>
 
@@ -38,16 +38,20 @@
       <div class="col-3 p-0 dropdown">
 
         <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100" data-toggle="dropdown">
-          Category
+          {{dropdata.category}}
           <i class="text-secondary material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
         </button>
 
-        <div class="dropdown-menu">
+        <div class="dropdown-menu w-100">
 
-          <div class="dropdown-item" (click)="change()">Vehicle</div>
-          <div class="dropdown-item" (click)="change()">Electronics</div>
-          <div class="dropdown-item" (click)="change()">Property</div>
-
+          <div *ngFor="let cat of category">
+            <div class="dropdown-item d-flex" (click)="dropChange(cat)">
+              <i class="material-icons text-secondary mr-2 d-flex align-items-center">
+                {{cat.icon}}
+              </i>
+              {{cat.name}}
+            </div>
+          </div>
         </div>
 
 
@@ -56,15 +60,15 @@
       <div class="col-3 p-0 dropdown">
 
         <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100" data-toggle="dropdown">
-          Posted
+          {{dropdata.posted}}
           <i class="text-secondary material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
         </button>
 
         <div class="dropdown-menu">
 
-          <div class="dropdown-item" (click)="change()">Last Week</div>
-          <div class="dropdown-item" (click)="change()">Last Month</div>
-          <div class="dropdown-item" (click)="change()">Last Year</div>
+          <div class="dropdown-item" (click)="change(6)">Last Week</div>
+          <div class="dropdown-item" (click)="change(7)">Last Month</div>
+          <div class="dropdown-item" (click)="change(8)">Last Year</div>
 
         </div>
 
@@ -73,15 +77,15 @@
       <div class="col-3 p-0 dropdown">
 
         <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100" data-toggle="dropdown">
-          Location
+          {{dropdata.location}}
           <i class="text-secondary material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
         </button>
 
         <div class="dropdown-menu">
 
-          <div class="dropdown-item" (click)="change()">Madhapur</div>
-          <div class="dropdown-item" (click)="change()">Gachibowli</div>
-          <div class="dropdown-item" (click)="change()">Kukatpally</div>
+          <div class="dropdown-item" (click)="change(9)">Madhapur</div>
+          <div class="dropdown-item" (click)="change(10)">Gachibowli</div>
+          <div class="dropdown-item" (click)="change(11)">Kukatpally</div>
 
         </div>
 
@@ -99,7 +103,7 @@
 
       <div class="col-3 p-0 d-flex align-items-center justify-content-center">
 
-        <button class="btn btn-default bg-white border border-black h-100 w-100 d-flex align-items-center justify-content-center">
+        <button class="btn btn-default bg-white border border-black h-100 w-100 d-flex align-items-center justify-content-center" (click)="reset()">
           <i class="material-icons">refresh</i>
           Reset
         </button>
@@ -130,15 +134,25 @@
    
   <div *ngIf="ads.length!=0">
 
-    <div class="grid ml-3 mt-3" *ngIf="!view">
+    <div class="row ml-2 mt-3" *ngIf="!view">
       <div *ngFor="let ad of ads">
-        <div class="ad m-1">
+        <div class="col-4 p-0 m-1">
           <app-advertisement [ad]="ad"></app-advertisement>
         </div>
       </div>
     </div>
 
       <div *ngIf="view">
+        <div class="row p-2 m-2 border border-black bg-light">
+
+          <div class="col-4">ITEM DETAILS</div>
+          <div class="col-1">PRICE</div>
+          <div class="col-2">POSTED BY</div>
+          <div class="col-2">EXPIRY</div>
+          <div class="col-1">OFFERS</div>
+          <div class="col-1">COMMENTS</div>
+
+        </div>
         <div *ngFor="let ad of ads">
           <app-ad-list [ad]="ad"></app-ad-list>
         </div>

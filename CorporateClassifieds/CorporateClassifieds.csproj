@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="SimpleInjector, Version=4.8.1.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.4.8.1\lib\net45\SimpleInjector.dll</HintPath>
@@ -551,7 +554,8 @@
     <Content Include="website\vendor.js" />
     <TypeScriptCompile Include="src\app\AdList\ad-list.component.ts" />
     <TypeScriptCompile Include="src\app\Advertisement\advertisement.component.ts" />
-    <TypeScriptCompile Include="src\app\MyClassifieds\AdModel.ts" />
+    <TypeScriptCompile Include="src\app\MyClassifieds\Models\CategoryModel.ts" />
+    <TypeScriptCompile Include="src\app\MyClassifieds\Models\ViewModel.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\AppService.ts" />
     <Content Include="src\app\MyClassifieds\Create\create.component.css" />
     <Content Include="src\app\MyClassifieds\Create\create.component.html" />
@@ -570,6 +574,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SimpleInjectorWebApiInitializer.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ClassifiedsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">

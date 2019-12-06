@@ -120,3 +120,6 @@ C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AppData.dll
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AppCore.pdb
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AppData.pdb
 C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AppData.dll.config
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AutoMapper.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AutoMapper.pdb
+C:\Users\suyash.s\Source\Repos\Classifieds\CorporateClassifieds\bin\AutoMapper.xml

@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import {HttpClient} from "@angular/common/http"
-import { Ad } from './AdModel';
+import { ViewModel } from './Models/ViewModel';
+import { CategoryModel } from './Models/CategoryModel';
 
 
 @Injectable({
@@ -17,11 +18,19 @@ export class AppService {
     return this.http.get("/api/classifieds");
   }
 
-  postClassifieds(classified: Ad) {
+  postClassifieds(classified: ViewModel) {
     this.http.post("/api/classifieds", classified).subscribe(
-      (res: Ad) => {
+      (res: ViewModel) => {
         console.log(res);
       })
+  }
+
+  getCategories() {
+    return this.http.get("./api/category");
+  }
+
+  getCategory(id){
+    return this.http.get<CategoryModel>("./api/category/"+id);
   }
 
   getUsers() {

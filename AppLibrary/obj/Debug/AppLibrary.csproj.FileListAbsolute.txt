@@ -23,3 +23,6 @@ C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AppData.dll
 C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AppCore.pdb
 C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AppData.pdb
 C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AppData.dll.config
+C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AutoMapper.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AutoMapper.pdb
+C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AutoMapper.xml

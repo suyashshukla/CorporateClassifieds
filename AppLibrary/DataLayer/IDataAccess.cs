@@ -1,4 +1,5 @@
-﻿using classifieds;
+﻿using AppCore;
+using classifieds;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +11,15 @@ namespace AppLibrary.DI
     public interface IDataAccess
     {
 
-        IEnumerable<advertisement> get();
+        IEnumerable<CoreModel> get();
 
-        advertisement get(int id);
+        CoreModel get(int id);
 
         int delete(int id);
 
-        int insert(advertisement ad);
+        int insert(classifieds.DataModel ad);
+
+        int update(classifieds.DataModel ad);
 
 
     }

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Ad } from '../MyClassifieds/AdModel';
+import { ViewModel } from '../MyClassifieds/Models/ViewModel';
+import { AppService } from '../MyClassifieds/AppService';
+import { CategoryModel } from '../MyClassifieds/Models/CategoryModel';
 
 @Component({
   selector: 'app-advertisement',
@@ -8,14 +10,17 @@ import { Ad } from '../MyClassifieds/AdModel';
 })
 export class Advertisement implements OnInit {
 
-  @Input() ad: Ad;
+  @Input() ad: ViewModel;
+  category: CategoryModel;
 
-  constructor() { }
+  constructor(
+    private service: AppService
+  ) { }
 
   ngOnInit() {
-
-    
-
+    this.service.getCategory(+this.ad.category).subscribe((res) => {
+      this.category = res;
+    });
   }
-
 }
+

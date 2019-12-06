@@ -4,11 +4,11 @@
   <div class="navbar-nav d-flex flex-row">
 
     <span class="d-flex flex-column align-items-center" routerLink="/active">
-      <span class="nav-item px-3 active">ACTIVE</span>
+      <span class="nav-item px-3 active" (click)="active(0)">ACTIVE</span>
       <span class="triangle"></span>
     </span>
 
-    <span class="d-flex flex-column align-items-center" routerLink="/history">
+    <span class="d-flex flex-column align-items-center" (click)="active(1)" routerLink="/history">
       <span class="nav-item px-3">HISTORY</span>
       <span class="triangle d-none"></span>
     </span>

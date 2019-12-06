@@ -1,10 +1,10 @@
-export class Ad {
+export class ViewModel {
   public Id: string;
   public title: string;
   public type: string;
   public category: string;
   public description: string;
-  public validity: number;
+  public expiry: string;
   public price: number;
   public thumbnail: string;
   public timestamp: string;

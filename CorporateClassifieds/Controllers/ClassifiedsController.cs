@@ -1,3 +1,4 @@
+using AppCore;
 using AppLibrary;
 using AppLibrary.DI;
 using classifieds;
@@ -20,17 +21,17 @@ namespace CorporateClassifieds.Controllers
       this.dataAccess = dataAccess;
     }
 
-    public IHttpActionResult Post(advertisement ad)
+    public IHttpActionResult Post(classifieds.DataModel ad)
     {
       return Ok(dataAccess.insert(ad));
     }
 
-    public IEnumerable<advertisement> Get()
+    public IEnumerable<CoreModel> Get()
     {
       return dataAccess.get(); 
     }
 
-    public advertisement Get(int id)
+    public CoreModel Get(int id)
     {
       return dataAccess.get(id); 
     }
@@ -38,7 +39,11 @@ namespace CorporateClassifieds.Controllers
     public int Delete(int id)
     {
       return dataAccess.delete(id);
-    
+    }
+
+    public int Put(classifieds.DataModel ad)
+    {
+      return dataAccess.update(ad);
     }
 
   }

@@ -1,28 +1,28 @@
-<div class="card d-flex flex-column ad-width overflow-hidden">
+<div class="card d-flex m-0 flex-column ad-width overflow-hidden">
 
-  <div class="row ad-width pl-1 py-1">
+  <div class="row m-0 ad-width px-1 py-2">
     <span class="col-sm-2 "><img class="rounded-circle fit" src={{ad.userpic}} style="height:24px;width:24px"></span>
     <span class="col-sm-6"> {{ad.username}}</span>
-    <span class="col-sm-4 text-secondary d-flex align-items-end"> {{ad.timestamp}}</span>
+    <span class="col-sm-4 text-secondary d-flex justify-content-end"> {{ad.timestamp}}</span>
   </div>
 
   <div class="position-relative">
     <img src={{ad.thumbnail}} class="ad-box"/>
-    <div class="position-absolute black-desc ad-width py-2">
+    <div class="position-absolute black-desc ad-width py-2 px-2">
       <div class="row pl-1 pr-1 text-white">
-        <i class="col-sm-2 material-icons">home</i>
+        <i class="col-sm-2 material-icons">{{category.icon}}</i>
         <div class="col-sm-6">{{ad.title}}</div>
         <div class="col-sm-4 d-flex flex-row justify-content-end">&#8377; {{ad.price}}</div>
       </div>
     </div>
   </div>
 
-  <div class="w-100 pl-1 overflow-hidden d-flex align-items-center ellipse" style="height:75px">{{ad.description}}</div>
+  <div class="w-100 px-2 overflow-hidden d-flex text-justify" style="height:75px">{{ad.description}}</div>
 
-  <div class="row pl-3 text-secondary">
-    <i class="material-icons pr-3">phone</i>
+  <div class="row m-0 px-2 py-2 text-secondary">
+    <i class="material-icons pr-3">local_offer</i>
     {{ad.offers}}
-    <i class="material-icons px-3">messages</i>
+    <div class="material-icons icon-size mx-3">comments</div>
     {{ad.comments}}
   </div>
 
