@@ -11,7 +11,6 @@ import { CategoryModel } from '../Models/CategoryModel';
 })
 export class CreateComponent implements OnInit {
 
-
   constructor(
     private service: AppService
   ) { }
@@ -30,15 +29,15 @@ export class CreateComponent implements OnInit {
     var button = document.getElementsByClassName("dropdown-item")[id];
 
     if (id < 3)
-      this.formData.type = button.innerHTML;
+      this.formData.details.type = button.innerHTML;
     else
-      this.formData.category = button.innerHTML;
+      this.formData.details.category = button.innerHTML;
 
   }
 
   dropChange(category: CategoryModel) {
 
-    this.formData.category = category.name;
+    this.formData.details.category = category.Id+"";
 
   }
 
@@ -46,47 +45,43 @@ export class CreateComponent implements OnInit {
 
     var date = new Date();
 
-    this.formData.timestamp = date.getFullYear() + "" +
+    var timestamp = date.getFullYear() + "" +
       (date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth()) + "" +
       (date.getDate() < 10 ? "0" + date.getDate() : date.getDate());
+    
+    this.formData.timeinfo.date = this.service.getDate(timestamp);
+    this.formData.timeinfo.expiry = this.service.getExpiry(timestamp, this.formData.timeinfo.validity);
+     
+       
+    this.service.getClassifieds().subscribe((res: ViewModel[]) => {
 
-
-    this.service.getClassifieds().subscribe((res:ViewModel[]) => {
-      //this.formData.Id = date.getTime().toString();
       this.formData.Id = res.length.toString();
 
       this.service.getUsers().subscribe((res) => {
-        this.formData.username = res["results"][0]["name"]["first"];
-        this.formData.userpic = res["results"][0]["picture"]["thumbnail"];
+        this.formData.userdata.name = res["results"][0]["name"]["first"];
+        this.formData.userdata.pic = res["results"][0]["picture"]["thumbnail"];
 
         this.formData.price = this.adData.value.price;
         this.formData.title = this.adData.value.title;
         this.formData.description = this.adData.value.description;
-        this.formData.offers = 0;
-        this.formData.comments = "0";
+        this.formData.details.offers = "0";
+        this.formData.details.comments = "0";
         this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.description+"/300/400";
 
         this.service.postClassifieds(this.formData);
-
+      
         console.log(this.formData);
-
         this.formData = new ViewModel();
 
         this.adData.reset();
+
     })
-
-      
-    });
-
-    
+    });    
   }
   
   ngOnInit() {
-
     this.service.getCategories().subscribe((res: CategoryModel[]) => {
-
       this.category = res;
-
     });
 
 

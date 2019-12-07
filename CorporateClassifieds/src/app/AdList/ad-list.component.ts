@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AppService } from '../MyClassifieds/AppService';
 import { CategoryModel } from '../MyClassifieds/Models/CategoryModel';
+import { ViewModel } from '../MyClassifieds/Models/ViewModel';
 
 @Component({
   selector: 'app-ad-list',
@@ -9,14 +10,14 @@ import { CategoryModel } from '../MyClassifieds/Models/CategoryModel';
 })
 export class AdListComponent implements OnInit {
 
-  @Input() ad;
-  category: CategoryModel;
+  @Input() ad: ViewModel;
+  category = new CategoryModel();
 
   constructor(
   private service : AppService) { }
 
   ngOnInit() {
-    this.service.getCategory(+this.ad.category).subscribe((res) => {
+    this.service.getCategory(Number(this.ad.details.category)).subscribe((res) => {
       this.category = res;
     });
   }

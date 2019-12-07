@@ -19,22 +19,22 @@ namespace CorporateClassifieds.Controllers
       this.category = category;
     }
 
-    public IEnumerable<CategoryModel> Get()
+    public IEnumerable<category> Get()
     {
       return category.get();
     }
 
-    public CategoryModel Get(int id)
+    public category Get(int id)
     {
       return category.get(id);
     }
 
-    public int Post(CategoryModel model)
+    public int Post(category model)
     {
       return category.insert(model);
     }
 
-    public int Put(CategoryModel model)
+    public int Put(category model)
     {
       return category.update(model);
     }

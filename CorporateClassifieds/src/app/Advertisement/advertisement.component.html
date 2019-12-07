@@ -1,9 +1,9 @@
 <div class="card d-flex m-0 flex-column ad-width overflow-hidden">
 
   <div class="row m-0 ad-width px-1 py-2">
-    <span class="col-sm-2 "><img class="rounded-circle fit" src={{ad.userpic}} style="height:24px;width:24px"></span>
-    <span class="col-sm-6"> {{ad.username}}</span>
-    <span class="col-sm-4 text-secondary d-flex justify-content-end"> {{ad.timestamp}}</span>
+    <span class="col-sm-2 "><img class="rounded-circle fit" src={{ad.userdata.pic}} style="height:24px;width:24px"></span>
+    <span class="col-sm-6"> {{ad.userdata.name}}</span>
+    <span class="col-sm-4 text-secondary d-flex justify-content-end"> {{ad.timeinfo.date}}</span>
   </div>
 
   <div class="position-relative">
@@ -21,9 +21,9 @@
 
   <div class="row m-0 px-2 py-2 text-secondary">
     <i class="material-icons pr-3">local_offer</i>
-    {{ad.offers}}
+    {{ad.details.offers}}
     <div class="material-icons icon-size mx-3">comments</div>
-    {{ad.comments}}
+    {{ad.details.comments}}
   </div>
 
 </div>

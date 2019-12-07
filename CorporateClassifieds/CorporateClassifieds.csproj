@@ -49,6 +49,9 @@
       <HintPath>..\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="SimpleInjector, Version=4.8.1.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.4.8.1\lib\net45\SimpleInjector.dll</HintPath>
     </Reference>
@@ -97,9 +100,6 @@
     </Reference>
     <Reference Include="System.Web.Mvc">
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Formatting">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -554,7 +554,10 @@
     <Content Include="website\vendor.js" />
     <TypeScriptCompile Include="src\app\AdList\ad-list.component.ts" />
     <TypeScriptCompile Include="src\app\Advertisement\advertisement.component.ts" />
+    <TypeScriptCompile Include="src\app\MyClassifieds\Models\AdDetails.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Models\CategoryModel.ts" />
+    <TypeScriptCompile Include="src\app\MyClassifieds\Models\TimeInfo.ts" />
+    <TypeScriptCompile Include="src\app\MyClassifieds\Models\UserInfo.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Models\ViewModel.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\AppService.ts" />
     <Content Include="src\app\MyClassifieds\Create\create.component.css" />
@@ -668,17 +671,17 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppCore\AppCore.csproj">
+    <ProjectReference Include="..\AppCore\AppViewModel.csproj">
       <Project>{b5568299-2002-4b08-845c-398524d676fd}</Project>
-      <Name>AppCore</Name>
+      <Name>AppViewModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AppData\AppData.csproj">
+    <ProjectReference Include="..\AppData\AppDataModel.csproj">
       <Project>{429a670c-4d49-4d38-9bb8-2177304b7738}</Project>
-      <Name>AppData</Name>
+      <Name>AppDataModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AppLibrary\AppLibrary.csproj">
+    <ProjectReference Include="..\AppLibrary\AppServices.csproj">
       <Project>{4298D632-B25E-4B2D-91E6-E8EE678486E3}</Project>
-      <Name>AppLibrary</Name>
+      <Name>AppServices</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

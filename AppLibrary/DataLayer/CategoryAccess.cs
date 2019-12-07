@@ -13,29 +13,27 @@ namespace AppLibrary.DataLayer
 
         Database database;
 
-
         public CategoryAccess()
         {
             database = new Database("classifieds");
         }
 
-
-        public IEnumerable<CategoryModel> get()
+        public IEnumerable<category> get()
         {
-            return database.Query<CategoryModel>("SELECT * FROM category");
+            return database.Query<category>("SELECT * FROM category");
         }
 
-        public CategoryModel get(int id)
+        public category get(int id)
         {
-            return database.Single<CategoryModel>("SELECT * FROM category WHERE id=" + id);
+            return database.Single<category>("SELECT * FROM category WHERE id=" + id);
         }
 
-        public int insert(CategoryModel category)
+        public int insert(category category)
         {
             return database.Insert(category)==null?0:1;
         }
 
-        public int update(CategoryModel category)
+        public int update(category category)
         {
             return database.Update(category);
         }

@@ -147,7 +147,7 @@ namespace classifieds
 
 	[ExplicitColumns]
 
-    public partial class DataModel : classifiedsDB.Record<DataModel>  
+    public partial class advertisement : classifiedsDB.Record<advertisement>  
     {
 
 
@@ -241,7 +241,7 @@ namespace classifieds
 
 	[ExplicitColumns]
 
-    public partial class CategoryModel : classifiedsDB.Record<CategoryModel>  
+    public partial class category : classifiedsDB.Record<category>  
     {
 
 
@@ -259,6 +259,70 @@ namespace classifieds
 
 
 		[Column] public string icon { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.classifieds")]
+
+
+
+	[PrimaryKey("Id", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class classified : classifiedsDB.Record<classified>  
+    {
+
+
+
+		[Column] public int Id { get; set; }
+
+
+
+
+
+		[Column] public string title { get; set; }
+
+
+
+
+
+		[Column] public string description { get; set; }
+
+
+
+
+
+		[Column] public int? price { get; set; }
+
+
+
+
+
+		[Column] public string thumbnail { get; set; }
+
+
+
+
+
+		[Column] public string userdata { get; set; }
+
+
+
+
+
+		[Column] public string details { get; set; }
+
+
+
+
+
+		[Column] public string timeinfo { get; set; }
 
 
 

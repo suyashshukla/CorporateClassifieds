@@ -1,15 +1,15 @@
+
+import { TimeInfo } from "./TimeInfo";
+import { AdDetails } from './AdDetails';
+import { UserInfo } from './UserInfo';
+
 export class ViewModel {
   public Id: string;
   public title: string;
-  public type: string;
-  public category: string;
   public description: string;
-  public expiry: string;
   public price: number;
   public thumbnail: string;
-  public timestamp: string;
-  public username: string;
-  public userpic: string;
-  public offers: number;
-  public comments: string;
+  public timeinfo= new TimeInfo();
+  public details = new AdDetails();
+  public userdata = new UserInfo();
 }

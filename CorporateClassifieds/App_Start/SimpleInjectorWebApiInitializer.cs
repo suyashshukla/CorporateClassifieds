@@ -2,52 +2,73 @@
 
 namespace CorporateClassifieds.App_Start
 {
-    using System.Web.Http;
-    using SimpleInjector;
-    using SimpleInjector.Integration.WebApi;
-    using SimpleInjector.Lifestyles;
-  using AppLibrary.DI;
-  using AppLibrary.DataLayer;
   using AppLibrary;
+  using AppLibrary.DataLayer;
+  using AppLibrary.DI;
   using AutoMapper;
   using classifieds;
-  using AppCore;
-  using DataModel;
+  using CoreModel;
+  using Newtonsoft.Json;
+  using SimpleInjector;
+  using SimpleInjector.Integration.WebApi;
+  using SimpleInjector.Lifestyles;
+  using System.Web.Http;
 
   public static class SimpleInjectorWebApiInitializer
+  {
+
+    /// <summary>Initialize the container and register it as Web API Dependency Resolver.</summary>
+    public static void Initialize()
     {
-        /// <summary>Initialize the container and register it as Web API Dependency Resolver.</summary>
-        public static void Initialize()
-        {
-            var container = new Container();
-            container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
-            
-            InitializeContainer(container);
+      Container container = new Container();
+      container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
 
-            container.RegisterWebApiControllers(GlobalConfiguration.Configuration);
-       
-            container.Verify();
-            
-            GlobalConfiguration.Configuration.DependencyResolver =
-                new SimpleInjectorWebApiDependencyResolver(container);
-        }
-     
-        private static void InitializeContainer(Container container)
-        {
+      InitializeContainer(container);
 
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<DataModel, CoreModel>()
-            .ForMember(destination => destination.expiry,
-            map => map.MapFrom(
-              source => DataTransformation.getExpiry(source.timestamp.ToString(), int.Parse(source.validity.ToString())))
-            )
-            .ForMember(destination=>destination.timestamp,
-            map => map.MapFrom(
-              source => DataTransformation.getDate(source.timestamp.ToString()))
-            ));
+      container.RegisterWebApiControllers(GlobalConfiguration.Configuration);
 
-            container.Register<IDataAccess, DataAccess>();
-            container.Register<ICategoryAccess, CategoryAccess>();
-            container.Register<IMapper>(()=>new Mapper(config));
-        }
+      container.Verify();
+
+      GlobalConfiguration.Configuration.DependencyResolver =
+          new SimpleInjectorWebApiDependencyResolver(container);
     }
+
+    private static void InitializeContainer(Container container)
+    {
+
+      MapperConfiguration config = new MapperConfiguration(cfg => cfg.AddProfile<MappingProfile>());
+            
+
+
+      container.Register<IDataAccess, DataAccess>();
+      container.Register<ICategoryAccess, CategoryAccess>();
+      container.Register<IMapper>(() => new Mapper(config));
+    }
+  }
+
+  public class MappingProfile : Profile
+  {
+    public MappingProfile()
+    {
+      CreateMap<advertisement, CoreAd>();
+
+      CreateMap<Advertisement, classified>()
+        .ForMember(destination => destination.userdata,
+        map => map.MapFrom(source => DataTransformation.toUserJson(source.userdata)))
+        .ForMember(destination => destination.details,
+        map => map.MapFrom(source => DataTransformation.toDetailsJson(source.details)))
+        .ForMember(destination => destination.timeinfo,
+        map => map.MapFrom(source => DataTransformation.toTimeJson(source.timeinfo)));
+
+      CreateMap<classified, Advertisement>()
+        .ForMember(destination => destination.timeinfo,
+        map => map.MapFrom(source => JsonConvert.DeserializeObject<Time>(source.userdata)))
+        .ForMember(destination => destination.details,
+        map => map.MapFrom(source => JsonConvert.DeserializeObject<AdDetails>(source.details)))
+        .ForMember(destination => destination.userdata,
+        map => map.MapFrom(source => JsonConvert.DeserializeObject<User>(source.userdata)));
+   
+
+    }
+  }
 }

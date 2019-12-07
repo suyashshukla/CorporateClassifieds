@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div class=\"card m-2\">\r\n  <div class=\"row m-1 p-1 overflow-hidden\">\r\n\r\n    <div class=\"col-1 d-flex align-items-center \">\r\n\r\n      <img src={{ad.thumbnail}} class=\"fit thumbnail\">\r\n\r\n    </div>\r\n\r\n    <div class=\"col-3 d-flex flex-column\">\r\n\r\n      <div class=\"d-flex\">\r\n        <i class=\"material-icons pr-2 d-flex align-items-center text-secondary\">{{category.icon}}</i>\r\n        {{ad.title}}\r\n      </div>\r\n      <span class=\"text-secondary\">\r\n        {{ad.description}}\r\n      </span>\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      &#8377; {{ad.price}}\r\n    </div>\r\n\r\n    <div class=\"col-2\">\r\n      {{ad.username}}\r\n      <br />\r\n      <div class=\"text-secondary pt-1\">{{ad.timestamp}}</div>\r\n    </div>\r\n\r\n    <div class=\"col-2\">\r\n      {{ad.expiry}}\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      {{ad.offers}}\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      {{ad.comments}}\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div class=\"card m-2\">\r\n  <div class=\"row m-1 p-1 overflow-hidden\">\r\n\r\n    <div class=\"col-1 d-flex align-items-center \">\r\n\r\n      <img src={{ad.thumbnail}} class=\"fit thumbnail\">\r\n\r\n    </div>\r\n\r\n    <div class=\"col-3 d-flex flex-column\">\r\n\r\n      <div class=\"d-flex\">\r\n        <i class=\"material-icons pr-2 d-flex align-items-center text-secondary\">{{category.icon}}</i>\r\n        {{ad.title}}\r\n      </div>\r\n      <span class=\"text-secondary\">\r\n        {{ad.description}}\r\n      </span>\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      &#8377; {{ad.price}}\r\n    </div>\r\n\r\n    <div class=\"col-2\">\r\n      {{ad.userdata.name}}\r\n      <br />\r\n      <div class=\"text-secondary pt-1\">{{ad.timeinfo.date}}</div>\r\n    </div>\r\n\r\n    <div class=\"col-2\">\r\n      {{ad.timeinfo.expiry}}\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      {{ad.details.offers}}\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      {{ad.details.comments}}\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card d-flex m-0 flex-column ad-width overflow-hidden\">\n\n  <div class=\"row m-0 ad-width px-1 py-2\">\n    <span class=\"col-sm-2 \"><img class=\"rounded-circle fit\" src={{ad.userpic}} style=\"height:24px;width:24px\"></span>\n    <span class=\"col-sm-6\"> {{ad.username}}</span>\n    <span class=\"col-sm-4 text-secondary d-flex justify-content-end\"> {{ad.timestamp}}</span>\n  </div>\n\n  <div class=\"position-relative\">\n    <img src={{ad.thumbnail}} class=\"ad-box\"/>\n    <div class=\"position-absolute black-desc ad-width py-2 px-2\">\n      <div class=\"row pl-1 pr-1 text-white\">\n        <i class=\"col-sm-2 material-icons\">{{category.icon}}</i>\n        <div class=\"col-sm-6\">{{ad.title}}</div>\n        <div class=\"col-sm-4 d-flex flex-row justify-content-end\">&#8377; {{ad.price}}</div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"w-100 px-2 overflow-hidden d-flex text-justify\" style=\"height:75px\">{{ad.description}}</div>\n\n  <div class=\"row m-0 px-2 py-2 text-secondary\">\n    <i class=\"material-icons pr-3\">local_offer</i>\n    {{ad.offers}}\n    <div class=\"material-icons icon-size mx-3\">comments</div>\n    {{ad.comments}}\n  </div>\n\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card d-flex m-0 flex-column ad-width overflow-hidden\">\n\n  <div class=\"row m-0 ad-width px-1 py-2\">\n    <span class=\"col-sm-2 \"><img class=\"rounded-circle fit\" src={{ad.userdata.pic}} style=\"height:24px;width:24px\"></span>\n    <span class=\"col-sm-6\"> {{ad.userdata.name}}</span>\n    <span class=\"col-sm-4 text-secondary d-flex justify-content-end\"> {{ad.timeinfo.date}}</span>\n  </div>\n\n  <div class=\"position-relative\">\n    <img src={{ad.thumbnail}} class=\"ad-box\"/>\n    <div class=\"position-absolute black-desc ad-width py-2 px-2\">\n      <div class=\"row pl-1 pr-1 text-white\">\n        <i class=\"col-sm-2 material-icons\">{{category.icon}}</i>\n        <div class=\"col-sm-6\">{{ad.title}}</div>\n        <div class=\"col-sm-4 d-flex flex-row justify-content-end\">&#8377; {{ad.price}}</div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"w-100 px-2 overflow-hidden d-flex text-justify\" style=\"height:75px\">{{ad.description}}</div>\n\n  <div class=\"row m-0 px-2 py-2 text-secondary\">\n    <i class=\"material-icons pr-3\">local_offer</i>\n    {{ad.details.offers}}\n    <div class=\"material-icons icon-size mx-3\">comments</div>\n    {{ad.details.comments}}\n  </div>\n\n</div>\n");
 
 /***/ }),
 
@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!DOCTYPE html>\r\n\r\n\r\n<div>\r\n\r\n\r\n  <div class=\"content-header d-flex align-items-center\">\r\n    <div class=\"text\">\r\n      <div class=\"lead px-3 pt-3 text-black\">Active Classifieds</div>\r\n      <div class=\"lead px-3 text-secondary\">Here you can explore the Active Ads posted by you.</div>\r\n    </div>\r\n    <div class=\"pt-3 flex-grow-1 d-flex justify-content-end\">\r\n      <button class=\"btn btn-default p-2 text-white py-2 bg-color\" routerLink=\"/create\">CREATE AD</button>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <div class=\"row m-0 ml-2 mt-3\" style=\"height:50px\">\r\n\r\n    <div class=\"col-6 row\">\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          {{dropdata.type}}\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change(0)\">Sale</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(1)\">Rent</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(2)\">Required</div>\r\n\r\n        </div>\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          {{dropdata.category}}\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu w-100\">\r\n\r\n          <div *ngFor=\"let cat of category\">\r\n            <div class=\"dropdown-item d-flex\" (click)=\"dropChange(cat)\">\r\n              <i class=\"material-icons text-secondary mr-2 d-flex align-items-center\">\r\n                {{cat.icon}}\r\n              </i>\r\n              {{cat.name}}\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          {{dropdata.posted}}\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change(6)\">Last Week</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(7)\">Last Month</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(8)\">Last Year</div>\r\n\r\n        </div>\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          {{dropdata.location}}\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change(9)\">Madhapur</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(10)\">Gachibowli</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(11)\">Kukatpally</div>\r\n\r\n        </div>\r\n\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-6 row\">\r\n\r\n      <div class=\"col-6 p-0\">\r\n\r\n        <input type=\"text\" class=\"form-control p-2  h-100\" placeholder=\"Search\" />\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 d-flex align-items-center justify-content-center\">\r\n\r\n        <button class=\"btn btn-default bg-white border border-black h-100 w-100 d-flex align-items-center justify-content-center\" (click)=\"reset()\">\r\n          <i class=\"material-icons\">refresh</i>\r\n          Reset\r\n        </button>\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 d-flex align-items-center justify-content-center bg-white border border-black\">\r\n\r\n        <i class=\"material-icons text-color flex-grow-1 d-flex justify-content-center pointer\"\r\n           id=\"grid\"\r\n           (click)=\"grid()\">grid_on</i>\r\n\r\n        <i class=\"material-icons flex-grow-1 d-flex justify-content-center pointer\"\r\n           id=\"list\"\r\n           (click)=\"list()\">list</i>\r\n\r\n      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n  \r\n  <div *ngIf=\"ads.length==0\" class=\"d-flex flex-row justify-content-center align-items-bottom ml-5 pl-5\">\r\n      <img class=\"img-fluid\" src=\"../../../assets/nothing.png\" />\r\n      </div>\r\n   \r\n  <div *ngIf=\"ads.length!=0\">\r\n\r\n    <div class=\"row ml-2 mt-3\" *ngIf=\"!view\">\r\n      <div *ngFor=\"let ad of ads\">\r\n        <div class=\"col-4 p-0 m-1\">\r\n          <app-advertisement [ad]=\"ad\"></app-advertisement>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n      <div *ngIf=\"view\">\r\n        <div class=\"row p-2 m-2 border border-black bg-light\">\r\n\r\n          <div class=\"col-4\">ITEM DETAILS</div>\r\n          <div class=\"col-1\">PRICE</div>\r\n          <div class=\"col-2\">POSTED BY</div>\r\n          <div class=\"col-2\">EXPIRY</div>\r\n          <div class=\"col-1\">OFFERS</div>\r\n          <div class=\"col-1\">COMMENTS</div>\r\n\r\n        </div>\r\n        <div *ngFor=\"let ad of ads\">\r\n          <app-ad-list [ad]=\"ad\"></app-ad-list>\r\n        </div>\r\n      </div>\r\n\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!DOCTYPE html>\r\n\r\n\r\n<div>\r\n\r\n\r\n  <div class=\"content-header d-flex align-items-center\">\r\n    <div class=\"text\">\r\n      <div class=\"lead px-3 pt-3 text-black\">Active Classifieds</div>\r\n      <div class=\"lead px-3 text-secondary\">Here you can explore the Active Ads posted by you.</div>\r\n    </div>\r\n    <div class=\"pt-3 flex-grow-1 d-flex justify-content-end\">\r\n      <button class=\"btn btn-default p-2 text-white py-2 bg-color\" routerLink=\"/create\">CREATE AD</button>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <div class=\"row m-0 ml-2 mt-3\" style=\"height:50px\">\r\n\r\n    <div class=\"col-6 row\">\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          {{dropdata.type}}\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change(0)\">Sale</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(1)\">Rent</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(2)\">Required</div>\r\n\r\n        </div>\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          {{dropdata.category}}\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu w-100\">\r\n\r\n          <div *ngFor=\"let cat of category\">\r\n            <div class=\"dropdown-item d-flex\" (click)=\"dropChange(cat)\">\r\n              <i class=\"material-icons text-secondary mr-2 d-flex align-items-center\">\r\n                {{cat.icon}}\r\n              </i>\r\n              {{cat.name}}\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          {{dropdata.posted}}\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change(6)\">Last Week</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(7)\">Last Month</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(8)\">Last Year</div>\r\n\r\n        </div>\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          {{dropdata.location}}\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change(9)\">Madhapur</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(10)\">Gachibowli</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(11)\">Kukatpally</div>\r\n\r\n        </div>\r\n\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-6 row\">\r\n\r\n      <div class=\"col-6 p-0\">\r\n\r\n        <input type=\"text\" class=\"form-control p-2  h-100\" placeholder=\"Search\" />\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 d-flex align-items-center justify-content-center\">\r\n\r\n        <button class=\"btn btn-default bg-white border border-black h-100 w-100 d-flex align-items-center justify-content-center\" (click)=\"reset()\">\r\n          <i class=\"material-icons\">refresh</i>\r\n          Reset\r\n        </button>\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 d-flex align-items-center justify-content-center bg-white border border-black\">\r\n\r\n        <i class=\"material-icons text-color flex-grow-1 d-flex justify-content-center pointer\"\r\n           id=\"grid\"\r\n           (click)=\"grid()\">grid_on</i>\r\n\r\n        <i class=\"material-icons flex-grow-1 d-flex justify-content-center pointer\"\r\n           id=\"list\"\r\n           (click)=\"list()\">list</i>\r\n\r\n      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n  \r\n  <div *ngIf=\"ads.length==0\" class=\"position-absolute ml-5 pl-5 d-flex justify-content-center\" style=\"bottom : 0\">\r\n      <img class=\"img-fluid\" src=\"../../../assets/nothing.png\" />\r\n  </div>\r\n   \r\n  <div *ngIf=\"ads.length!=0\">\r\n\r\n    <div class=\"row ml-2 mt-3\" *ngIf=\"!view\">\r\n      <div *ngFor=\"let ad of ads\">\r\n        <div class=\"col-4 p-0 m-1\">\r\n          <app-advertisement [ad]=\"ad\"></app-advertisement>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n      <div *ngIf=\"view\">\r\n        <div class=\"row p-2 m-2 border border-black bg-light\">\r\n\r\n          <div class=\"col-4\">ITEM DETAILS</div>\r\n          <div class=\"col-1\">PRICE</div>\r\n          <div class=\"col-2\">POSTED BY</div>\r\n          <div class=\"col-2\">EXPIRY</div>\r\n          <div class=\"col-1\">OFFERS</div>\r\n          <div class=\"col-1\">COMMENTS</div>\r\n\r\n        </div>\r\n        <div *ngFor=\"let ad of ads\">\r\n          <app-ad-list [ad]=\"ad\"></app-ad-list>\r\n        </div>\r\n      </div>\r\n\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid pt-3\">\r\n\r\n  <button class=\"btn btn-default bg-transparent text-color\" routerLink=\"/me/classifieds\"><i class=\"material-icons align-bottom\">arrow_back</i>&nbsp;Back to List</button>\r\n  \r\n  <div class=\"row mt-3 ml-3\">\r\n\r\n    <div class=\"col-sm-8 d-flex flex-column\">\r\n\r\n      <div class=\"card flex-grow-1 px-3 pt-3\">\r\n        <h5 class=\"text-dark\">Item Details</h5>\r\n      \r\n        <form class=\"form-group labels d-flex flex-column\" [formGroup]=\"adData\">\r\n\r\n          <div class=\"line-one d-flex flex-grow-2 py-2 m-0 row\">\r\n            <div class=\"col-sm-4 px-1\">\r\n              <label for=\"type\">Type</label>\r\n\r\n              <div class=\"dropdown\">\r\n                <button class=\"btn btn-default d-flex w-100 text-left border border-gray type-button\"\r\n                        id=\"dropdownTypebutton\" data-toggle=\"dropdown\">\r\n                  {{formData.type}}\r\n                  <i class=\"material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n                </button>\r\n\r\n                <div class=\"dropdown-menu w-100\">\r\n                  <div class=\"dropdown-item\" (click)=\"typeChange(0)\">Sale</div>\r\n                  <div class=\"dropdown-item\" (click)=\"typeChange(1)\">Rent</div>\r\n                  <div class=\"dropdown-item\" (click)=\"typeChange(2)\">Required</div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"col-sm-4 px-1\">\r\n              <label for=\"category\">Category</label>\r\n              <div class=\"dropdown\">\r\n                <button class=\"btn btn-default d-flex w-100 text-left border border-gray\" id=\"dropdownTypebutton\" data-toggle=\"dropdown\">\r\n                 {{formData.category}}\r\n                  <i class=\"material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n                </button>\r\n                <div class=\"dropdown-menu w-100\">\r\n\r\n                  <div *ngFor=\"let cat of category\">\r\n                    <div class=\"dropdown-item d-flex\" (click)=\"dropChange(cat)\">\r\n                      <i class=\"material-icons text-secondary mr-2 d-flex align-items-center\">\r\n                        {{cat.icon}}\r\n                      </i>\r\n                      {{cat.name}}\r\n                    </div>\r\n                  </div>              \r\n              </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"col-sm-4 px-1\">\r\n              <label for=\"price\">Price</label>\r\n              <div class=\"input-group d-flex\" [formGroup]=\"adData\">\r\n                <div class=\"input-group-prepend\">\r\n                  <span class=\"input-group-text\" id=\"basic-addon1\">&#8377;</span>\r\n                </div>\r\n                <input type=\"text\" class=\"border flex-grow-1 pl-1 border border-gray\" aria-describedby=\"basic-addon1\" formControlName=\"price\" />\r\n              </div>\r\n            </div>\r\n\r\n          </div>\r\n        </form>\r\n\r\n        <div class=\"line-two py-2\" [formGroup]=\"adData\">\r\n          <label for=\"title\">Ad Title</label>\r\n          <input type=\"text\" class=\"form-control w-100 border border-gray\" formControlName = \"title\"/>\r\n        </div>\r\n\r\n        <div class=\"line-three py-2 mb-3\" [formGroup]=\"adData\">\r\n          <label for=\"description\">Description</label>\r\n          <textarea class=\"form-control w-100 border border-gray\" rows=\"3\" formControlName = \"description\">Provide Item Details</textarea>\r\n        </div>\r\n        </div>\r\n\r\n\r\n      <app-slider></app-slider>\r\n\r\n\r\n    </div>\r\n\r\n\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"card mx-3 p-3 font-normal\">\r\n        <h5>Publishing Details</h5>\r\n\r\n        <div class=\"d-flex align-items-center mt-2\">\r\n          <img class=\"rounded-circle mr-2\" src=\"https://raw.githubusercontent.com/suyashshukla/Sherlock/master/Angular/Formal.jpg\" height=\"36\" width=\"36\" />\r\n          Random User\r\n        </div>\r\n\r\n        <div class=\"d-flex mt-2\">\r\n          <div class=\"flex-grow-1 d-flex align-items-center\">\r\n            <i class=\"material-icons text-secondary mr-2 ml-1\">beenhere</i>\r\n            <span>Hyderabad Corp Office</span>\r\n          </div>\r\n          <div class=\"flex-grow-1 d-flex align-items-center\">\r\n            <i class=\"material-icons text-secondary mr-2 ml-1\">email</i>\r\n            <span>random.user@corp.com</span>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"d-flex mt-2\">\r\n\r\n          <div class=\"flex-grow-1 d-flex align-items-center\">\r\n            <i class=\"material-icons text-secondary mr-2 ml-1\">phone</i>\r\n            <span>9856321459</span>\r\n          </div>\r\n\r\n          <div class=\"form-check flex-grow-1\">\r\n            <input class=\"form-check-input ml-2\" type=\"checkbox\" id=\"contact-info-check\" />\r\n            <label class=\"form-check-label pl-4\" for=\"contact-info-check\">Show Contact Info</label>\r\n          </div>\r\n\r\n        </div>\r\n\r\n        <div class=\"mt-2\">\r\n          <label for=\"expiry\">Ad Expires in</label>\r\n          <div class=\"input-group\">\r\n            <input type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon2\" [(ngModel)]=\"formData.validity\" />\r\n            <span class=\"input-group-append\"><span class=\"input-group-text\" id=\"basic-addon2\">days</span></span>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"d-flex justify-content-end mt-5\">\r\n          <button class=\"btn btn-secondary text-white ml-2\">CANCEL</button>\r\n          <button class=\"btn btn-default bg-color text-white ml-2\" (click)=\"submitData()\">POST AD</button>\r\n        </div>\r\n\r\n      </div>\r\n\r\n      </div>\r\n\r\n\r\n  </div>\r\n\r\n\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid pt-3\">\r\n\r\n  <button class=\"btn btn-default bg-transparent text-color\" routerLink=\"/me/classifieds\"><i class=\"material-icons align-bottom\">arrow_back</i>&nbsp;Back to List</button>\r\n  \r\n  <div class=\"row mt-3 ml-3\">\r\n\r\n    <div class=\"col-sm-8 d-flex flex-column\">\r\n\r\n      <div class=\"card flex-grow-1 px-3 pt-3\">\r\n        <h5 class=\"text-dark\">Item Details</h5>\r\n      \r\n        <form class=\"form-group labels d-flex flex-column\" [formGroup]=\"adData\">\r\n\r\n          <div class=\"line-one d-flex flex-grow-2 py-2 m-0 row\">\r\n            <div class=\"col-sm-4 px-1\">\r\n              <label for=\"type\">Type</label>\r\n\r\n              <div class=\"dropdown\">\r\n                <button class=\"btn btn-default d-flex w-100 text-left border border-gray type-button\"\r\n                        id=\"dropdownTypebutton\" data-toggle=\"dropdown\">\r\n                  {{formData.details.type}}\r\n                  <i class=\"material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n                </button>\r\n\r\n                <div class=\"dropdown-menu w-100\">\r\n                  <div class=\"dropdown-item\" (click)=\"typeChange(0)\">Sale</div>\r\n                  <div class=\"dropdown-item\" (click)=\"typeChange(1)\">Rent</div>\r\n                  <div class=\"dropdown-item\" (click)=\"typeChange(2)\">Required</div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"col-sm-4 px-1\">\r\n              <label for=\"category\">Category</label>\r\n              <div class=\"dropdown\">\r\n                <button class=\"btn btn-default d-flex w-100 text-left border border-gray\" id=\"dropdownTypebutton\" data-toggle=\"dropdown\">\r\n                 {{formData.details.category}}\r\n                  <i class=\"material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n                </button>\r\n                <div class=\"dropdown-menu w-100\">\r\n\r\n                  <div *ngFor=\"let cat of category\">\r\n                    <div class=\"dropdown-item d-flex\" (click)=\"dropChange(cat)\">\r\n                      <i class=\"material-icons text-secondary mr-2 d-flex align-items-center\">\r\n                        {{cat.icon}}\r\n                      </i>\r\n                      {{cat.name}}\r\n                    </div>\r\n                  </div>              \r\n              </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"col-sm-4 px-1\">\r\n              <label for=\"price\">Price</label>\r\n              <div class=\"input-group d-flex\" [formGroup]=\"adData\">\r\n                <div class=\"input-group-prepend\">\r\n                  <span class=\"input-group-text\" id=\"basic-addon1\">&#8377;</span>\r\n                </div>\r\n                <input type=\"text\" class=\"border flex-grow-1 pl-1 border border-gray\" aria-describedby=\"basic-addon1\" formControlName=\"price\" />\r\n              </div>\r\n            </div>\r\n\r\n          </div>\r\n        </form>\r\n\r\n        <div class=\"line-two py-2\" [formGroup]=\"adData\">\r\n          <label for=\"title\">Ad Title</label>\r\n          <input type=\"text\" class=\"form-control w-100 border border-gray\" formControlName = \"title\"/>\r\n        </div>\r\n\r\n        <div class=\"line-three py-2 mb-3\" [formGroup]=\"adData\">\r\n          <label for=\"description\">Description</label>\r\n          <textarea class=\"form-control w-100 border border-gray\" rows=\"3\" formControlName = \"description\">Provide Item Details</textarea>\r\n        </div>\r\n        </div>\r\n\r\n\r\n      <app-slider></app-slider>\r\n\r\n\r\n    </div>\r\n\r\n\r\n    <div class=\"col-sm-4\">\r\n      <div class=\"card mx-3 p-3 font-normal\">\r\n        <h5>Publishing Details</h5>\r\n\r\n        <div class=\"d-flex align-items-center mt-2\">\r\n          <img class=\"rounded-circle mr-2\" src=\"https://raw.githubusercontent.com/suyashshukla/Sherlock/master/Angular/Formal.jpg\" height=\"36\" width=\"36\" />\r\n          Random User\r\n        </div>\r\n\r\n        <div class=\"d-flex mt-2\">\r\n          <div class=\"flex-grow-1 d-flex align-items-center\">\r\n            <i class=\"material-icons text-secondary mr-2 ml-1\">beenhere</i>\r\n            <span>Hyderabad Corp Office</span>\r\n          </div>\r\n          <div class=\"flex-grow-1 d-flex align-items-center\">\r\n            <i class=\"material-icons text-secondary mr-2 ml-1\">email</i>\r\n            <span>random.user@corp.com</span>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"d-flex mt-2\">\r\n\r\n          <div class=\"flex-grow-1 d-flex align-items-center\">\r\n            <i class=\"material-icons text-secondary mr-2 ml-1\">phone</i>\r\n            <span>9856321459</span>\r\n          </div>\r\n\r\n          <div class=\"form-check flex-grow-1\">\r\n            <input class=\"form-check-input ml-2\" type=\"checkbox\" id=\"contact-info-check\" />\r\n            <label class=\"form-check-label pl-4\" for=\"contact-info-check\">Show Contact Info</label>\r\n          </div>\r\n\r\n        </div>\r\n\r\n        <div class=\"mt-2\">\r\n          <label for=\"expiry\">Ad Expires in</label>\r\n          <div class=\"input-group\">\r\n            <input type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon2\" [(ngModel)]=\"formData.timeinfo.validity\" />\r\n            <span class=\"input-group-append\"><span class=\"input-group-text\" id=\"basic-addon2\">days</span></span>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"d-flex justify-content-end mt-5\">\r\n          <button class=\"btn btn-secondary text-white ml-2\">CANCEL</button>\r\n          <button class=\"btn btn-default bg-color text-white ml-2\" (click)=\"submitData()\">POST AD</button>\r\n        </div>\r\n\r\n      </div>\r\n\r\n      </div>\r\n\r\n\r\n  </div>\r\n\r\n\r\n</div>\r\n");
 
 /***/ }),
 
@@ -434,15 +434,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _MyClassifieds_AppService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../MyClassifieds/AppService */ "./src/app/MyClassifieds/AppService.ts");
+/* harmony import */ var _MyClassifieds_Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../MyClassifieds/Models/CategoryModel */ "./src/app/MyClassifieds/Models/CategoryModel.ts");
+
 
 
 
 let AdListComponent = class AdListComponent {
     constructor(service) {
         this.service = service;
+        this.category = new _MyClassifieds_Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__["CategoryModel"]();
     }
     ngOnInit() {
-        this.service.getCategory(+this.ad.category).subscribe((res) => {
+        this.service.getCategory(Number(this.ad.details.category)).subscribe((res) => {
             this.category = res;
         });
     }
@@ -605,15 +608,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _MyClassifieds_AppService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../MyClassifieds/AppService */ "./src/app/MyClassifieds/AppService.ts");
+/* harmony import */ var _MyClassifieds_Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../MyClassifieds/Models/CategoryModel */ "./src/app/MyClassifieds/Models/CategoryModel.ts");
+
 
 
 
 let Advertisement = class Advertisement {
     constructor(service) {
         this.service = service;
+        this.category = new _MyClassifieds_Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__["CategoryModel"]();
     }
     ngOnInit() {
-        this.service.getCategory(+this.ad.category).subscribe((res) => {
+        console.log(this.ad);
+        this.service.getCategory(this.ad.details.category).subscribe((res) => {
             this.category = res;
         });
     }
@@ -910,6 +917,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _AppService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AppService */ "./src/app/MyClassifieds/AppService.ts");
+/* harmony import */ var _Models_ViewModel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Models/ViewModel */ "./src/app/MyClassifieds/Models/ViewModel.ts");
+
 
 
 
@@ -918,6 +927,7 @@ let ActiveComponent = class ActiveComponent {
         this.service = service;
     }
     ngOnInit() {
+        this.ads = [new _Models_ViewModel__WEBPACK_IMPORTED_MODULE_3__["ViewModel"]()];
         this.service.getCategories().subscribe((res) => {
             this.category = res;
         });
@@ -952,7 +962,7 @@ let ActiveComponent = class ActiveComponent {
         var query = dropdown[id].innerHTML;
         if (id < 3) {
             this.dropdata.type = query;
-            this.ads = this.universal.filter((ad) => ad.type == query);
+            this.ads = this.universal.filter((ad) => ad.details.type == query);
         }
         else if (id >= 6 && id < 9) {
             this.dropdata.posted = query;
@@ -971,7 +981,7 @@ let ActiveComponent = class ActiveComponent {
     }
     dropChange(category) {
         this.dropdata.category = category.name;
-        this.ads = this.universal.filter((ad) => ad.category == category.Id.toString());
+        this.ads = this.universal.filter((ad) => ad.details.category == category.Id.toString());
     }
 };
 ActiveComponent.ctorParameters = () => [
@@ -1045,6 +1055,44 @@ let AppService = class AppService {
     getUsers() {
         return this.http.get("https://randomuser.me/api/");
     }
+    getExpiry(timestamp, expiry) {
+        var initial = +timestamp;
+        var increment = expiry;
+        var year = +(timestamp.substring(0, 4));
+        var month = +(timestamp.substring(4, 2));
+        var date = +(timestamp.substring(6, 2));
+        if (date + increment > 30) {
+            date = (date + increment) % 30;
+            if (date == 0)
+                date = 30;
+            increment = increment / 2;
+            if (month + increment > 12) {
+                month = (month + increment) % 12;
+                if (month == 0)
+                    month = 12;
+                increment = increment / 12;
+                if (increment > 0) {
+                    year = year + increment;
+                }
+            }
+            else {
+                month = month + increment;
+            }
+        }
+        else {
+            date = date + increment;
+        }
+        return (this.normalize(date) + "/" + this.normalize(month) + "/" + year);
+    }
+    getDate(timestamp) {
+        var year = timestamp.substring(0, 4);
+        var month = timestamp.substring(4, 2);
+        var date = timestamp.substring(6, 2);
+        return (date + "/" + month + "/" + year);
+    }
+    normalize(num) {
+        return num < 10 ? "0" + num : num + "";
+    }
 };
 AppService.ctorParameters = () => [
     { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
@@ -1105,29 +1153,30 @@ let CreateComponent = class CreateComponent {
     typeChange(id) {
         var button = document.getElementsByClassName("dropdown-item")[id];
         if (id < 3)
-            this.formData.type = button.innerHTML;
+            this.formData.details.type = button.innerHTML;
         else
-            this.formData.category = button.innerHTML;
+            this.formData.details.category = button.innerHTML;
     }
     dropChange(category) {
-        this.formData.category = category.name;
+        this.formData.details.category = category.Id + "";
     }
     submitData() {
         var date = new Date();
-        this.formData.timestamp = date.getFullYear() + "" +
+        var timestamp = date.getFullYear() + "" +
             (date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth()) + "" +
             (date.getDate() < 10 ? "0" + date.getDate() : date.getDate());
+        this.formData.timeinfo.date = this.service.getDate(timestamp);
+        this.formData.timeinfo.expiry = this.service.getExpiry(timestamp, this.formData.timeinfo.validity);
         this.service.getClassifieds().subscribe((res) => {
-            //this.formData.Id = date.getTime().toString();
             this.formData.Id = res.length.toString();
             this.service.getUsers().subscribe((res) => {
-                this.formData.username = res["results"][0]["name"]["first"];
-                this.formData.userpic = res["results"][0]["picture"]["thumbnail"];
+                this.formData.userdata.name = res["results"][0]["name"]["first"];
+                this.formData.userdata.pic = res["results"][0]["picture"]["thumbnail"];
                 this.formData.price = this.adData.value.price;
                 this.formData.title = this.adData.value.title;
                 this.formData.description = this.adData.value.description;
-                this.formData.offers = 0;
-                this.formData.comments = "0";
+                this.formData.details.offers = "0";
+                this.formData.details.comments = "0";
                 this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.description + "/300/400";
                 this.service.postClassifieds(this.formData);
                 console.log(this.formData);
@@ -1310,6 +1359,83 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/app/MyClassifieds/Models/AdDetails.ts":
+/*!***************************************************!*\
+  !*** ./src/app/MyClassifieds/Models/AdDetails.ts ***!
+  \***************************************************/
+/*! exports provided: AdDetails */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdDetails", function() { return AdDetails; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class AdDetails {
+}
+
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/Models/CategoryModel.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/MyClassifieds/Models/CategoryModel.ts ***!
+  \*******************************************************/
+/*! exports provided: CategoryModel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoryModel", function() { return CategoryModel; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class CategoryModel {
+}
+
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/Models/TimeInfo.ts":
+/*!**************************************************!*\
+  !*** ./src/app/MyClassifieds/Models/TimeInfo.ts ***!
+  \**************************************************/
+/*! exports provided: TimeInfo */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimeInfo", function() { return TimeInfo; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class TimeInfo {
+    TimeInfo() {
+        this.date = "";
+        this.validity = 0;
+        this.expiry = "";
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/Models/UserInfo.ts":
+/*!**************************************************!*\
+  !*** ./src/app/MyClassifieds/Models/UserInfo.ts ***!
+  \**************************************************/
+/*! exports provided: UserInfo */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserInfo", function() { return UserInfo; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class UserInfo {
+}
+
+
+/***/ }),
+
 /***/ "./src/app/MyClassifieds/Models/ViewModel.ts":
 /*!***************************************************!*\
   !*** ./src/app/MyClassifieds/Models/ViewModel.ts ***!
@@ -1321,8 +1447,19 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewModel", function() { return ViewModel; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _TimeInfo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TimeInfo */ "./src/app/MyClassifieds/Models/TimeInfo.ts");
+/* harmony import */ var _AdDetails__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AdDetails */ "./src/app/MyClassifieds/Models/AdDetails.ts");
+/* harmony import */ var _UserInfo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./UserInfo */ "./src/app/MyClassifieds/Models/UserInfo.ts");
+
+
+
 
 class ViewModel {
+    constructor() {
+        this.timeinfo = new _TimeInfo__WEBPACK_IMPORTED_MODULE_1__["TimeInfo"]();
+        this.details = new _AdDetails__WEBPACK_IMPORTED_MODULE_2__["AdDetails"]();
+        this.userdata = new _UserInfo__WEBPACK_IMPORTED_MODULE_3__["UserInfo"]();
+    }
 }
 
 
@@ -1423,7 +1560,7 @@ SliderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!****************************************!*\
   !*** ./src/app/MyClassifieds/index.ts ***!
   \****************************************/
-/*! exports provided: ActiveComponent, HistoryComponent, CreateComponent, HomeComponent */
+/*! exports provided: ActiveComponent, HistoryComponent, HomeComponent, CreateComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1584,7 +1721,7 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".navbar {\r\n    background-color: rgba(118, 97, 139, 0.9);\r\n    height:48px;\r\n}\r\n\r\n.navbar-brand img {\r\n    padding: 10px;\r\n}\r\n\r\n.sidebar {\r\n  width : 96px;\r\n  position : fixed;\r\n  height : 100vh;\r\n  background-color: rgb(62, 66, 73);\r\n}\r\n\r\n.content-bar{\r\n  margin-left : 96px;\r\n}\r\n\r\n.menu-list{\r\n  font-size : 12px;\r\n}\r\n\r\n.screen{\r\n  flex:1;\r\n}\r\n\r\n.menu-item {\r\n    font-size: 12px;\r\n    padding : 10px;\r\n    cursor : pointer;\r\n    margin-bottom: 1px;\r\n    color: lightgray;\r\n}\r\n\r\n.menu-item:hover,\r\n.active {\r\n    background-color: rgba(128, 128, 128, 0.25);\r\n    color: white;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx5Q0FBeUM7SUFDekMsV0FBVztBQUNmOztBQUVBO0lBQ0ksYUFBYTtBQUNqQjs7QUFHQTtFQUNFLFlBQVk7RUFDWixnQkFBZ0I7RUFDaEIsY0FBYztFQUNkLGlDQUFpQztBQUNuQzs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFJQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLE1BQU07QUFDUjs7QUFFQTtJQUNJLGVBQWU7SUFDZixjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQixnQkFBZ0I7QUFDcEI7O0FBRUE7O0lBRUksMkNBQTJDO0lBQzNDLFlBQVk7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZiYXIge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgxMTgsIDk3LCAxMzksIDAuOSk7XHJcbiAgICBoZWlnaHQ6NDhweDtcclxufVxyXG5cclxuLm5hdmJhci1icmFuZCBpbWcge1xyXG4gICAgcGFkZGluZzogMTBweDtcclxufVxyXG5cclxuXHJcbi5zaWRlYmFyIHtcclxuICB3aWR0aCA6IDk2cHg7XHJcbiAgcG9zaXRpb24gOiBmaXhlZDtcclxuICBoZWlnaHQgOiAxMDB2aDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoNjIsIDY2LCA3Myk7XHJcbn1cclxuXHJcbi5jb250ZW50LWJhcntcclxuICBtYXJnaW4tbGVmdCA6IDk2cHg7XHJcbn1cclxuXHJcblxyXG5cclxuLm1lbnUtbGlzdHtcclxuICBmb250LXNpemUgOiAxMnB4O1xyXG59XHJcblxyXG4uc2NyZWVue1xyXG4gIGZsZXg6MTtcclxufVxyXG5cclxuLm1lbnUtaXRlbSB7XHJcbiAgICBmb250LXNpemU6IDEycHg7XHJcbiAgICBwYWRkaW5nIDogMTBweDtcclxuICAgIGN1cnNvciA6IHBvaW50ZXI7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxcHg7XHJcbiAgICBjb2xvcjogbGlnaHRncmF5O1xyXG59XHJcblxyXG4ubWVudS1pdGVtOmhvdmVyLFxyXG4uYWN0aXZlIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMTI4LCAxMjgsIDEyOCwgMC4yNSk7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuIl19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".navbar {\r\n    background-color: rgba(118, 97, 139, 0.9);\r\n    height:48px;\r\n}\r\n\r\n.navbar-brand img {\r\n    padding: 10px;\r\n}\r\n\r\n.sidebar {\r\n  width : 96px;\r\n  position : fixed;\r\n  height : 100vh;\r\n  background-color: rgb(62, 66, 73);\r\n}\r\n\r\n.content-bar{\r\n  margin-left : 96px;\r\n}\r\n\r\n.menu-list{\r\n  font-size : 12px;\r\n}\r\n\r\n.screen{\r\n  flex:1;\r\n}\r\n\r\n.menu-item {\r\n    font-size: 12px;\r\n    padding : 10px;\r\n    cursor : pointer;\r\n    margin-bottom: 1px;\r\n    color: lightgray;\r\n}\r\n\r\n.menu-item:hover,\r\n.active {\r\n    background-color: rgba(128, 128, 128, 0.25);\r\n    color: white;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx5Q0FBeUM7SUFDekMsV0FBVztBQUNmOztBQUVBO0lBQ0ksYUFBYTtBQUNqQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixnQkFBZ0I7RUFDaEIsY0FBYztFQUNkLGlDQUFpQztBQUNuQzs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLE1BQU07QUFDUjs7QUFFQTtJQUNJLGVBQWU7SUFDZixjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQixnQkFBZ0I7QUFDcEI7O0FBRUE7O0lBRUksMkNBQTJDO0lBQzNDLFlBQVk7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZiYXIge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgxMTgsIDk3LCAxMzksIDAuOSk7XHJcbiAgICBoZWlnaHQ6NDhweDtcclxufVxyXG5cclxuLm5hdmJhci1icmFuZCBpbWcge1xyXG4gICAgcGFkZGluZzogMTBweDtcclxufVxyXG5cclxuLnNpZGViYXIge1xyXG4gIHdpZHRoIDogOTZweDtcclxuICBwb3NpdGlvbiA6IGZpeGVkO1xyXG4gIGhlaWdodCA6IDEwMHZoO1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYig2MiwgNjYsIDczKTtcclxufVxyXG5cclxuLmNvbnRlbnQtYmFye1xyXG4gIG1hcmdpbi1sZWZ0IDogOTZweDtcclxufVxyXG5cclxuLm1lbnUtbGlzdHtcclxuICBmb250LXNpemUgOiAxMnB4O1xyXG59XHJcblxyXG4uc2NyZWVue1xyXG4gIGZsZXg6MTtcclxufVxyXG5cclxuLm1lbnUtaXRlbSB7XHJcbiAgICBmb250LXNpemU6IDEycHg7XHJcbiAgICBwYWRkaW5nIDogMTBweDtcclxuICAgIGN1cnNvciA6IHBvaW50ZXI7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxcHg7XHJcbiAgICBjb2xvcjogbGlnaHRncmF5O1xyXG59XHJcblxyXG4ubWVudS1pdGVtOmhvdmVyLFxyXG4uYWN0aXZlIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMTI4LCAxMjgsIDEyOCwgMC4yNSk7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 

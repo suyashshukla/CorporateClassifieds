@@ -23,6 +23,8 @@ export class ActiveComponent implements OnInit {
 
   ngOnInit() {
 
+    this.ads = [new ViewModel()]
+
 
     this.service.getCategories().subscribe((res: CategoryModel[]) => {
 
@@ -76,7 +78,7 @@ export class ActiveComponent implements OnInit {
 
     if (id < 3) {
       this.dropdata.type = query;
-      this.ads = this.universal.filter((ad) => ad.type == query);
+      this.ads = this.universal.filter((ad) => ad.details.type == query);
     }
     
     else if (id >= 6 && id < 9) {
@@ -102,7 +104,7 @@ export class ActiveComponent implements OnInit {
 
     this.dropdata.category = category.name;
 
-    this.ads = this.universal.filter((ad) => ad.category == category.Id.toString());
+    this.ads = this.universal.filter((ad) => ad.details.category == category.Id.toString());
 
   }
 

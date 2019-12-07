@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CoreModel;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -66,5 +68,32 @@ namespace AppLibrary
         {
             return number < 10 ? "0" + number : number+"";
         }
+
+        public static string toUserJson(User user)
+        {
+            string json = JsonConvert.SerializeObject(user);
+
+            return json;
+        }
+
+        public static string toTimeJson(Time time)
+        {
+
+            //time.date = getDate(time.date);
+            //time.expiry = getExpiry(time.date, time.validity);
+            //time.validity = time.validity;
+
+            string json = JsonConvert.SerializeObject(time);
+
+            return json;
+        }
+
+        public static string toDetailsJson(AdDetails details)
+        {
+            string json = JsonConvert.SerializeObject(details);
+
+            return json;
+        }
+
     }
 }
