@@ -9,7 +9,7 @@ using System.Web.SessionState;
 using System.Web.Http;
 using AutoMapper;
 using DataModel;
-using AppCore;
+using CoreModel;
 using classifieds;
 
 namespace CorporateClassifieds

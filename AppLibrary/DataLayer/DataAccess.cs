@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AppCore;
+using CoreModel;
 using classifieds;
 using PetaPoco;
 using AutoMapper;
@@ -24,33 +24,34 @@ namespace AppLibrary.DI
 
         public int delete(int id)
         {
-            classifieds.DataModel ad = database.Single<classifieds.DataModel>("SELECT * FROM advertisement WHERE id="+ id);
-            return database.Delete(ad);
+            classified classified = database.Single<classified>("SELECT * FROM classifieds WHERE id=" + id);
+
+            return database.Delete(classified);
         }
 
-        public IEnumerable<CoreModel> get()
+        public IEnumerable<classified> get()
         {
-            IEnumerable<classifieds.DataModel> source = database.Query<classifieds.DataModel>("SELECT * FROM advertisement");
+            IEnumerable<classified> source = database.Query<classified>("SELECT * FROM classifieds");
 
-            IEnumerable<CoreModel> destination = mapper.Map<IEnumerable<CoreModel>>(source);
+           // IEnumerable<advertisement> destination = mapper.Map<IEnumerable<CoreModel.CoreAd>>(source);
 
-            return destination;
+            return source;
         }
 
-        public CoreModel get(int id)
+        public CoreAd get(int id)
         {
-            classifieds.DataModel source = database.Single<classifieds.DataModel>("SELECT * FROM advertisement WHERE id="+ id);
-            CoreModel ads = mapper.Map<CoreModel>(source);
+            advertisement source = database.Single<advertisement>("SELECT * FROM advertisement WHERE id="+ id);
+            CoreAd ads = mapper.Map<CoreAd>(source);
 
             return ads;
         }
 
-        public int insert(classifieds.DataModel ad)
+        public int insert(classified ad)
         {
-            return database.Insert(ad)==null?0:1;
+            return database.Insert("classifieds",ad)==null?0:1;
         }
 
-        public int update(classifieds.DataModel ad)
+        public int update(advertisement ad)
         {
             return database.Update(ad);
         }

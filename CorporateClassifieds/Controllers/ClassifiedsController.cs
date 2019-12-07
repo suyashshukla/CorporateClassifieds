@@ -1,4 +1,5 @@
-using AppCore;
+using CoreModel;
+using DataModel;
 using AppLibrary;
 using AppLibrary.DI;
 using classifieds;
@@ -8,6 +9,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using AutoMapper;
+using Advertisement = CoreModel.Advertisement;
 
 namespace CorporateClassifieds.Controllers
 {
@@ -15,23 +18,32 @@ namespace CorporateClassifieds.Controllers
   {
 
     IDataAccess dataAccess;
+    IMapper mapper;
 
-    public ClassifiedsController(IDataAccess dataAccess)
+    public ClassifiedsController(IDataAccess dataAccess, IMapper mapper)
     {
       this.dataAccess = dataAccess;
+      this.mapper = mapper;
     }
 
-    public IHttpActionResult Post(classifieds.DataModel ad)
+    public IHttpActionResult Post(CoreModel.Advertisement ad)
     {
-      return Ok(dataAccess.insert(ad));
+      System.Diagnostics.Debug.WriteLine(ad);
+
+      classified advertisement = mapper.Map<classified>(ad);
+    
+      return Ok(dataAccess.insert(advertisement));
     }
 
-    public IEnumerable<CoreModel> Get()
+    public IEnumerable<Advertisement> Get()
     {
-      return dataAccess.get(); 
+
+      IEnumerable<Advertisement> ad = mapper.Map<IEnumerable<Advertisement>>(dataAccess.get());
+
+      return ad; 
     }
 
-    public CoreModel Get(int id)
+    public CoreAd Get(int id)
     {
       return dataAccess.get(id); 
     }
@@ -41,7 +53,7 @@ namespace CorporateClassifieds.Controllers
       return dataAccess.delete(id);
     }
 
-    public int Put(classifieds.DataModel ad)
+    public int Put(advertisement ad)
     {
       return dataAccess.update(ad);
     }

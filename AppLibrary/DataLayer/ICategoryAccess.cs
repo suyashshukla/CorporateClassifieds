@@ -10,10 +10,10 @@ namespace AppLibrary.DataLayer
     public interface ICategoryAccess
     {
 
-        IEnumerable<CategoryModel> get();
-        CategoryModel get(int id);
-        int insert(CategoryModel category);
-        int update(CategoryModel category);
+        IEnumerable<category> get();
+        category get(int id);
+        int insert(category category);
+        int update(category category);
         
 
     }

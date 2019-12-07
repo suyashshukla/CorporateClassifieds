@@ -18,7 +18,7 @@
               <div class="dropdown">
                 <button class="btn btn-default d-flex w-100 text-left border border-gray type-button"
                         id="dropdownTypebutton" data-toggle="dropdown">
-                  {{formData.type}}
+                  {{formData.details.type}}
                   <i class="material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
                 </button>
 
@@ -34,7 +34,7 @@
               <label for="category">Category</label>
               <div class="dropdown">
                 <button class="btn btn-default d-flex w-100 text-left border border-gray" id="dropdownTypebutton" data-toggle="dropdown">
-                 {{formData.category}}
+                 {{formData.details.category}}
                   <i class="material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
                 </button>
                 <div class="dropdown-menu w-100">
@@ -119,7 +119,7 @@
         <div class="mt-2">
           <label for="expiry">Ad Expires in</label>
           <div class="input-group">
-            <input type="text" class="form-control" aria-describedby="basic-addon2" [(ngModel)]="formData.validity" />
+            <input type="text" class="form-control" aria-describedby="basic-addon2" [(ngModel)]="formData.timeinfo.validity" />
             <span class="input-group-append"><span class="input-group-text" id="basic-addon2">days</span></span>
           </div>
         </div>

@@ -11,14 +11,16 @@ import { CategoryModel } from '../MyClassifieds/Models/CategoryModel';
 export class Advertisement implements OnInit {
 
   @Input() ad: ViewModel;
-  category: CategoryModel;
+  category = new CategoryModel();
 
   constructor(
     private service: AppService
   ) { }
 
   ngOnInit() {
-    this.service.getCategory(+this.ad.category).subscribe((res) => {
+
+    console.log(this.ad);
+    this.service.getCategory(this.ad.details.category).subscribe((res) => {
       this.category = res;
     });
   }
