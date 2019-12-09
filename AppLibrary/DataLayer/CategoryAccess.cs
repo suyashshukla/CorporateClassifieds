@@ -18,22 +18,22 @@ namespace AppLibrary.DataLayer
             database = new Database("classifieds");
         }
 
-        public IEnumerable<category> get()
+        public IEnumerable<category> Get()
         {
             return database.Query<category>("SELECT * FROM category");
         }
 
-        public category get(int id)
+        public category Get(int id)
         {
             return database.Single<category>("SELECT * FROM category WHERE id=" + id);
         }
 
-        public int insert(category category)
+        public int Insert(category category)
         {
             return database.Insert(category)==null?0:1;
         }
 
-        public int update(category category)
+        public int Update(category category)
         {
             return database.Update(category);
         }

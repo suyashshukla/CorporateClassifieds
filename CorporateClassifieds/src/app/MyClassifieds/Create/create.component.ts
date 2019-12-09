@@ -37,7 +37,7 @@ export class CreateComponent implements OnInit {
 
   dropChange(category: CategoryModel) {
 
-    this.formData.details.category = category.Id+"";
+    this.formData.details.category = category.name;
 
   }
 
@@ -45,9 +45,7 @@ export class CreateComponent implements OnInit {
 
     var date = new Date();
 
-    var timestamp = date.getFullYear() + "" +
-      (date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth()) + "" +
-      (date.getDate() < 10 ? "0" + date.getDate() : date.getDate());
+    var timestamp = date.getFullYear() + "" + this.service.normalize(date.getMonth()+1) + "" + this.service.normalize(date.getDate());
     
     this.formData.timeinfo.date = this.service.getDate(timestamp);
     this.formData.timeinfo.expiry = this.service.getExpiry(timestamp, this.formData.timeinfo.validity);
@@ -55,7 +53,7 @@ export class CreateComponent implements OnInit {
        
     this.service.getClassifieds().subscribe((res: ViewModel[]) => {
 
-      this.formData.Id = res.length.toString();
+      this.formData.id = res.length.toString();
 
       this.service.getUsers().subscribe((res) => {
         this.formData.userdata.name = res["results"][0]["name"]["first"];
@@ -66,11 +64,12 @@ export class CreateComponent implements OnInit {
         this.formData.description = this.adData.value.description;
         this.formData.details.offers = "0";
         this.formData.details.comments = "0";
-        this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.description+"/300/400";
+        this.formData.details.category = this.category[this.category.findIndex(c => c.name == this.formData.details.category)].Id+"";
+        this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.title+"/300/400";
 
         this.service.postClassifieds(this.formData);
-      
-        console.log(this.formData);
+
+        console.log(timestamp);
         this.formData = new ViewModel();
 
         this.adData.reset();
@@ -80,7 +79,7 @@ export class CreateComponent implements OnInit {
   }
   
   ngOnInit() {
-    this.service.getCategories().subscribe((res: CategoryModel[]) => {
+    this.service.getCategories().subscribe(res => {
       this.category = res;
     });
 

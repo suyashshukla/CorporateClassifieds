@@ -1,74 +1,5 @@
 ﻿namespace CoreModel
-{
-    public class CoreAd
-    {
-
-        public int Id
-        {
-            get; set;
-        }
-
-        public string title
-        {
-            get; set;
-        }
-
-        public string description
-        {
-            get; set;
-        }
-
-        public string expiry
-        {
-            get; set;
-        }
-
-        public int price
-        {
-            get; set;
-        }
-
-        public string timestamp
-        {
-            get; set;
-        }
-
-        public string type
-        {
-            get; set;
-        }
-
-        public string category
-        {
-            get; set;
-        }
-
-        public string username
-        {
-            get; set;
-        }
-
-        public string userpic
-        {
-            get; set;
-        }
-
-        public int offers
-        {
-            get; set;
-        }
-
-        public string comments
-        {
-            get; set;
-        }
-
-        public string thumbnail
-        {
-            get; set;
-        }
-
-    }
+{   
 
     public class User
     {
@@ -80,10 +11,10 @@
         public string pic
         {
             get; set;
-        }
+        } 
     }
 
-    public class AdDetails
+    public class ClassifiedDetails
     {
 
         public string type
@@ -119,9 +50,9 @@
 
     }
 
-    public class Advertisement
+    public class ClassifiedsView
     {
-        public int Id { get; set; }
+        public int id { get; set; }
 
         public string title { get; set; }
 
@@ -130,10 +61,10 @@
         public int? price { get; set; }
 
         public string thumbnail { get; set; }
-
+         
         public User userdata { get; set; }
 
-        public AdDetails details { get; set; }
+        public ClassifiedDetails details { get; set; }
 
         public Time timeinfo { get; set; }
 

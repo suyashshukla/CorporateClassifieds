@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
-import {HttpClient} from "@angular/common/http"
+import { HttpClient } from "@angular/common/http"
 import { ViewModel } from './Models/ViewModel';
 import { CategoryModel } from './Models/CategoryModel';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -19,18 +20,19 @@ export class AppService {
   }
 
   postClassifieds(classified: ViewModel) {
+    console.log(classified);
     this.http.post("/api/classifieds", classified).subscribe(
       (res: ViewModel) => {
         console.log(res);
       })
   }
 
-  getCategories() {
-    return this.http.get("./api/category");
+  getCategories(): Observable<CategoryModel[]> {
+    return this.http.get<CategoryModel[]>("./api/category");
   }
 
-  getCategory(id){
-    return this.http.get<CategoryModel>("./api/category/"+id);
+  getCategory(id) {
+    return this.http.get<CategoryModel>("./api/category/" + id);
   }
 
   getUsers() {
@@ -39,18 +41,19 @@ export class AppService {
 
   getExpiry(timestamp: string, expiry: number): string {
 
-    var initial:number = +timestamp;
-    var increment:number = expiry;
+    var initial: number = +timestamp;
+    var increment: number = expiry;
 
-    var year:number = +(timestamp.substring(0, 4));
-    var month:number = +(timestamp.substring(4, 2));
-    var date:number = +(timestamp.substring(6, 2));
+    var year: number = Number(timestamp.substring(0, 4));
+    var month: number = Number(timestamp.substring(4,6));
+    var date: number = Number(timestamp.substring(6));
 
     if (date + increment > 30) {
       date = (date + increment) % 30;
       if (date == 0)
         date = 30;
-      increment = increment / 2;
+
+      increment = Math.floor(increment / 30);
 
 
       if (month + increment > 12) {
@@ -58,12 +61,11 @@ export class AppService {
         if (month == 0)
           month = 12;
 
-        increment = increment / 12;
+        increment = Math.floor(increment / 12);
 
         if (increment > 0) {
           year = year + increment;
         }
-
       }
       else {
         month = month + increment;
@@ -76,19 +78,19 @@ export class AppService {
     return (this.normalize(date) + "/" + this.normalize(month) + "/" + year);
   }
 
-  getDate(timestamp:string):string {
+  getDate(timestamp: string): string {
 
-   var year: string = timestamp.substring(0, 4);
-    var month:string = timestamp.substring(4, 2);
-    var date:string = timestamp.substring(6, 2);
+    var year: number = +timestamp.substring(0, 4);
+    var month: number = +timestamp.substring(4, 6);
+    var date: number = +timestamp.substring(6);
 
-    return (date + "/" + month + "/" + year);
+    return (this.normalize(date) + "/" + this.normalize(month) + "/" + this.normalize(year));
   }
 
-  normalize(num: number) :string{
+  normalize(num: number): string {
     return num < 10 ? "0" + num : num + "";
   }
- 
+
 
 
 }

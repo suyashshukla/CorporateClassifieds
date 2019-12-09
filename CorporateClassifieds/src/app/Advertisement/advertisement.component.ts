@@ -20,6 +20,7 @@ export class Advertisement implements OnInit {
   ngOnInit() {
 
     console.log(this.ad);
+
     this.service.getCategory(this.ad.details.category).subscribe((res) => {
       this.category = res;
     });

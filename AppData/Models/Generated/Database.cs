@@ -275,7 +275,7 @@ namespace classifieds
 
 	[ExplicitColumns]
 
-    public partial class classified : classifiedsDB.Record<classified>  
+    public partial class Classified : classifiedsDB.Record<Classified>  
     {
 
 

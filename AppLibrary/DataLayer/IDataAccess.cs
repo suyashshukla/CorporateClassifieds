@@ -1,25 +1,20 @@
 ﻿using CoreModel;
-using classifieds;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppLibrary.DI
 {
     public interface IDataAccess
     {
 
-        IEnumerable<classified> get();
+        IEnumerable<ClassifiedsView> Get();
 
-        CoreAd get(int id);
+        ClassifiedsView Get(int id);
 
-        int delete(int id);
+        int Delete(int id);
 
-        int insert(classifieds.classified ad);
+        int Insert(ClassifiedsView ad);
 
-        int update(classifieds.advertisement ad);
+        int Update(ClassifiedsView ad);
 
 
     }
