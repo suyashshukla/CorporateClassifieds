@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using classifieds;
 using CoreModel;
-using classifieds;
 using PetaPoco;
-using AutoMapper;
+using System.Collections.Generic;
 
 namespace AppLibrary.DI
 {
     public class DataAccess : IDataAccess
     {
-
-        Database database;
-        AutoMapper.IMapper mapper;
+        private Database database;
+        private AutoMapper.IMapper mapper;
 
         public DataAccess(AutoMapper.IMapper mapper)
         {
@@ -22,36 +16,38 @@ namespace AppLibrary.DI
             this.mapper = mapper;
         }
 
-        public int delete(int id)
+        public int Delete(int id)
         {
-            classified classified = database.Single<classified>("SELECT * FROM classifieds WHERE id=" + id);
+            Classified classified = database.Single<Classified>("SELECT * FROM classifieds WHERE id=" + id);
 
             return database.Delete(classified);
         }
 
-        public IEnumerable<classified> get()
+        public IEnumerable<ClassifiedsView> Get()
         {
-            IEnumerable<classified> source = database.Query<classified>("SELECT * FROM classifieds");
+            IEnumerable<Classified> source = database.Query<Classified>("SELECT * FROM classifieds");
 
-           // IEnumerable<advertisement> destination = mapper.Map<IEnumerable<CoreModel.CoreAd>>(source);
+            IEnumerable<ClassifiedsView> destination = mapper.Map<IEnumerable<ClassifiedsView>>(source);
 
-            return source;
+            return destination;
         }
 
-        public CoreAd get(int id)
+        public ClassifiedsView Get(int id)
         {
-            advertisement source = database.Single<advertisement>("SELECT * FROM advertisement WHERE id="+ id);
-            CoreAd ads = mapper.Map<CoreAd>(source);
+            Classified source = database.Single<Classified>("SELECT * FROM classifieds WHERE id=" + id);
+            ClassifiedsView destination = mapper.Map<ClassifiedsView>(source);
 
-            return ads;
+            return destination;
         }
 
-        public int insert(classified ad)
+        public int Insert(ClassifiedsView classifieds)
         {
-            return database.Insert("classifieds",ad)==null?0:1;
+            Classified classifiedsData = mapper.Map<Classified>(classifieds);
+
+            return database.Insert("classifieds", classifiedsData) == null ? 0 : 1;
         }
 
-        public int update(advertisement ad)
+        public int Update(ClassifiedsView ad)
         {
             return database.Update(ad);
         }

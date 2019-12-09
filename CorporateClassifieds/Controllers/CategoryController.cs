@@ -21,22 +21,22 @@ namespace CorporateClassifieds.Controllers
 
     public IEnumerable<category> Get()
     {
-      return category.get();
+      return category.Get();
     }
 
     public category Get(int id)
     {
-      return category.get(id);
+      return category.Get(id);
     }
 
     public int Post(category model)
     {
-      return category.insert(model);
+      return category.Insert(model);
     }
 
     public int Put(category model)
     {
-      return category.update(model);
+      return category.Update(model);
     }
   }
 }

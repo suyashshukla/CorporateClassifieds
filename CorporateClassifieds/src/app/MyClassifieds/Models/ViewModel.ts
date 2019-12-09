@@ -4,7 +4,7 @@ import { AdDetails } from './AdDetails';
 import { UserInfo } from './UserInfo';
 
 export class ViewModel {
-  public Id: string;
+  public id: string;
   public title: string;
   public description: string;
   public price: number;

@@ -35,6 +35,7 @@ export class ActiveComponent implements OnInit {
     this.service.getClassifieds().subscribe((res: ViewModel[]) => {
       this.ads = res;
       this.universal = res;
+      console.log(this.ads);
     });
 
     this.view = false;

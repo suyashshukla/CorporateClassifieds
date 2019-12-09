@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div class=\"card m-2\">\r\n  <div class=\"row m-1 p-1 overflow-hidden\">\r\n\r\n    <div class=\"col-1 d-flex align-items-center \">\r\n\r\n      <img src={{ad.thumbnail}} class=\"fit thumbnail\">\r\n\r\n    </div>\r\n\r\n    <div class=\"col-3 d-flex flex-column\">\r\n\r\n      <div class=\"d-flex\">\r\n        <i class=\"material-icons pr-2 d-flex align-items-center text-secondary\">{{category.icon}}</i>\r\n        {{ad.title}}\r\n      </div>\r\n      <span class=\"text-secondary\">\r\n        {{ad.description}}\r\n      </span>\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      &#8377; {{ad.price}}\r\n    </div>\r\n\r\n    <div class=\"col-2\">\r\n      {{ad.userdata.name}}\r\n      <br />\r\n      <div class=\"text-secondary pt-1\">{{ad.timeinfo.date}}</div>\r\n    </div>\r\n\r\n    <div class=\"col-2\">\r\n      {{ad.timeinfo.expiry}}\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      {{ad.details.offers}}\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      {{ad.details.comments}}\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div class=\"card m-2\">\r\n  <div class=\"row m-1 p-1 overflow-hidden\">\r\n\r\n    <div class=\"col-1 d-flex align-items-center \">\r\n\r\n      <img src={{ad.thumbnail}} class=\"fit thumbnail\">\r\n\r\n    </div>\r\n\r\n    <div class=\"col-3 d-flex flex-column\">\r\n\r\n      <div class=\"d-flex\">\r\n        <i class=\"material-icons pr-2 d-flex align-items-center text-secondary\">{{category.icon}}</i>\r\n        {{ad.title}}\r\n      </div>\r\n      <span class=\"text-secondary text-justify overflow-hidden\" style=\"height:75px\">\r\n        {{ad.description}}\r\n      </span>\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      &#8377; {{ad.price}}\r\n    </div>\r\n\r\n    <div class=\"col-2\">\r\n      {{ad.userdata.name}}\r\n      <br />\r\n      <div class=\"text-secondary pt-1\">{{ad.timeinfo.date}}</div>\r\n    </div>\r\n\r\n    <div class=\"col-2\">\r\n      {{ad.timeinfo.expiry}}\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      {{ad.details.offers}}\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      {{ad.details.comments}}\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -934,6 +934,7 @@ let ActiveComponent = class ActiveComponent {
         this.service.getClassifieds().subscribe((res) => {
             this.ads = res;
             this.universal = res;
+            console.log(this.ads);
         });
         this.view = false;
         this.dropdata = {
@@ -1042,6 +1043,7 @@ let AppService = class AppService {
         return this.http.get("/api/classifieds");
     }
     postClassifieds(classified) {
+        console.log(classified);
         this.http.post("/api/classifieds", classified).subscribe((res) => {
             console.log(res);
         });
@@ -1058,19 +1060,19 @@ let AppService = class AppService {
     getExpiry(timestamp, expiry) {
         var initial = +timestamp;
         var increment = expiry;
-        var year = +(timestamp.substring(0, 4));
-        var month = +(timestamp.substring(4, 2));
-        var date = +(timestamp.substring(6, 2));
+        var year = Number(timestamp.substring(0, 4));
+        var month = Number(timestamp.substring(4, 6));
+        var date = Number(timestamp.substring(6));
         if (date + increment > 30) {
             date = (date + increment) % 30;
             if (date == 0)
                 date = 30;
-            increment = increment / 2;
+            increment = Math.floor(increment / 30);
             if (month + increment > 12) {
                 month = (month + increment) % 12;
                 if (month == 0)
                     month = 12;
-                increment = increment / 12;
+                increment = Math.floor(increment / 12);
                 if (increment > 0) {
                     year = year + increment;
                 }
@@ -1085,10 +1087,10 @@ let AppService = class AppService {
         return (this.normalize(date) + "/" + this.normalize(month) + "/" + year);
     }
     getDate(timestamp) {
-        var year = timestamp.substring(0, 4);
-        var month = timestamp.substring(4, 2);
-        var date = timestamp.substring(6, 2);
-        return (date + "/" + month + "/" + year);
+        var year = +timestamp.substring(0, 4);
+        var month = +timestamp.substring(4, 6);
+        var date = +timestamp.substring(6);
+        return (this.normalize(date) + "/" + this.normalize(month) + "/" + this.normalize(year));
     }
     normalize(num) {
         return num < 10 ? "0" + num : num + "";
@@ -1158,17 +1160,15 @@ let CreateComponent = class CreateComponent {
             this.formData.details.category = button.innerHTML;
     }
     dropChange(category) {
-        this.formData.details.category = category.Id + "";
+        this.formData.details.category = category.name;
     }
     submitData() {
         var date = new Date();
-        var timestamp = date.getFullYear() + "" +
-            (date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth()) + "" +
-            (date.getDate() < 10 ? "0" + date.getDate() : date.getDate());
+        var timestamp = date.getFullYear() + "" + this.service.normalize(date.getMonth() + 1) + "" + this.service.normalize(date.getDate());
         this.formData.timeinfo.date = this.service.getDate(timestamp);
         this.formData.timeinfo.expiry = this.service.getExpiry(timestamp, this.formData.timeinfo.validity);
         this.service.getClassifieds().subscribe((res) => {
-            this.formData.Id = res.length.toString();
+            this.formData.id = res.length.toString();
             this.service.getUsers().subscribe((res) => {
                 this.formData.userdata.name = res["results"][0]["name"]["first"];
                 this.formData.userdata.pic = res["results"][0]["picture"]["thumbnail"];
@@ -1177,16 +1177,17 @@ let CreateComponent = class CreateComponent {
                 this.formData.description = this.adData.value.description;
                 this.formData.details.offers = "0";
                 this.formData.details.comments = "0";
-                this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.description + "/300/400";
+                this.formData.details.category = this.category[this.category.findIndex(c => c.name == this.formData.details.category)].Id + "";
+                this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.title + "/300/400";
                 this.service.postClassifieds(this.formData);
-                console.log(this.formData);
+                console.log(timestamp);
                 this.formData = new _Models_ViewModel__WEBPACK_IMPORTED_MODULE_3__["ViewModel"]();
                 this.adData.reset();
             });
         });
     }
     ngOnInit() {
-        this.service.getCategories().subscribe((res) => {
+        this.service.getCategories().subscribe(res => {
             this.category = res;
         });
     }

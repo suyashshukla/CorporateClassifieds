@@ -50,21 +50,21 @@ namespace CorporateClassifieds.App_Start
   {
     public MappingProfile()
     {
-      CreateMap<advertisement, CoreAd>();
+     
 
-      CreateMap<Advertisement, classified>()
+      CreateMap<ClassifiedsView, Classified>()
         .ForMember(destination => destination.userdata,
-        map => map.MapFrom(source => DataTransformation.toUserJson(source.userdata)))
+        map => map.MapFrom(source => DataTransformation.ToUserJson(source.userdata)))
         .ForMember(destination => destination.details,
-        map => map.MapFrom(source => DataTransformation.toDetailsJson(source.details)))
+        map => map.MapFrom(source => DataTransformation.ToDetailsJson(source.details)))
         .ForMember(destination => destination.timeinfo,
-        map => map.MapFrom(source => DataTransformation.toTimeJson(source.timeinfo)));
+        map => map.MapFrom(source => DataTransformation.ToTimeJson(source.timeinfo)));
 
-      CreateMap<classified, Advertisement>()
+      CreateMap<Classified, ClassifiedsView>()
         .ForMember(destination => destination.timeinfo,
-        map => map.MapFrom(source => JsonConvert.DeserializeObject<Time>(source.userdata)))
+        map => map.MapFrom(source => JsonConvert.DeserializeObject<Time>(source.timeinfo)))
         .ForMember(destination => destination.details,
-        map => map.MapFrom(source => JsonConvert.DeserializeObject<AdDetails>(source.details)))
+        map => map.MapFrom(source => JsonConvert.DeserializeObject<ClassifiedDetails>(source.details)))
         .ForMember(destination => destination.userdata,
         map => map.MapFrom(source => JsonConvert.DeserializeObject<User>(source.userdata)));
    
