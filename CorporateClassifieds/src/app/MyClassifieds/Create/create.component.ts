@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { ViewModel } from "../Models/ViewModel";
+import { Classified } from "../Models/ViewModel";
 import { AppService } from "../AppService";
-import { CategoryModel } from '../Models/CategoryModel';
+import { Category } from '../Models/CategoryModel';
 
 @Component({
   selector: 'app-create',
@@ -21,8 +21,8 @@ export class CreateComponent implements OnInit {
     description: new FormControl('Description for the Classified')
   });
 
-  formData = new ViewModel();
-  category : CategoryModel[];
+  formData = new Classified();
+  category : Category[];
  
   typeChange(id) {
 
@@ -35,7 +35,7 @@ export class CreateComponent implements OnInit {
 
   }
 
-  dropChange(category: CategoryModel) {
+  dropChange(category: Category) {
 
     this.formData.details.category = category.name;
 
@@ -51,7 +51,7 @@ export class CreateComponent implements OnInit {
     this.formData.timeinfo.expiry = this.service.getExpiry(timestamp, this.formData.timeinfo.validity);
      
        
-    this.service.getClassifieds().subscribe((res: ViewModel[]) => {
+    this.service.getClassifieds().subscribe((res: Classified[]) => {
 
       this.formData.id = res.length.toString();
 
@@ -70,7 +70,7 @@ export class CreateComponent implements OnInit {
         this.service.postClassifieds(this.formData);
 
         console.log(timestamp);
-        this.formData = new ViewModel();
+        this.formData = new Classified();
 
         this.adData.reset();
 

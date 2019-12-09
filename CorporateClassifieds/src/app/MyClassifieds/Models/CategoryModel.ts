@@ -1,4 +1,4 @@
-export class CategoryModel {
+export class Category {
 
   public Id: number;
   public name: string;

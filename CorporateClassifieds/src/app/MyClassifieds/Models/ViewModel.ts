@@ -3,7 +3,7 @@ import { TimeInfo } from "./TimeInfo";
 import { AdDetails } from './AdDetails';
 import { UserInfo } from './UserInfo';
 
-export class ViewModel {
+export class Classified {
   public id: string;
   public title: string;
   public description: string;

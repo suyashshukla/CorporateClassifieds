@@ -1,1 +1,19 @@
-Admin
+<form class="m-0 p-0 ml-3">
+
+  <label for="name">Category Name : </label>
+  <input class="form-control" />
+
+  <label for="icon">Icon : </label>
+
+  <div class="icon-list d-flex">
+
+    <div *ngFor="let category of categoryIcons" class="p-2">
+      <i class="material-icons text-secondary">{{category}}</i>
+    </div>
+
+
+  </div>
+
+  <button class="btn btn-primary bg-color">SUBMIT</button>
+
+</form>

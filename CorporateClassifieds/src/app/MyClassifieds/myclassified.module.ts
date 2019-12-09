@@ -3,8 +3,7 @@ import { CommonModule} from '@angular/common';
 import { HttpClientModule } from '@angular/common/http'
 import { ActiveComponent, HistoryComponent, CreateComponent, HomeComponent} from './';
 import { MyCLassifiedRoutingModule } from './myclassified-routing.module';
-import { Advertisement } from '../Advertisement/advertisement.component';
-import { AdListComponent } from '../AdList/ad-list.component';
+import { AdListComponent, Advertisement } from './index';
 import { SliderComponent } from './Slider/slider.component';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { AppService } from './AppService';

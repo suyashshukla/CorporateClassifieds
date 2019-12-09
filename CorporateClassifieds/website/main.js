@@ -23,19 +23,6 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/AdList/ad-list.component.html":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/AdList/ad-list.component.html ***!
-  \*************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div class=\"card m-2\">\r\n  <div class=\"row m-1 p-1 overflow-hidden\">\r\n\r\n    <div class=\"col-1 d-flex align-items-center \">\r\n\r\n      <img src={{ad.thumbnail}} class=\"fit thumbnail\">\r\n\r\n    </div>\r\n\r\n    <div class=\"col-3 d-flex flex-column\">\r\n\r\n      <div class=\"d-flex\">\r\n        <i class=\"material-icons pr-2 d-flex align-items-center text-secondary\">{{category.icon}}</i>\r\n        {{ad.title}}\r\n      </div>\r\n      <span class=\"text-secondary text-justify overflow-hidden\" style=\"height:75px\">\r\n        {{ad.description}}\r\n      </span>\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      &#8377; {{ad.price}}\r\n    </div>\r\n\r\n    <div class=\"col-2\">\r\n      {{ad.userdata.name}}\r\n      <br />\r\n      <div class=\"text-secondary pt-1\">{{ad.timeinfo.date}}</div>\r\n    </div>\r\n\r\n    <div class=\"col-2\">\r\n      {{ad.timeinfo.expiry}}\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      {{ad.details.offers}}\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      {{ad.details.comments}}\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n");
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Admin/Dashboard/admin.component.html":
 /*!********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Admin/Dashboard/admin.component.html ***!
@@ -45,20 +32,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("Admin\r\n");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Advertisement/advertisement.component.html":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Advertisement/advertisement.component.html ***!
-  \**************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card d-flex m-0 flex-column ad-width overflow-hidden\">\n\n  <div class=\"row m-0 ad-width px-1 py-2\">\n    <span class=\"col-sm-2 \"><img class=\"rounded-circle fit\" src={{ad.userdata.pic}} style=\"height:24px;width:24px\"></span>\n    <span class=\"col-sm-6\"> {{ad.userdata.name}}</span>\n    <span class=\"col-sm-4 text-secondary d-flex justify-content-end\"> {{ad.timeinfo.date}}</span>\n  </div>\n\n  <div class=\"position-relative\">\n    <img src={{ad.thumbnail}} class=\"ad-box\"/>\n    <div class=\"position-absolute black-desc ad-width py-2 px-2\">\n      <div class=\"row pl-1 pr-1 text-white\">\n        <i class=\"col-sm-2 material-icons\">{{category.icon}}</i>\n        <div class=\"col-sm-6\">{{ad.title}}</div>\n        <div class=\"col-sm-4 d-flex flex-row justify-content-end\">&#8377; {{ad.price}}</div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"w-100 px-2 overflow-hidden d-flex text-justify\" style=\"height:75px\">{{ad.description}}</div>\n\n  <div class=\"row m-0 px-2 py-2 text-secondary\">\n    <i class=\"material-icons pr-3\">local_offer</i>\n    {{ad.details.offers}}\n    <div class=\"material-icons icon-size mx-3\">comments</div>\n    {{ad.details.comments}}\n  </div>\n\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<form class=\"m-0 p-0 ml-3\">\r\n\r\n  <label for=\"name\">Category Name : </label>\r\n  <input class=\"form-control\" />\r\n\r\n  <label for=\"icon\">Icon : </label>\r\n\r\n  <div class=\"icon-list d-flex\">\r\n\r\n    <div *ngFor=\"let category of categoryIcons\" class=\"p-2\">\r\n      <i class=\"material-icons text-secondary\">{{category}}</i>\r\n    </div>\r\n\r\n\r\n  </div>\r\n\r\n  <button class=\"btn btn-primary bg-color\">SUBMIT</button>\r\n\r\n</form>\r\n");
 
 /***/ }),
 
@@ -98,6 +72,32 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<!DOCTYPE html>\r\n\r\n\r\n<div>\r\n\r\n\r\n  <div class=\"content-header d-flex align-items-center\">\r\n    <div class=\"text\">\r\n      <div class=\"lead px-3 pt-3 text-black\">Active Classifieds</div>\r\n      <div class=\"lead px-3 text-secondary\">Here you can explore the Active Ads posted by you.</div>\r\n    </div>\r\n    <div class=\"pt-3 flex-grow-1 d-flex justify-content-end\">\r\n      <button class=\"btn btn-default p-2 text-white py-2 bg-color\" routerLink=\"/create\">CREATE AD</button>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <div class=\"row m-0 ml-2 mt-3\" style=\"height:50px\">\r\n\r\n    <div class=\"col-6 row\">\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          {{dropdata.type}}\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change(0)\">Sale</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(1)\">Rent</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(2)\">Required</div>\r\n\r\n        </div>\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          {{dropdata.category}}\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu w-100\">\r\n\r\n          <div *ngFor=\"let cat of category\">\r\n            <div class=\"dropdown-item d-flex\" (click)=\"dropChange(cat)\">\r\n              <i class=\"material-icons text-secondary mr-2 d-flex align-items-center\">\r\n                {{cat.icon}}\r\n              </i>\r\n              {{cat.name}}\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          {{dropdata.posted}}\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change(6)\">Last Week</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(7)\">Last Month</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(8)\">Last Year</div>\r\n\r\n        </div>\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 dropdown\">\r\n\r\n        <button class=\"btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100\" data-toggle=\"dropdown\">\r\n          {{dropdata.location}}\r\n          <i class=\"text-secondary material-icons d-flex flex-grow-1 justify-content-end\">keyboard_arrow_down</i>\r\n        </button>\r\n\r\n        <div class=\"dropdown-menu\">\r\n\r\n          <div class=\"dropdown-item\" (click)=\"change(9)\">Madhapur</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(10)\">Gachibowli</div>\r\n          <div class=\"dropdown-item\" (click)=\"change(11)\">Kukatpally</div>\r\n\r\n        </div>\r\n\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-6 row\">\r\n\r\n      <div class=\"col-6 p-0\">\r\n\r\n        <input type=\"text\" class=\"form-control p-2  h-100\" placeholder=\"Search\" />\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 d-flex align-items-center justify-content-center\">\r\n\r\n        <button class=\"btn btn-default bg-white border border-black h-100 w-100 d-flex align-items-center justify-content-center\" (click)=\"reset()\">\r\n          <i class=\"material-icons\">refresh</i>\r\n          Reset\r\n        </button>\r\n\r\n      </div>\r\n\r\n      <div class=\"col-3 p-0 d-flex align-items-center justify-content-center bg-white border border-black\">\r\n\r\n        <i class=\"material-icons text-color flex-grow-1 d-flex justify-content-center pointer\"\r\n           id=\"grid\"\r\n           (click)=\"grid()\">grid_on</i>\r\n\r\n        <i class=\"material-icons flex-grow-1 d-flex justify-content-center pointer\"\r\n           id=\"list\"\r\n           (click)=\"list()\">list</i>\r\n\r\n      </div>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n  \r\n  <div *ngIf=\"ads.length==0\" class=\"position-absolute ml-5 pl-5 d-flex justify-content-center\" style=\"bottom : 0\">\r\n      <img class=\"img-fluid\" src=\"../../../assets/nothing.png\" />\r\n  </div>\r\n   \r\n  <div *ngIf=\"ads.length!=0\">\r\n\r\n    <div class=\"row ml-2 mt-3\" *ngIf=\"!view\">\r\n      <div *ngFor=\"let ad of ads\">\r\n        <div class=\"col-4 p-0 m-1\">\r\n          <app-advertisement [ad]=\"ad\"></app-advertisement>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n      <div *ngIf=\"view\">\r\n        <div class=\"row p-2 m-2 border border-black bg-light\">\r\n\r\n          <div class=\"col-4\">ITEM DETAILS</div>\r\n          <div class=\"col-1\">PRICE</div>\r\n          <div class=\"col-2\">POSTED BY</div>\r\n          <div class=\"col-2\">EXPIRY</div>\r\n          <div class=\"col-1\">OFFERS</div>\r\n          <div class=\"col-1\">COMMENTS</div>\r\n\r\n        </div>\r\n        <div *ngFor=\"let ad of ads\">\r\n          <app-ad-list [ad]=\"ad\"></app-ad-list>\r\n        </div>\r\n      </div>\r\n\r\n  </div>\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/AdList/ad-list.component.html":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/AdList/ad-list.component.html ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div class=\"card m-2\">\r\n  <div class=\"row m-1 p-1 overflow-hidden\">\r\n\r\n    <div class=\"col-1 d-flex align-items-center \">\r\n\r\n      <img src={{ad.thumbnail}} class=\"fit thumbnail\">\r\n\r\n    </div>\r\n\r\n    <div class=\"col-3 d-flex flex-column\">\r\n\r\n      <div class=\"d-flex\">\r\n        <i class=\"material-icons pr-2 d-flex align-items-center text-secondary\">{{category.icon}}</i>\r\n        {{ad.title}}\r\n      </div>\r\n      <span class=\"text-secondary text-justify overflow-hidden\" style=\"height:75px\">\r\n        {{ad.description}}\r\n      </span>\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      &#8377; {{ad.price}}\r\n    </div>\r\n\r\n    <div class=\"col-2\">\r\n      {{ad.userdata.name}}\r\n      <br />\r\n      <div class=\"text-secondary pt-1\">{{ad.timeinfo.date}}</div>\r\n    </div>\r\n\r\n    <div class=\"col-2\">\r\n      {{ad.timeinfo.expiry}}\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      {{ad.details.offers}}\r\n    </div>\r\n\r\n    <div class=\"col-1\">\r\n      {{ad.details.comments}}\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/Advertisement/advertisement.component.html":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/Advertisement/advertisement.component.html ***!
+  \****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card d-flex m-0 flex-column ad-width overflow-hidden\">\n\n  <div class=\"row m-0 ad-width px-1 py-2\">\n    <span class=\"col-sm-2 \"><img class=\"rounded-circle fit\" src={{ad.userdata.pic}} style=\"height:24px;width:24px\"></span>\n    <span class=\"col-sm-6\"> {{ad.userdata.name}}</span>\n    <span class=\"col-sm-4 text-secondary d-flex justify-content-end\"> {{ad.timeinfo.date}}</span>\n  </div>\n\n  <div class=\"position-relative\">\n    <img src={{ad.thumbnail}} class=\"ad-box\"/>\n    <div class=\"position-absolute black-desc ad-width py-2 px-2\">\n      <div class=\"row pl-1 pr-1 text-white\">\n        <i class=\"col-sm-2 material-icons\">{{category.icon}}</i>\n        <div class=\"col-sm-6\">{{ad.title}}</div>\n        <div class=\"col-sm-4 d-flex flex-row justify-content-end\">&#8377; {{ad.price}}</div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"w-100 px-2 overflow-hidden d-flex text-justify\" style=\"height:75px\">{{ad.description}}</div>\n\n  <div class=\"row m-0 px-2 py-2 text-secondary\">\n    <i class=\"material-icons pr-3\">local_offer</i>\n    {{ad.details.offers}}\n    <div class=\"material-icons icon-size mx-3\">comments</div>\n    {{ad.details.comments}}\n  </div>\n\n</div>\n");
 
 /***/ }),
 
@@ -408,66 +408,6 @@ function __importDefault(mod) {
 
 /***/ }),
 
-/***/ "./src/app/AdList/ad-list.component.css":
-/*!**********************************************!*\
-  !*** ./src/app/AdList/ad-list.component.css ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL0FkTGlzdC9hZC1saXN0LmNvbXBvbmVudC5jc3MifQ== */");
-
-/***/ }),
-
-/***/ "./src/app/AdList/ad-list.component.ts":
-/*!*********************************************!*\
-  !*** ./src/app/AdList/ad-list.component.ts ***!
-  \*********************************************/
-/*! exports provided: AdListComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdListComponent", function() { return AdListComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _MyClassifieds_AppService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../MyClassifieds/AppService */ "./src/app/MyClassifieds/AppService.ts");
-/* harmony import */ var _MyClassifieds_Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../MyClassifieds/Models/CategoryModel */ "./src/app/MyClassifieds/Models/CategoryModel.ts");
-
-
-
-
-let AdListComponent = class AdListComponent {
-    constructor(service) {
-        this.service = service;
-        this.category = new _MyClassifieds_Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__["CategoryModel"]();
-    }
-    ngOnInit() {
-        this.service.getCategory(Number(this.ad.details.category)).subscribe((res) => {
-            this.category = res;
-        });
-    }
-};
-AdListComponent.ctorParameters = () => [
-    { type: _MyClassifieds_AppService__WEBPACK_IMPORTED_MODULE_2__["AppService"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], AdListComponent.prototype, "ad", void 0);
-AdListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-ad-list',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./ad-list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/AdList/ad-list.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./ad-list.component.css */ "./src/app/AdList/ad-list.component.css")).default]
-    })
-], AdListComponent);
-
-
-
-/***/ }),
-
 /***/ "./src/app/Admin/Dashboard/admin.component.css":
 /*!*****************************************************!*\
   !*** ./src/app/Admin/Dashboard/admin.component.css ***!
@@ -493,12 +433,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminComponent", function() { return AdminComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _IconConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../IconConfig */ "./src/app/Admin/IconConfig.ts");
+
 
 
 let AdminComponent = class AdminComponent {
     constructor() {
     }
     ngOnInit() {
+        this.categoryIcons = _IconConfig__WEBPACK_IMPORTED_MODULE_2__["IconConfig"];
     }
 };
 AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -509,6 +452,40 @@ AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     })
 ], AdminComponent);
 
+
+
+/***/ }),
+
+/***/ "./src/app/Admin/IconConfig.ts":
+/*!*************************************!*\
+  !*** ./src/app/Admin/IconConfig.ts ***!
+  \*************************************/
+/*! exports provided: IconConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IconConfig", function() { return IconConfig; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+const IconConfig = [
+    "camera",
+    "rowing",
+    "pan_tool",
+    "settings_remote",
+    "setting_input_component",
+    "laptop",
+    "security",
+    "house",
+    "business_center",
+    "kitchen",
+    "spa",
+    "free_breakfast",
+    "hot_tub",
+    "golf_course",
+    "store_front",
+    "emoji_events"
+];
 
 
 /***/ }),
@@ -577,67 +554,6 @@ AdminModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         bootstrap: [_Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"]]
     })
 ], AdminModule);
-
-
-
-/***/ }),
-
-/***/ "./src/app/Advertisement/advertisement.component.css":
-/*!***********************************************************!*\
-  !*** ./src/app/Advertisement/advertisement.component.css ***!
-  \***********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".black-desc{\r\n  bottom : 0;\r\n  background-color : rgba(0,0,0,0.7)\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQWR2ZXJ0aXNlbWVudC9hZHZlcnRpc2VtZW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxVQUFVO0VBQ1Y7QUFDRiIsImZpbGUiOiJzcmMvYXBwL0FkdmVydGlzZW1lbnQvYWR2ZXJ0aXNlbWVudC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJsYWNrLWRlc2N7XHJcbiAgYm90dG9tIDogMDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yIDogcmdiYSgwLDAsMCwwLjcpXHJcbn1cclxuIl19 */");
-
-/***/ }),
-
-/***/ "./src/app/Advertisement/advertisement.component.ts":
-/*!**********************************************************!*\
-  !*** ./src/app/Advertisement/advertisement.component.ts ***!
-  \**********************************************************/
-/*! exports provided: Advertisement */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Advertisement", function() { return Advertisement; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _MyClassifieds_AppService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../MyClassifieds/AppService */ "./src/app/MyClassifieds/AppService.ts");
-/* harmony import */ var _MyClassifieds_Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../MyClassifieds/Models/CategoryModel */ "./src/app/MyClassifieds/Models/CategoryModel.ts");
-
-
-
-
-let Advertisement = class Advertisement {
-    constructor(service) {
-        this.service = service;
-        this.category = new _MyClassifieds_Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__["CategoryModel"]();
-    }
-    ngOnInit() {
-        console.log(this.ad);
-        this.service.getCategory(this.ad.details.category).subscribe((res) => {
-            this.category = res;
-        });
-    }
-};
-Advertisement.ctorParameters = () => [
-    { type: _MyClassifieds_AppService__WEBPACK_IMPORTED_MODULE_2__["AppService"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], Advertisement.prototype, "ad", void 0);
-Advertisement = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-advertisement',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./advertisement.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Advertisement/advertisement.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./advertisement.component.css */ "./src/app/Advertisement/advertisement.component.css")).default]
-    })
-], Advertisement);
 
 
 
@@ -927,14 +843,13 @@ let ActiveComponent = class ActiveComponent {
         this.service = service;
     }
     ngOnInit() {
-        this.ads = [new _Models_ViewModel__WEBPACK_IMPORTED_MODULE_3__["ViewModel"]()];
+        this.ads = [new _Models_ViewModel__WEBPACK_IMPORTED_MODULE_3__["Classified"]()];
         this.service.getCategories().subscribe((res) => {
             this.category = res;
         });
         this.service.getClassifieds().subscribe((res) => {
             this.ads = res;
             this.universal = res;
-            console.log(this.ads);
         });
         this.view = false;
         this.dropdata = {
@@ -1012,6 +927,164 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _active_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./active.component */ "./src/app/MyClassifieds/Active/active.component.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ActiveComponent", function() { return _active_component__WEBPACK_IMPORTED_MODULE_1__["ActiveComponent"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/AdList/ad-list.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/MyClassifieds/AdList/ad-list.component.css ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL015Q2xhc3NpZmllZHMvQWRMaXN0L2FkLWxpc3QuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/AdList/ad-list.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/MyClassifieds/AdList/ad-list.component.ts ***!
+  \***********************************************************/
+/*! exports provided: AdListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdListComponent", function() { return AdListComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _AppService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AppService */ "./src/app/MyClassifieds/AppService.ts");
+/* harmony import */ var _Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Models/CategoryModel */ "./src/app/MyClassifieds/Models/CategoryModel.ts");
+
+
+
+
+let AdListComponent = class AdListComponent {
+    constructor(service) {
+        this.service = service;
+        this.category = new _Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__["Category"]();
+    }
+    ngOnInit() {
+        this.service.getCategory(Number(this.ad.details.category)).subscribe((res) => {
+            this.category = res;
+        });
+    }
+};
+AdListComponent.ctorParameters = () => [
+    { type: _AppService__WEBPACK_IMPORTED_MODULE_2__["AppService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], AdListComponent.prototype, "ad", void 0);
+AdListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-ad-list',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./ad-list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/AdList/ad-list.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./ad-list.component.css */ "./src/app/MyClassifieds/AdList/ad-list.component.css")).default]
+    })
+], AdListComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/AdList/index.ts":
+/*!***********************************************!*\
+  !*** ./src/app/MyClassifieds/AdList/index.ts ***!
+  \***********************************************/
+/*! exports provided: AdListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _ad_list_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ad-list.component */ "./src/app/MyClassifieds/AdList/ad-list.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AdListComponent", function() { return _ad_list_component__WEBPACK_IMPORTED_MODULE_1__["AdListComponent"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/Advertisement/advertisement.component.css":
+/*!*************************************************************************!*\
+  !*** ./src/app/MyClassifieds/Advertisement/advertisement.component.css ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".black-desc{\r\n  bottom : 0;\r\n  background-color : rgba(0,0,0,0.7)\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvTXlDbGFzc2lmaWVkcy9BZHZlcnRpc2VtZW50L2FkdmVydGlzZW1lbnQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFVBQVU7RUFDVjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvTXlDbGFzc2lmaWVkcy9BZHZlcnRpc2VtZW50L2FkdmVydGlzZW1lbnQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ibGFjay1kZXNje1xyXG4gIGJvdHRvbSA6IDA7XHJcbiAgYmFja2dyb3VuZC1jb2xvciA6IHJnYmEoMCwwLDAsMC43KVxyXG59XHJcbiJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/Advertisement/advertisement.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/MyClassifieds/Advertisement/advertisement.component.ts ***!
+  \************************************************************************/
+/*! exports provided: Advertisement */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Advertisement", function() { return Advertisement; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _AppService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AppService */ "./src/app/MyClassifieds/AppService.ts");
+/* harmony import */ var _Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Models/CategoryModel */ "./src/app/MyClassifieds/Models/CategoryModel.ts");
+
+
+
+
+let Advertisement = class Advertisement {
+    constructor(service) {
+        this.service = service;
+        this.category = new _Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__["Category"]();
+    }
+    ngOnInit() {
+        this.service.getCategory(this.ad.details.category).subscribe((res) => {
+            this.category = res;
+        });
+    }
+};
+Advertisement.ctorParameters = () => [
+    { type: _AppService__WEBPACK_IMPORTED_MODULE_2__["AppService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], Advertisement.prototype, "ad", void 0);
+Advertisement = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-advertisement',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./advertisement.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/MyClassifieds/Advertisement/advertisement.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./advertisement.component.css */ "./src/app/MyClassifieds/Advertisement/advertisement.component.css")).default]
+    })
+], Advertisement);
+
+
+
+/***/ }),
+
+/***/ "./src/app/MyClassifieds/Advertisement/index.ts":
+/*!******************************************************!*\
+  !*** ./src/app/MyClassifieds/Advertisement/index.ts ***!
+  \******************************************************/
+/*! exports provided: Advertisement */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _advertisement_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./advertisement.component */ "./src/app/MyClassifieds/Advertisement/advertisement.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Advertisement", function() { return _advertisement_component__WEBPACK_IMPORTED_MODULE_1__["Advertisement"]; });
 
 
 
@@ -1150,7 +1223,7 @@ let CreateComponent = class CreateComponent {
             title: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('Title for the Classified'),
             description: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('Description for the Classified')
         });
-        this.formData = new _Models_ViewModel__WEBPACK_IMPORTED_MODULE_3__["ViewModel"]();
+        this.formData = new _Models_ViewModel__WEBPACK_IMPORTED_MODULE_3__["Classified"]();
     }
     typeChange(id) {
         var button = document.getElementsByClassName("dropdown-item")[id];
@@ -1181,7 +1254,7 @@ let CreateComponent = class CreateComponent {
                 this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.title + "/300/400";
                 this.service.postClassifieds(this.formData);
                 console.log(timestamp);
-                this.formData = new _Models_ViewModel__WEBPACK_IMPORTED_MODULE_3__["ViewModel"]();
+                this.formData = new _Models_ViewModel__WEBPACK_IMPORTED_MODULE_3__["Classified"]();
                 this.adData.reset();
             });
         });
@@ -1382,15 +1455,15 @@ class AdDetails {
 /*!*******************************************************!*\
   !*** ./src/app/MyClassifieds/Models/CategoryModel.ts ***!
   \*******************************************************/
-/*! exports provided: CategoryModel */
+/*! exports provided: Category */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoryModel", function() { return CategoryModel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Category", function() { return Category; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 
-class CategoryModel {
+class Category {
 }
 
 
@@ -1441,12 +1514,12 @@ class UserInfo {
 /*!***************************************************!*\
   !*** ./src/app/MyClassifieds/Models/ViewModel.ts ***!
   \***************************************************/
-/*! exports provided: ViewModel */
+/*! exports provided: Classified */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewModel", function() { return ViewModel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Classified", function() { return Classified; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _TimeInfo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TimeInfo */ "./src/app/MyClassifieds/Models/TimeInfo.ts");
 /* harmony import */ var _AdDetails__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AdDetails */ "./src/app/MyClassifieds/Models/AdDetails.ts");
@@ -1455,7 +1528,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class ViewModel {
+class Classified {
     constructor() {
         this.timeinfo = new _TimeInfo__WEBPACK_IMPORTED_MODULE_1__["TimeInfo"]();
         this.details = new _AdDetails__WEBPACK_IMPORTED_MODULE_2__["AdDetails"]();
@@ -1561,7 +1634,7 @@ SliderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!****************************************!*\
   !*** ./src/app/MyClassifieds/index.ts ***!
   \****************************************/
-/*! exports provided: ActiveComponent, HistoryComponent, HomeComponent, CreateComponent */
+/*! exports provided: ActiveComponent, HistoryComponent, CreateComponent, HomeComponent, AdListComponent, Advertisement */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1578,6 +1651,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _Home___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Home/ */ "./src/app/MyClassifieds/Home/index.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return _Home___WEBPACK_IMPORTED_MODULE_4__["HomeComponent"]; });
+
+/* harmony import */ var _AdList___WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AdList/ */ "./src/app/MyClassifieds/AdList/index.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AdListComponent", function() { return _AdList___WEBPACK_IMPORTED_MODULE_5__["AdListComponent"]; });
+
+/* harmony import */ var _Advertisement___WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Advertisement/ */ "./src/app/MyClassifieds/Advertisement/index.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Advertisement", function() { return _Advertisement___WEBPACK_IMPORTED_MODULE_6__["Advertisement"]; });
+
+
 
 
 
@@ -1646,12 +1727,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ */ "./src/app/MyClassifieds/index.ts");
 /* harmony import */ var _myclassified_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./myclassified-routing.module */ "./src/app/MyClassifieds/myclassified-routing.module.ts");
-/* harmony import */ var _Advertisement_advertisement_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Advertisement/advertisement.component */ "./src/app/Advertisement/advertisement.component.ts");
-/* harmony import */ var _AdList_ad_list_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../AdList/ad-list.component */ "./src/app/AdList/ad-list.component.ts");
-/* harmony import */ var _Slider_slider_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Slider/slider.component */ "./src/app/MyClassifieds/Slider/slider.component.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _AppService__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./AppService */ "./src/app/MyClassifieds/AppService.ts");
-
+/* harmony import */ var _Slider_slider_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Slider/slider.component */ "./src/app/MyClassifieds/Slider/slider.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _AppService__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./AppService */ "./src/app/MyClassifieds/AppService.ts");
 
 
 
@@ -1666,9 +1744,9 @@ let MyClassifiedsModule = class MyClassifiedsModule {
 };
 MyClassifiedsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [___WEBPACK_IMPORTED_MODULE_4__["ActiveComponent"], ___WEBPACK_IMPORTED_MODULE_4__["HistoryComponent"], ___WEBPACK_IMPORTED_MODULE_4__["CreateComponent"], ___WEBPACK_IMPORTED_MODULE_4__["HomeComponent"], _Slider_slider_component__WEBPACK_IMPORTED_MODULE_8__["SliderComponent"], _Advertisement_advertisement_component__WEBPACK_IMPORTED_MODULE_6__["Advertisement"], _AdList_ad_list_component__WEBPACK_IMPORTED_MODULE_7__["AdListComponent"]],
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _myclassified_routing_module__WEBPACK_IMPORTED_MODULE_5__["MyCLassifiedRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]],
-        providers: [_AppService__WEBPACK_IMPORTED_MODULE_10__["AppService"]],
+        declarations: [___WEBPACK_IMPORTED_MODULE_4__["ActiveComponent"], ___WEBPACK_IMPORTED_MODULE_4__["HistoryComponent"], ___WEBPACK_IMPORTED_MODULE_4__["CreateComponent"], ___WEBPACK_IMPORTED_MODULE_4__["HomeComponent"], _Slider_slider_component__WEBPACK_IMPORTED_MODULE_6__["SliderComponent"], ___WEBPACK_IMPORTED_MODULE_4__["Advertisement"], ___WEBPACK_IMPORTED_MODULE_4__["AdListComponent"]],
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _myclassified_routing_module__WEBPACK_IMPORTED_MODULE_5__["MyCLassifiedRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_7__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]],
+        providers: [_AppService__WEBPACK_IMPORTED_MODULE_8__["AppService"]],
         bootstrap: [___WEBPACK_IMPORTED_MODULE_4__["ActiveComponent"]]
     })
 ], MyClassifiedsModule);

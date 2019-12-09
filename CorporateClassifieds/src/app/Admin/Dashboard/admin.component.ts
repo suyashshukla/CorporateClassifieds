@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IconConfig } from '../IconConfig';
 
 @Component({
 selector: 'admin-component',
@@ -7,10 +8,14 @@ styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
 
+  categoryIcons;
+
 constructor() {
-}
+  }
 
-ngOnInit(){
 
-}
+  ngOnInit(){
+  this.categoryIcons = IconConfig;
+  }
+
 }

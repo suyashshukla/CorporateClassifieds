@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../AppService';
-import { ViewModel } from '../Models/ViewModel';
-import { CategoryModel } from "../Models/CategoryModel";
+import { Classified } from '../Models/ViewModel';
+import { Category } from "../Models/CategoryModel";
 
 @Component(
   {
@@ -13,9 +13,9 @@ import { CategoryModel } from "../Models/CategoryModel";
 
 export class ActiveComponent implements OnInit {
 
-  ads: ViewModel[];
-  universal: ViewModel[];
-  category: CategoryModel[];
+  ads: Classified[];
+  universal: Classified[];
+  category: Category[];
   dropdata;
   view;
    
@@ -23,19 +23,18 @@ export class ActiveComponent implements OnInit {
 
   ngOnInit() {
 
-    this.ads = [new ViewModel()]
+    this.ads = [new Classified()]
 
 
-    this.service.getCategories().subscribe((res: CategoryModel[]) => {
+    this.service.getCategories().subscribe((res: Category[]) => {
 
       this.category = res;
 
     });
 
-    this.service.getClassifieds().subscribe((res: ViewModel[]) => {
+    this.service.getClassifieds().subscribe((res: Classified[]) => {
       this.ads = res;
       this.universal = res;
-      console.log(this.ads);
     });
 
     this.view = false;
@@ -101,7 +100,7 @@ export class ActiveComponent implements OnInit {
   }
 
 
-  dropChange(category: CategoryModel) {
+  dropChange(category: Category) {
 
     this.dropdata.category = category.name;
 

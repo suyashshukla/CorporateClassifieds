@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http"
-import { ViewModel } from './Models/ViewModel';
-import { CategoryModel } from './Models/CategoryModel';
+import { Classified } from './Models/ViewModel';
+import { Category } from './Models/CategoryModel';
 import { Observable } from 'rxjs';
 
 
@@ -19,20 +19,20 @@ export class AppService {
     return this.http.get("/api/classifieds");
   }
 
-  postClassifieds(classified: ViewModel) {
+  postClassifieds(classified: Classified) {
     console.log(classified);
     this.http.post("/api/classifieds", classified).subscribe(
-      (res: ViewModel) => {
+      (res: Classified) => {
         console.log(res);
       })
   }
 
-  getCategories(): Observable<CategoryModel[]> {
-    return this.http.get<CategoryModel[]>("./api/category");
+  getCategories(): Observable<Category[]> {
+    return this.http.get<Category[]>("./api/category");
   }
 
   getCategory(id) {
-    return this.http.get<CategoryModel>("./api/category/" + id);
+    return this.http.get<Category>("./api/category/" + id);
   }
 
   getUsers() {
