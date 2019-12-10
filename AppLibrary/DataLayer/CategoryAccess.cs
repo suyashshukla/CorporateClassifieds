@@ -25,7 +25,7 @@ namespace AppLibrary.DataLayer
 
         public category Get(int id)
         {
-            return database.Single<category>("SELECT * FROM category WHERE id=" + id);
+            return database.Single<category>("SELECT * FROM category WHERE id=" + id);                    
         }
 
         public int Insert(category category)

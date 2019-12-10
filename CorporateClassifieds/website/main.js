@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form class=\"m-0 p-0 ml-3\">\r\n\r\n  <label for=\"name\">Category Name : </label>\r\n  <input class=\"form-control\" />\r\n\r\n  <label for=\"icon\">Icon : </label>\r\n\r\n  <div class=\"icon-list d-flex\">\r\n\r\n    <div *ngFor=\"let category of categoryIcons\" class=\"p-2\">\r\n      <i class=\"material-icons text-secondary\">{{category}}</i>\r\n    </div>\r\n\r\n\r\n  </div>\r\n\r\n  <button class=\"btn btn-primary bg-color\">SUBMIT</button>\r\n\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<form class=\"m-0 p-0 ml-3\">\r\n\r\n  <div class=\"display-4 text-center\">Category Addition Menu</div>\r\n\r\n  <label for=\"name\">Category Name : </label>\r\n  <input class=\"form-control\" [(ngModel)]=\"category.name\" name=\"category.name\" />\r\n\r\n  <label for=\"icon\">Icon : </label>\r\n\r\n  <div class=\"icon-list d-flex pb-2\">\r\n\r\n    <div *ngFor=\"let category of categoryIcons; index as i\" class=\"card\">\r\n      <i class=\"material-icons category text-secondary pointer p-2\" (click)=\"iconSelected(i)\">{{category}}</i>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <button class=\"btn btn-primary bg-color\" (click)=\"addCategory()\">SUBMIT</button>\r\n\r\n</form>\r\n");
 
 /***/ }),
 
@@ -408,6 +408,48 @@ function __importDefault(mod) {
 
 /***/ }),
 
+/***/ "./src/app/Admin/AdminService.ts":
+/*!***************************************!*\
+  !*** ./src/app/Admin/AdminService.ts ***!
+  \***************************************/
+/*! exports provided: AdminService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminService", function() { return AdminService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+let AdminService = class AdminService {
+    constructor(http) {
+        this.http = http;
+    }
+    addCategory(category) {
+        return this.http.post("/api/category", category).subscribe(res => {
+            window.alert("Success!");
+        });
+    }
+    getCategories() {
+        return this.http.get("/api/category");
+    }
+};
+AdminService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+AdminService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], AdminService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/Admin/Dashboard/admin.component.css":
 /*!*****************************************************!*\
   !*** ./src/app/Admin/Dashboard/admin.component.css ***!
@@ -434,16 +476,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _IconConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../IconConfig */ "./src/app/Admin/IconConfig.ts");
+/* harmony import */ var src_app_MyClassifieds_Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/MyClassifieds/Models/CategoryModel */ "./src/app/MyClassifieds/Models/CategoryModel.ts");
+/* harmony import */ var _AdminService__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../AdminService */ "./src/app/Admin/AdminService.ts");
+
+
 
 
 
 let AdminComponent = class AdminComponent {
-    constructor() {
+    constructor(service) {
+        this.service = service;
+        this.category = new src_app_MyClassifieds_Models_CategoryModel__WEBPACK_IMPORTED_MODULE_3__["Category"]();
     }
     ngOnInit() {
         this.categoryIcons = _IconConfig__WEBPACK_IMPORTED_MODULE_2__["IconConfig"];
+        this.category.name = "Icon name";
+    }
+    iconSelected(id) {
+        var icons = document.getElementsByClassName("category");
+        var iconSelected = icons[id];
+        for (var i = 0; i < icons.length; i++) {
+            var icon = icons[i];
+            icon.className = icon.className.replace("border border-success", "  ");
+        }
+        iconSelected.className = iconSelected.className + " border border-success ";
+        this.category.name = iconSelected.innerHTML;
+        this.category.icon = iconSelected.innerHTML;
+    }
+    addCategory() {
+        this.service.getCategories().subscribe(res => {
+            this.category.Id = res.length;
+            this.service.addCategory(this.category);
+        });
     }
 };
+AdminComponent.ctorParameters = () => [
+    { type: _AdminService__WEBPACK_IMPORTED_MODULE_4__["AdminService"] }
+];
 AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'admin-component',
@@ -473,7 +542,6 @@ const IconConfig = [
     "rowing",
     "pan_tool",
     "settings_remote",
-    "setting_input_component",
     "laptop",
     "security",
     "house",
@@ -483,7 +551,6 @@ const IconConfig = [
     "free_breakfast",
     "hot_tub",
     "golf_course",
-    "store_front",
     "emoji_events"
 ];
 
@@ -540,6 +607,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Dashboard/admin.component */ "./src/app/Admin/Dashboard/admin.component.ts");
 /* harmony import */ var _admin_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./admin-routing.module */ "./src/app/Admin/admin-routing.module.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
 
 
 
@@ -549,7 +620,7 @@ let AdminModule = class AdminModule {
 };
 AdminModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _admin_routing_module__WEBPACK_IMPORTED_MODULE_4__["AdminRoutingModule"]],
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _admin_routing_module__WEBPACK_IMPORTED_MODULE_4__["AdminRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"]],
         declarations: [_Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"]],
         bootstrap: [_Dashboard_admin_component__WEBPACK_IMPORTED_MODULE_3__["AdminComponent"]]
     })

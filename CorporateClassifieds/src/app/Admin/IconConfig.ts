@@ -3,7 +3,6 @@ export const IconConfig: string[] = [
   "rowing",
   "pan_tool",
   "settings_remote",
-  "setting_input_component",
   "laptop",
   "security",
   "house",
@@ -13,7 +12,6 @@ export const IconConfig: string[] = [
   "free_breakfast",
   "hot_tub",
   "golf_course",
-  "store_front",
   "emoji_events"
 ]
 

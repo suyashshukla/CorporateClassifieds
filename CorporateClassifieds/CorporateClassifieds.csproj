@@ -552,6 +552,7 @@
     <Content Include="website\scripts.js" />
     <Content Include="website\styles.js" />
     <Content Include="website\vendor.js" />
+    <TypeScriptCompile Include="src\app\Admin\AdminService.ts" />
     <TypeScriptCompile Include="src\app\Admin\IconConfig.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\AdList\ad-list.component.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\AdList\index.ts" />

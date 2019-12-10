@@ -28,7 +28,7 @@ namespace AppLibrary.DI
             IEnumerable<Classified> source = database.Query<Classified>("SELECT * FROM classifieds");
 
             IEnumerable<ClassifiedsView> destination = mapper.Map<IEnumerable<ClassifiedsView>>(source);
-
+        
             return destination;
         }
 

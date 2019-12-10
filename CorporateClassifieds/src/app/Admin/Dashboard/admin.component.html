@@ -1,19 +1,20 @@
 <form class="m-0 p-0 ml-3">
 
+  <div class="display-4 text-center">Category Addition Menu</div>
+
   <label for="name">Category Name : </label>
-  <input class="form-control" />
+  <input class="form-control" [(ngModel)]="category.name" name="category.name" />
 
   <label for="icon">Icon : </label>
 
-  <div class="icon-list d-flex">
+  <div class="icon-list d-flex pb-2">
 
-    <div *ngFor="let category of categoryIcons" class="p-2">
-      <i class="material-icons text-secondary">{{category}}</i>
+    <div *ngFor="let category of categoryIcons; index as i" class="card">
+      <i class="material-icons category text-secondary pointer p-2" (click)="iconSelected(i)">{{category}}</i>
     </div>
-
 
   </div>
 
-  <button class="btn btn-primary bg-color">SUBMIT</button>
+  <button class="btn btn-primary bg-color" (click)="addCategory()">SUBMIT</button>
 
 </form>
