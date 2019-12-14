@@ -67,3 +67,11 @@ body{
 .bottom{
   bottom : 0;
 }
+
+.border-color {
+  border: 1px solid rgb(118, 97, 139);
+}
+
+.bg-trans{
+  background-color : rgba(0,0,0,0.75);
+}

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AppService } from '../AppService';
-import { Category } from '../Models/CategoryModel';
-import { Classified } from '../Models/ViewModel';
+import { Category } from '../../Models/CategoryModel';
+import { Classified } from '../../Models/ViewModel';
 
 @Component({
   selector: 'app-ad-list',

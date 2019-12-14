@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IconConfig } from '../IconConfig';
-import { Category } from 'src/app/MyClassifieds/Models/CategoryModel';
+import { Category } from 'src/app/Models/CategoryModel';
 import { AdminService } from '../AdminService';
 
 @Component({
@@ -20,7 +20,7 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
     this.categoryIcons = IconConfig;
 
-    this.category.name = "Icon name";
+    this.category.name = "Enter the category name";
   }
 
   iconSelected(id) {
@@ -36,7 +36,6 @@ export class AdminComponent implements OnInit {
     }
 
     iconSelected.className = iconSelected.className + " border border-success ";
-    this.category.name = iconSelected.innerHTML;
     this.category.icon = iconSelected.innerHTML;
   }
 

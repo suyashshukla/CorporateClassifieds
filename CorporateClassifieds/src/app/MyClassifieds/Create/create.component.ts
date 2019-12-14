@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Classified } from "../Models/ViewModel";
-import { AppService } from "../AppService";
-import { Category } from '../Models/CategoryModel';
+import { Classified } from "../../Models/ViewModel";
+import { AppService } from "../../Shared/AppService";
+import { Category } from '../../Models/CategoryModel';
 
 @Component({
   selector: 'app-create',
@@ -66,6 +66,7 @@ export class CreateComponent implements OnInit {
         this.formData.details.comments = "0";
         this.formData.details.category = this.category[this.category.findIndex(c => c.name == this.formData.details.category)].Id+"";
         this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.title+"/300/400";
+
 
         this.service.postClassifieds(this.formData);
 

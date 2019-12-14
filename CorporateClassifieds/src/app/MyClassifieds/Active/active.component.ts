@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../AppService';
-import { Classified } from '../Models/ViewModel';
-import { Category } from "../Models/CategoryModel";
+import { AppService } from '../../Shared/AppService';
+import { Category,Classified,AdDetails } from "../../Models";
+import { Offers } from 'src/app/Models/Offers';
+import { InboxService } from 'src/app/Inbox/InboxService';
 
 @Component(
   {
@@ -18,11 +19,17 @@ export class ActiveComponent implements OnInit {
   category: Category[];
   dropdata;
   view;
+  offerData: Offers = new Offers();
+  offer: boolean;
+  activeAd: Classified;
    
-  constructor(private service: AppService) {}
+  constructor(private service: AppService,
+    private inboxService: InboxService
+  ) { }
 
   ngOnInit() {
-
+    this.offer = false;
+    this.offerData.amount = 1000;
     this.ads = [new Classified()]
 
 
@@ -85,7 +92,7 @@ export class ActiveComponent implements OnInit {
       this.dropdata.posted = query;
     }
     else
-      this.dropdata.location =query;
+      this.dropdata.location = query;
   }
 
   reset() {
@@ -101,10 +108,42 @@ export class ActiveComponent implements OnInit {
 
 
   dropChange(category: Category) {
-
     this.dropdata.category = category.name;
-
     this.ads = this.universal.filter((ad) => ad.details.category == category.Id.toString());
+  }
+
+
+  makeOffer(ad: Classified) {
+    this.offer = true;
+    this.activeAd = ad;
+  }
+
+  confirmOffer() {
+    this.offer = false;
+
+    var d = new Date();
+
+    var timestamp = d.getFullYear() + "" + d.getMonth()+1 + "" + d.getDate();
+
+    this.offerData.timestamp = this.service.getDate(timestamp);
+    this.offerData.adData = this.activeAd;
+
+
+    this.service.getUsers().subscribe((res) => {
+
+      this.offerData.userData.name = res["results"][0]["name"]["first"];
+      this.offerData.userData.pic = res["results"][0]["picture"]["thumbnail"];
+
+
+      this.inboxService.getOffers().subscribe(res => {
+        this.offerData.id = res.length;
+
+        this.inboxService.postOffers(this.offerData);
+      });
+           
+    });
+
+
 
   }
 

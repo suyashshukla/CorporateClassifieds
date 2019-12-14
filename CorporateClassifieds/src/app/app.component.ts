@@ -14,13 +14,10 @@ export class AppComponent implements OnInit{
 
 
   click(id:string){
-
     var item = document.getElementById(id);
-
     var values = document.getElementsByClassName("active");
-
     values[0].className = values[0].className.replace(" active","");
-    item.className = item.className+" active";
-    
-  }
+    item.className = item.className+" active";    
+  } 
+
 }

@@ -1,0 +1,40 @@
+
+<div class="card m-2">
+  <div class="card-header">
+    Offer # {{inbox.id}}
+  </div>
+  <div class="card-body">
+    <div class="row">
+
+      <div class="col-4">
+        {{inbox.adData.title}}
+        <div class="text-secondary">
+          {{inbox.adData.description}}
+        </div>
+      </div>
+
+      <div class="col-4">
+        <i>"{{inbox.comments}}"</i>
+        <div class="d-flex text-secondary">
+          <div class="text-danger">
+            &#8377; {{inbox.amount}}
+          </div>
+           &nbsp;against&nbsp; 
+          <div class="text-success">
+            &#8377; {{inbox.adData.price}}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="d-flex align-items-center">
+          <img src="{{inbox.userData.pic}}" class="rounded-circle mr-1" style="height:24px;width:24px" />
+          {{inbox.userData.name}}
+        </div>
+        <div class="text-secondary ml-3">{{inbox.timestamp}}</div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

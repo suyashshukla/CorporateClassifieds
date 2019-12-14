@@ -10,7 +10,9 @@ import { AdminModule } from './Admin/admin.module';
 import { InboxModule } from './Inbox/inbox.module';
 import { ClassifiedsModule } from './Classifieds/classifieds.module';
 import { LoginComponent } from './login/login.component';
-import { AppService } from './MyClassifieds/AppService';
+import { AppService } from './Shared/AppService';
+
+import {} from './Models'
 
 @NgModule({
   declarations: [

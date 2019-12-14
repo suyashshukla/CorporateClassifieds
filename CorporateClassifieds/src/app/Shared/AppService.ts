@@ -1,12 +1,11 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http"
-import { Classified } from './Models/ViewModel';
-import { Category } from './Models/CategoryModel';
+import { Classified,Category,Offers } from '../Models/';
 import { Observable } from 'rxjs';
 
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 
 export class AppService {
@@ -38,6 +37,7 @@ export class AppService {
   getUsers() {
     return this.http.get("https://randomuser.me/api/");
   }
+
 
   getExpiry(timestamp: string, expiry: number): string {
 
