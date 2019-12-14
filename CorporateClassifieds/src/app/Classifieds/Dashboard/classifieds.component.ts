@@ -22,6 +22,7 @@ export class ClassifiedsComponent implements OnInit {
   offerData: Offers = new Offers();
   offer: boolean;
   activeAd: Classified;
+  categoryCount: number;
 
   constructor(private service: AppService,
     private inboxService: InboxService
@@ -29,14 +30,13 @@ export class ClassifiedsComponent implements OnInit {
 
   ngOnInit() {
     this.offer = false;
-    this.offerData.amount = 1000;
     this.ads = [new Classified()]
 
 
     this.service.getCategories().subscribe((res: Category[]) => {
 
       this.category = res;
-
+      this.categoryCount = res.length;
     });
 
     this.service.getClassifieds().subscribe((res: Classified[]) => {
@@ -83,16 +83,27 @@ export class ClassifiedsComponent implements OnInit {
 
     var query = dropdown[id].innerHTML;
 
+
     if (id < 3) {
       this.dropdata.type = query;
       this.ads = this.universal.filter((ad) => ad.details.type == query);
     }
 
-    else if (id >= 6 && id < 9) {
+    else if (id >= 3 && id < 6) {
+
+      id = id + this.categoryCount;
+      query = dropdown[id].innerHTML;
+
       this.dropdata.posted = query;
     }
-    else
+    else {
+
+      id = id + this.categoryCount;
+      query = dropdown[id].innerHTML;
+
       this.dropdata.location = query;
+
+    }
   }
 
   reset() {

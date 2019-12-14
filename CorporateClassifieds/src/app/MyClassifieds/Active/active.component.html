@@ -26,11 +26,9 @@
         </button>
 
         <div class="dropdown-menu">
-
           <div class="dropdown-item" (click)="change(0)">Sale</div>
           <div class="dropdown-item" (click)="change(1)">Rent</div>
           <div class="dropdown-item" (click)="change(2)">Required</div>
-
         </div>
 
       </div>
@@ -66,9 +64,9 @@
 
         <div class="dropdown-menu">
 
-          <div class="dropdown-item" (click)="change(6)">Last Week</div>
-          <div class="dropdown-item" (click)="change(7)">Last Month</div>
-          <div class="dropdown-item" (click)="change(8)">Last Year</div>
+          <div class="dropdown-item" (click)="change(3)">Last Week</div>
+          <div class="dropdown-item" (click)="change(4)">Last Month</div>
+          <div class="dropdown-item" (click)="change(5)">Last Year</div>
 
         </div>
 
@@ -83,9 +81,9 @@
 
         <div class="dropdown-menu">
 
-          <div class="dropdown-item" (click)="change(9)">Madhapur</div>
-          <div class="dropdown-item" (click)="change(10)">Gachibowli</div>
-          <div class="dropdown-item" (click)="change(11)">Kukatpally</div>
+          <div class="dropdown-item" (click)="change(6)">Madhapur</div>
+          <div class="dropdown-item" (click)="change(7)">Gachibowli</div>
+          <div class="dropdown-item" (click)="change(8)">Kukatpally</div>
 
         </div>
 
@@ -128,12 +126,13 @@
 
 
 
-  <div *ngIf="ads.length==0" class="position-absolute ml-5 pl-5 d-flex justify-content-center" style="bottom : 0">
-    <img class="img-fluid" src="../../../assets/nothing.png" />
+
+  <div *ngIf="ads.length==0" class="position-absolute ml-5 pl-5 d-flex justify-content-center" style="top:250px;
+align-items:flex-end;">
+    <span><img class="img-fluid" src="../../../assets/nothing.png" /></span>
   </div>
 
   <div *ngIf="ads.length!=0">
-
     <div class="row ml-2 mt-3" *ngIf="!view">
       <div *ngFor="let ad of ads">
         <div class="col-4 p-0 m-1">
@@ -144,26 +143,22 @@
 
     <div *ngIf="view">
       <div class="row p-2 m-2 border border-black bg-light">
-
         <div class="col-4">ITEM DETAILS</div>
         <div class="col-1">PRICE</div>
         <div class="col-2">POSTED BY</div>
         <div class="col-2">EXPIRY</div>
         <div class="col-1">OFFERS</div>
         <div class="col-1">COMMENTS</div>
-
       </div>
+
       <div *ngFor="let ad of ads">
         <app-ad-list [ad]="ad"></app-ad-list>
       </div>
-    </div>
 
+    </div>
   </div>
 
-  <div class="position-absolute w-100 h-100 bg-trans" *ngIf="offer" style="top:0;"></div>
-
-
-  <div class="position-absolute w-100 d-flex align-items-center justify-content-center" style="top:0;height:100vh" *ngIf="offer">
+  <div class="fixed-top fixed-bottom w-100 d-flex align-items-center justify-content-center bg-trans" style="top:0;height:100vh" *ngIf="offer">
     <div class="card">
 
       <div class="card-header bg-dark text-white">

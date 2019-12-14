@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../Shared/AppService';
-import { Category,Classified,AdDetails } from "../../Models";
+import { Category, Classified, AdDetails } from "../../Models";
 import { Offers } from 'src/app/Models/Offers';
 import { InboxService } from 'src/app/Inbox/InboxService';
 
@@ -8,7 +8,7 @@ import { InboxService } from 'src/app/Inbox/InboxService';
   {
     selector: 'app-active',
     templateUrl: './active.component.html',
-    styleUrls : ['./active.component.css']
+    styleUrls: ['./active.component.css']
   }
 )
 
@@ -22,20 +22,22 @@ export class ActiveComponent implements OnInit {
   offerData: Offers = new Offers();
   offer: boolean;
   activeAd: Classified;
-   
+  categoryCount: number;
+
   constructor(private service: AppService,
     private inboxService: InboxService
   ) { }
 
   ngOnInit() {
     this.offer = false;
-    this.offerData.amount = 1000;
+    this.offerData.amount = 0;
     this.ads = [new Classified()]
 
 
     this.service.getCategories().subscribe((res: Category[]) => {
 
       this.category = res;
+      this.categoryCount = res.length;
 
     });
 
@@ -64,7 +66,7 @@ export class ActiveComponent implements OnInit {
     list.className = list.className + " text-color";
 
     this.view = true;
-    
+
   }
 
   grid() {
@@ -87,12 +89,22 @@ export class ActiveComponent implements OnInit {
       this.dropdata.type = query;
       this.ads = this.universal.filter((ad) => ad.details.type == query);
     }
-    
-    else if (id >= 6 && id < 9) {
+
+    else if (id >= 3 && id <6) {
+
+      id = id + this.categoryCount;
+      query = dropdown[id].innerHTML;
+
       this.dropdata.posted = query;
     }
-    else
+    else {
+
+      id = id + this.categoryCount;
+      query = dropdown[id].innerHTML;
+
       this.dropdata.location = query;
+
+    }
   }
 
   reset() {
@@ -123,7 +135,7 @@ export class ActiveComponent implements OnInit {
 
     var d = new Date();
 
-    var timestamp = d.getFullYear() + "" + d.getMonth()+1 + "" + d.getDate();
+    var timestamp = d.getFullYear() + "" + d.getMonth() + 1 + "" + d.getDate();
 
     this.offerData.timestamp = this.service.getDate(timestamp);
     this.offerData.adData = this.activeAd;
@@ -140,7 +152,7 @@ export class ActiveComponent implements OnInit {
 
         this.inboxService.postOffers(this.offerData);
       });
-           
+
     });
 
 

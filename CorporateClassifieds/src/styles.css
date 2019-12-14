@@ -75,3 +75,7 @@ body{
 .bg-trans{
   background-color : rgba(0,0,0,0.75);
 }
+
+.flex-end{
+  align-items:flex-end;
+}
