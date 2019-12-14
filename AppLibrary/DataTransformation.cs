@@ -22,7 +22,6 @@ namespace AppLibrary
         {
 
             string json = JsonConvert.SerializeObject(time);
-            System.Diagnostics.Debug.WriteLine(json + "\n ::" + time.date);
 
             return json;
         }

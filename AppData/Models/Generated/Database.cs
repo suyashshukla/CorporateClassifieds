@@ -138,100 +138,6 @@ namespace classifieds
 
     
 
-	[TableName("dbo.advertisement")]
-
-
-
-	[PrimaryKey("Id", AutoIncrement=false)]
-
-
-	[ExplicitColumns]
-
-    public partial class advertisement : classifiedsDB.Record<advertisement>  
-    {
-
-
-
-		[Column] public int Id { get; set; }
-
-
-
-
-
-		[Column] public string title { get; set; }
-
-
-
-
-
-		[Column] public string description { get; set; }
-
-
-
-
-
-		[Column] public int? validity { get; set; }
-
-
-
-
-
-		[Column] public int? price { get; set; }
-
-
-
-
-
-		[Column] public int? timestamp { get; set; }
-
-
-
-
-
-		[Column] public string type { get; set; }
-
-
-
-
-
-		[Column] public string category { get; set; }
-
-
-
-
-
-		[Column] public string username { get; set; }
-
-
-
-
-
-		[Column] public string userpic { get; set; }
-
-
-
-
-
-		[Column] public int? offers { get; set; }
-
-
-
-
-
-		[Column] public int? comments { get; set; }
-
-
-
-
-
-		[Column] public string thumbnail { get; set; }
-
-
-
-	}
-
-    
-
 	[TableName("dbo.category")]
 
 
@@ -275,7 +181,7 @@ namespace classifieds
 
 	[ExplicitColumns]
 
-    public partial class Classified : classifiedsDB.Record<Classified>  
+    public partial class ClassifiedData : classifiedsDB.Record<ClassifiedData>  
     {
 
 
@@ -323,6 +229,58 @@ namespace classifieds
 
 
 		[Column] public string timeinfo { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.offers")]
+
+
+
+	[PrimaryKey("Id", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class OfferData : classifiedsDB.Record<OfferData>  
+    {
+
+
+
+		[Column] public int Id { get; set; }
+
+
+
+
+
+		[Column] public string adData { get; set; }
+
+
+
+
+
+		[Column] public string userData { get; set; }
+
+
+
+
+
+		[Column] public int? amount { get; set; }
+
+
+
+
+
+		[Column] public string comments { get; set; }
+
+
+
+
+
+		[Column] public string timestamp { get; set; }
 
 
 

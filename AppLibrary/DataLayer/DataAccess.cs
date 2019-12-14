@@ -18,14 +18,14 @@ namespace AppLibrary.DI
 
         public int Delete(int id)
         {
-            Classified classified = database.Single<Classified>("SELECT * FROM classifieds WHERE id=" + id);
+            ClassifiedData classified = database.Single<ClassifiedData>("SELECT * FROM classifieds WHERE id=" + id);
 
             return database.Delete(classified);
         }
 
         public IEnumerable<ClassifiedsView> Get()
         {
-            IEnumerable<Classified> source = database.Query<Classified>("SELECT * FROM classifieds");
+            IEnumerable<ClassifiedData> source = database.Query<ClassifiedData>("SELECT * FROM classifieds");
 
             IEnumerable<ClassifiedsView> destination = mapper.Map<IEnumerable<ClassifiedsView>>(source);
         
@@ -34,7 +34,7 @@ namespace AppLibrary.DI
 
         public ClassifiedsView Get(int id)
         {
-            Classified source = database.Single<Classified>("SELECT * FROM classifieds WHERE id=" + id);
+            ClassifiedData source = database.Single<ClassifiedData>("SELECT * FROM classifieds WHERE id=" + id);
             ClassifiedsView destination = mapper.Map<ClassifiedsView>(source);
 
             return destination;
@@ -42,7 +42,7 @@ namespace AppLibrary.DI
 
         public int Insert(ClassifiedsView classifieds)
         {
-            Classified classifiedsData = mapper.Map<Classified>(classifieds);
+            ClassifiedData classifiedsData = mapper.Map<ClassifiedData>(classifieds);
 
             return database.Insert("classifieds", classifiedsData) == null ? 0 : 1;
         }

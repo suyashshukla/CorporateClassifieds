@@ -71,6 +71,8 @@
     <Compile Include="DataLayer\DataAccess.cs" />
     <Compile Include="DataLayer\ICategoryAccess.cs" />
     <Compile Include="DataLayer\IDataAccess.cs" />
+    <Compile Include="DataLayer\IOfferAccess.cs" />
+    <Compile Include="DataLayer\OfferAccess.cs" />
     <Compile Include="DataTransformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -8,6 +8,7 @@ namespace CorporateClassifieds.App_Start
   using AutoMapper;
   using classifieds;
   using CoreModel;
+  using DataModel;
   using Newtonsoft.Json;
   using SimpleInjector;
   using SimpleInjector.Integration.WebApi;
@@ -17,7 +18,6 @@ namespace CorporateClassifieds.App_Start
   public static class SimpleInjectorWebApiInitializer
   {
 
-    /// <summary>Initialize the container and register it as Web API Dependency Resolver.</summary>
     public static void Initialize()
     {
       Container container = new Container();
@@ -37,11 +37,10 @@ namespace CorporateClassifieds.App_Start
     {
 
       MapperConfiguration config = new MapperConfiguration(cfg => cfg.AddProfile<MappingProfile>());
-            
-
 
       container.Register<IDataAccess, DataAccess>();
       container.Register<ICategoryAccess, CategoryAccess>();
+      container.Register<IOfferAccess, OfferAccess>();
       container.Register<IMapper>(() => new Mapper(config));
     }
   }
@@ -50,9 +49,8 @@ namespace CorporateClassifieds.App_Start
   {
     public MappingProfile()
     {
-     
 
-      CreateMap<ClassifiedsView, Classified>()
+      CreateMap<ClassifiedsView, ClassifiedData>()
         .ForMember(destination => destination.userdata,
         map => map.MapFrom(source => DataTransformation.ToUserJson(source.userdata)))
         .ForMember(destination => destination.details,
@@ -60,14 +58,25 @@ namespace CorporateClassifieds.App_Start
         .ForMember(destination => destination.timeinfo,
         map => map.MapFrom(source => DataTransformation.ToTimeJson(source.timeinfo)));
 
-      CreateMap<Classified, ClassifiedsView>()
+      CreateMap<ClassifiedData, ClassifiedsView>()
         .ForMember(destination => destination.timeinfo,
         map => map.MapFrom(source => JsonConvert.DeserializeObject<Time>(source.timeinfo)))
         .ForMember(destination => destination.details,
         map => map.MapFrom(source => JsonConvert.DeserializeObject<ClassifiedDetails>(source.details)))
         .ForMember(destination => destination.userdata,
         map => map.MapFrom(source => JsonConvert.DeserializeObject<User>(source.userdata)));
-   
+
+      CreateMap<OfferIntermediate, OfferData>()
+      .ForMember(destination => destination.userData,
+      map => map.MapFrom(source => DataTransformation.ToUserJson(source.userData)))
+      .ForMember(destination => destination.adData,
+      map => map.MapFrom(source => JsonConvert.SerializeObject(source.adData)));
+
+      CreateMap<OfferData, OfferIntermediate>()
+        .ForMember(destination => destination.userData,
+        map => map.MapFrom(source => JsonConvert.DeserializeObject<User>(source.userData)))
+        .ForMember(destination => destination.adData,
+        map => map.MapFrom(source => JsonConvert.DeserializeObject<ClassifiedData>(source.adData))); ;
 
     }
   }

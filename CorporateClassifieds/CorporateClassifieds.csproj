@@ -137,12 +137,14 @@
     <Content Include="e2e\protractor.conf.js" />
     <Content Include="Global.asax" />
     <Content Include="karma.conf.js" />
-    <Content Include="src\app\MyClassifieds\AdList\ad-list.component.css" />
-    <Content Include="src\app\MyClassifieds\AdList\ad-list.component.html" />
+    <Content Include="src\app\Inbox\InboxData\inbox-data.component.css" />
+    <Content Include="src\app\Inbox\InboxData\inbox-data.component.html" />
+    <Content Include="src\app\Shared\AdList\ad-list.component.css" />
+    <Content Include="src\app\Shared\AdList\ad-list.component.html" />
     <Content Include="src\app\Admin\Dashboard\admin.component.css" />
     <Content Include="src\app\Admin\Dashboard\admin.component.html" />
-    <Content Include="src\app\MyClassifieds\Advertisement\advertisement.component.css" />
-    <Content Include="src\app\MyClassifieds\Advertisement\advertisement.component.html" />
+    <Content Include="src\app\Shared\Advertisement\advertisement.component.css" />
+    <Content Include="src\app\Shared\Advertisement\advertisement.component.html" />
     <Content Include="src\app\app.component.css" />
     <Content Include="src\app\app.component.html" />
     <Content Include="src\app\Classifieds\Dashboard\classifieds.component.css" />
@@ -554,17 +556,21 @@
     <Content Include="website\vendor.js" />
     <TypeScriptCompile Include="src\app\Admin\AdminService.ts" />
     <TypeScriptCompile Include="src\app\Admin\IconConfig.ts" />
-    <TypeScriptCompile Include="src\app\MyClassifieds\AdList\ad-list.component.ts" />
-    <TypeScriptCompile Include="src\app\MyClassifieds\AdList\index.ts" />
-    <TypeScriptCompile Include="src\app\MyClassifieds\Advertisement\advertisement.component.ts" />
-    <TypeScriptCompile Include="src\app\MyClassifieds\Advertisement\index.ts" />
-    <TypeScriptCompile Include="src\app\MyClassifieds\Models\AdDetails.ts" />
-    <TypeScriptCompile Include="src\app\MyClassifieds\Models\CategoryModel.ts" />
-    <TypeScriptCompile Include="src\app\MyClassifieds\Models\Icon.ts" />
-    <TypeScriptCompile Include="src\app\MyClassifieds\Models\TimeInfo.ts" />
-    <TypeScriptCompile Include="src\app\MyClassifieds\Models\UserInfo.ts" />
-    <TypeScriptCompile Include="src\app\MyClassifieds\Models\ViewModel.ts" />
-    <TypeScriptCompile Include="src\app\MyClassifieds\AppService.ts" />
+    <TypeScriptCompile Include="src\app\Inbox\InboxData\inbox-data.component.ts" />
+    <TypeScriptCompile Include="src\app\Inbox\InboxService.ts" />
+    <TypeScriptCompile Include="src\app\Models\index.ts" />
+    <TypeScriptCompile Include="src\app\Models\Offers.ts" />
+    <TypeScriptCompile Include="src\app\Shared\AdList\ad-list.component.ts" />
+    <TypeScriptCompile Include="src\app\Shared\AdList\index.ts" />
+    <TypeScriptCompile Include="src\app\Shared\Advertisement\advertisement.component.ts" />
+    <TypeScriptCompile Include="src\app\Shared\Advertisement\index.ts" />
+    <TypeScriptCompile Include="src\app\Models\AdDetails.ts" />
+    <TypeScriptCompile Include="src\app\Models\CategoryModel.ts" />
+    <TypeScriptCompile Include="src\app\Models\Icon.ts" />
+    <TypeScriptCompile Include="src\app\Models\TimeInfo.ts" />
+    <TypeScriptCompile Include="src\app\Models\UserInfo.ts" />
+    <TypeScriptCompile Include="src\app\Models\ViewModel.ts" />
+    <TypeScriptCompile Include="src\app\Shared\AppService.ts" />
     <Content Include="src\app\MyClassifieds\Create\create.component.css" />
     <Content Include="src\app\MyClassifieds\Create\create.component.html" />
     <Content Include="src\app\MyClassifieds\History\history.component.css" />
@@ -585,6 +591,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ClassifiedsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OffersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -665,6 +672,8 @@
     <TypeScriptCompile Include="src\app\MyClassifieds\myclassified.module.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Slider\index.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Slider\slider.component.ts" />
+    <TypeScriptCompile Include="src\app\Shared\index.ts" />
+    <TypeScriptCompile Include="src\app\Shared\shared.module.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />
@@ -705,7 +714,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>62335</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62335/</IISUrl>
+          <IISUrl>http://localhost:56962/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

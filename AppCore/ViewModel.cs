@@ -1,5 +1,5 @@
 ﻿namespace CoreModel
-{   
+{
 
     public class User
     {
@@ -11,7 +11,7 @@
         public string pic
         {
             get; set;
-        } 
+        }
     }
 
     public class ClassifiedDetails
@@ -61,12 +61,29 @@
         public int? price { get; set; }
 
         public string thumbnail { get; set; }
-         
+
         public User userdata { get; set; }
 
         public ClassifiedDetails details { get; set; }
 
         public Time timeinfo { get; set; }
+
+    }
+
+    public class OffersView
+    {
+
+        public int id { get; set; }
+
+        public string comments { get; set; }
+
+        public int amount { get; set; }
+
+        public string timestamp { get; set; }
+
+        public ClassifiedsView adData { get; set; }
+
+        public User userData { get; set; }
 
     }
 }
