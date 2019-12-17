@@ -7,7 +7,7 @@
     <ProjectGuid>{B5568299-2002-4B08-845C-398524D676FD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AppCore</RootNamespace>
+    <RootNamespace>DataModel</RootNamespace>
     <AssemblyName>AppCore</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

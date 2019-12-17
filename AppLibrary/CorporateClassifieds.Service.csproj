@@ -7,7 +7,7 @@
     <ProjectGuid>{4298D632-B25E-4B2D-91E6-E8EE678486E3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AppLibrary</RootNamespace>
+    <RootNamespace>Services</RootNamespace>
     <AssemblyName>Services</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

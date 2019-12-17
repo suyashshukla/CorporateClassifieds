@@ -5,10 +5,6 @@ namespace CorporateClassifieds.App_Start
   using AppLibrary.DataLayer;
   using AppLibrary.DI;
   using AutoMapper;
-  using classifieds;
-  using CoreModel;
-  using DataModel;
-  using Newtonsoft.Json;
   using Services;
   using SimpleInjector;
   using SimpleInjector.Integration.WebApi;
@@ -35,7 +31,6 @@ namespace CorporateClassifieds.App_Start
 
     private static void InitializeContainer(Container container)
     {
-
       MapperConfiguration config = new MapperConfiguration(cfg => cfg.AddProfile<MappingProfile>());
 
       container.Register<IClassifiedsService, ClassifiedsService>();
@@ -45,5 +40,5 @@ namespace CorporateClassifieds.App_Start
     }
   }
 
- 
+
 }
