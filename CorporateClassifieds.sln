@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorporateClassifieds", "CorporateClassifieds\CorporateClassifieds.csproj", "{376BE828-E55E-41FF-B8AA-E14E1B7ABA28}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorporateClassifieds.Web", "CorporateClassifieds\CorporateClassifieds.Web.csproj", "{376BE828-E55E-41FF-B8AA-E14E1B7ABA28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppServices", "AppLibrary\AppServices.csproj", "{4298D632-B25E-4B2D-91E6-E8EE678486E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorporateClassifieds.Service", "AppLibrary\CorporateClassifieds.Service.csproj", "{4298D632-B25E-4B2D-91E6-E8EE678486E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppViewModel", "AppCore\AppViewModel.csproj", "{B5568299-2002-4B08-845C-398524D676FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorporateClassifieds.Model", "AppCore\CorporateClassifieds.Model.csproj", "{B5568299-2002-4B08-845C-398524D676FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDataModel", "AppData\AppDataModel.csproj", "{429A670C-4D49-4D38-9BB8-2177304B7738}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorporateClassifieds.Data", "AppData\CorporateClassifieds.Data.csproj", "{429A670C-4D49-4D38-9BB8-2177304B7738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTesting", "AppTesting\AppTesting.csproj", "{21A28DF6-48A6-419F-AE79-AE0E8F5007C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorporateClassifieds.Testing", "AppTesting\CorporateClassifieds.Testing.csproj", "{21A28DF6-48A6-419F-AE79-AE0E8F5007C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

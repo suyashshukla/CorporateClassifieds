@@ -24,3 +24,4 @@ C:\Users\suyash.s\source\repos\Classifieds\AppTesting\obj\Debug\AppTesting.cspro
 C:\Users\suyash.s\source\repos\Classifieds\AppTesting\obj\Debug\AppTesting.csproj.CopyComplete
 C:\Users\suyash.s\source\repos\Classifieds\AppTesting\obj\Debug\AppTesting.dll
 C:\Users\suyash.s\source\repos\Classifieds\AppTesting\obj\Debug\AppTesting.pdb
+C:\Users\suyash.s\source\repos\Classifieds\AppTesting\obj\Debug\AppTesting.csproj.CoreCompileInputs.cache

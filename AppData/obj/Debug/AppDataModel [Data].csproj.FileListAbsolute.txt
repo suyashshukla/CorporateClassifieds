@@ -1,0 +1,10 @@
+C:\Users\suyash.s\source\repos\Classifieds\AppData\bin\Debug\AppData.dll.config
+C:\Users\suyash.s\source\repos\Classifieds\AppData\bin\Debug\AppData.dll
+C:\Users\suyash.s\source\repos\Classifieds\AppData\bin\Debug\AppData.pdb
+C:\Users\suyash.s\source\repos\Classifieds\AppData\bin\Debug\AppCore.dll
+C:\Users\suyash.s\source\repos\Classifieds\AppData\bin\Debug\AppCore.pdb
+C:\Users\suyash.s\source\repos\Classifieds\AppData\obj\Debug\AppDataModel [Data].csprojAssemblyReference.cache
+C:\Users\suyash.s\source\repos\Classifieds\AppData\obj\Debug\AppDataModel [Data].csproj.CoreCompileInputs.cache
+C:\Users\suyash.s\source\repos\Classifieds\AppData\obj\Debug\AppDataModel [Data].csproj.CopyComplete
+C:\Users\suyash.s\source\repos\Classifieds\AppData\obj\Debug\AppData.dll
+C:\Users\suyash.s\source\repos\Classifieds\AppData\obj\Debug\AppData.pdb

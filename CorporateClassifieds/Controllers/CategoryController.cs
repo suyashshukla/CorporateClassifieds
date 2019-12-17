@@ -12,9 +12,9 @@ namespace CorporateClassifieds.Controllers
   public class CategoryController : ApiController
   {
 
-    ICategoryAccess category;
+    ICategoryService category;
 
-    public CategoryController(ICategoryAccess category)
+    public CategoryController(ICategoryService category)
     {
       this.category = category;
     }

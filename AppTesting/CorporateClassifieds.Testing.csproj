@@ -56,17 +56,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppCore\AppViewModel.csproj">
+    <ProjectReference Include="..\AppCore\CorporateClassifieds.Model.csproj">
       <Project>{b5568299-2002-4b08-845c-398524d676fd}</Project>
-      <Name>AppViewModel</Name>
+      <Name>CorporateClassifieds.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AppData\AppDataModel.csproj">
+    <ProjectReference Include="..\AppData\CorporateClassifieds.Data.csproj">
       <Project>{429a670c-4d49-4d38-9bb8-2177304b7738}</Project>
-      <Name>AppDataModel</Name>
+      <Name>CorporateClassifieds.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AppLibrary\AppServices.csproj">
+    <ProjectReference Include="..\AppLibrary\CorporateClassifieds.Service.csproj">
       <Project>{4298d632-b25e-4b2d-91e6-e8ee678486e3}</Project>
-      <Name>AppServices</Name>
+      <Name>CorporateClassifieds.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

@@ -30,15 +30,12 @@ export class ActiveComponent implements OnInit {
 
   ngOnInit() {
     this.offer = false;
-    this.offerData.amount = 0;
     this.ads = [new Classified()]
 
 
     this.service.getCategories().subscribe((res: Category[]) => {
-
       this.category = res;
       this.categoryCount = res.length;
-
     });
 
     this.service.getClassifieds().subscribe((res: Classified[]) => {
@@ -70,6 +67,7 @@ export class ActiveComponent implements OnInit {
   }
 
   grid() {
+
     var list = document.getElementById("list");
     var grid = document.getElementById("grid");
 
@@ -81,6 +79,7 @@ export class ActiveComponent implements OnInit {
   }
 
   change(id) {
+    
     var dropdown = document.getElementsByClassName("dropdown-item");
 
     var query = dropdown[id].innerHTML;
@@ -97,14 +96,14 @@ export class ActiveComponent implements OnInit {
 
       this.dropdata.posted = query;
     }
-    else {
 
+    else {
       id = id + this.categoryCount;
       query = dropdown[id].innerHTML;
 
       this.dropdata.location = query;
-
     }
+
   }
 
   reset() {

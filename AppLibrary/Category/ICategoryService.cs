@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppLibrary.DataLayer
 {
-    public interface ICategoryAccess
+    public interface ICategoryService
     {
 
         IEnumerable<category> Get();

@@ -67,9 +67,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppCore\AppViewModel.csproj">
+    <ProjectReference Include="..\AppCore\CorporateClassifieds.Model.csproj">
       <Project>{b5568299-2002-4b08-845c-398524d676fd}</Project>
-      <Name>AppViewModel</Name>
+      <Name>CorporateClassifieds.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

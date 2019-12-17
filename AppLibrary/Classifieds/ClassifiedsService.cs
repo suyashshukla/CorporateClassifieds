@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace AppLibrary.DI
 {
-    public class DataAccess : IDataAccess
+    public class ClassifiedsService : IClassifiedsService
     {
         private Database database;
         private AutoMapper.IMapper mapper;
 
-        public DataAccess(AutoMapper.IMapper mapper)
+        public ClassifiedsService(AutoMapper.IMapper mapper)
         {
             database = new Database("classifieds");
             this.mapper = mapper;

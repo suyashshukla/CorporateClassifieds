@@ -8,12 +8,12 @@ using PetaPoco;
 
 namespace AppLibrary.DataLayer
 {
-    public class CategoryAccess : ICategoryAccess
+    public class CategoryService : ICategoryService
     {
 
         Database database;
 
-        public CategoryAccess()
+        public CategoryService()
         {
             database = new Database("classifieds");
         }

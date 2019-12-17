@@ -24,9 +24,7 @@ export class ClassifiedsComponent implements OnInit {
   activeAd: Classified;
   categoryCount: number;
 
-  constructor(private service: AppService,
-    private inboxService: InboxService
-  ) { }
+  constructor(private service: AppService,private inboxService: InboxService) { }
 
   ngOnInit() {
     this.offer = false;
@@ -34,7 +32,6 @@ export class ClassifiedsComponent implements OnInit {
 
 
     this.service.getCategories().subscribe((res: Category[]) => {
-
       this.category = res;
       this.categoryCount = res.length;
     });
@@ -147,7 +144,7 @@ export class ClassifiedsComponent implements OnInit {
 
 
       this.inboxService.getOffers().subscribe(res => {
-        this.offerData.id = res.length;
+        this.offerData.id = res[res.length-1]['id']+1;
 
         this.inboxService.postOffers(this.offerData);
       });

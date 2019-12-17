@@ -8,9 +8,9 @@ namespace CorporateClassifieds.Controllers
 {
   public class ClassifiedsController : ApiController
   {
-    private IDataAccess dataAccess;
+    private IClassifiedsService dataAccess;
 
-    public ClassifiedsController(IDataAccess dataAccess, IMapper mapper)
+    public ClassifiedsController(IClassifiedsService dataAccess, IMapper mapper)
     {
       this.dataAccess = dataAccess;
     }

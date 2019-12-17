@@ -7,31 +7,36 @@ namespace CorporateClassifieds.Controllers
 {
   public class OffersController : ApiController
   {
-    private IOfferAccess offerAccess;
+    private IOfferService offerService;
 
-    public OffersController(IOfferAccess offerAccess)
+    public OffersController(IOfferService offerService)
     {
-      this.offerAccess = offerAccess;
+      this.offerService = offerService;
     }
 
     public IEnumerable<CoreModel.OffersView> Get()
     {
-      return offerAccess.Get();
+      return offerService.Get();
     }
 
     public CoreModel.OffersView Get(int id)
     {
-      return offerAccess.Get(id);
+      return offerService.Get(id);
     }
 
     public int Post(CoreModel.OffersView offer)
     {
-      return offerAccess.Post(offer);
+      return offerService.Post(offer);
     }
 
     public int Put(CoreModel.OffersView offer)
     {
-      return offerAccess.Put(offer);
+      return offerService.Put(offer);
+    }
+
+    public int Delete(int id)
+    {
+      return offerService.Delete(id);
     }
 
 

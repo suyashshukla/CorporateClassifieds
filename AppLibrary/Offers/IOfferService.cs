@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AppLibrary.DataLayer
 {
-    public interface IOfferAccess
+    public interface IOfferService
     {
         IEnumerable<CoreModel.OffersView> Get();
         CoreModel.OffersView Get(int id);

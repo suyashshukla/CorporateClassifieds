@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AppLibrary.DI
 {
-    public interface IDataAccess
+    public interface IClassifiedsService
     {
 
         IEnumerable<ClassifiedsView> Get();

@@ -19,8 +19,6 @@ namespace DataModel
         public User userData { get; set; }
 
         public ClassifiedData adData { get; set; }
-
-
-
+               
     }
 }
