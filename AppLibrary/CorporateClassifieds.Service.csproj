@@ -72,6 +72,8 @@
     <Compile Include="Category\ICategoryService.cs" />
     <Compile Include="Classifieds\IClassifiedsService.cs" />
     <Compile Include="MappingProfile.cs" />
+    <Compile Include="MOQ\ISMTPService.cs" />
+    <Compile Include="MOQ\SMTPService.cs" />
     <Compile Include="Offers\IOfferService.cs" />
     <Compile Include="Offers\OfferService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

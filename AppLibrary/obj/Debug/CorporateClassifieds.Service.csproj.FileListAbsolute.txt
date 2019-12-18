@@ -1,6 +1,3 @@
-C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AppLibrary.dll.config
-C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AppLibrary.dll
-C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AppLibrary.pdb
 C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AppCore.dll
 C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AppData.dll
 C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\AutoMapper.dll
@@ -24,5 +21,8 @@ C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\System.Web.Http.
 C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\obj\Debug\CorporateClassifieds.Service.csprojAssemblyReference.cache
 C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\obj\Debug\CorporateClassifieds.Service.csproj.CoreCompileInputs.cache
 C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\obj\Debug\CorporateClassifieds.Service.csproj.CopyComplete
-C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\obj\Debug\AppLibrary.dll
-C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\obj\Debug\AppLibrary.pdb
+C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\Services.dll.config
+C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\Services.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\bin\Debug\Services.pdb
+C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\obj\Debug\Services.dll
+C:\Users\suyash.s\Source\Repos\Classifieds\AppLibrary\obj\Debug\Services.pdb

@@ -138,7 +138,9 @@ align-items:flex-end;">
 
     </div>
     <div *ngFor="let ad of ads">
-      <app-ad-list [ad]="ad"></app-ad-list>
+      <div>
+        <app-ad-list [ad]="ad"></app-ad-list>
+      </div>
     </div>
   </div>
 
