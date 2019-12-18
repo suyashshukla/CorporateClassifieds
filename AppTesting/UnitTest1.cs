@@ -42,24 +42,29 @@ namespace AppTesting
         [TestMethod]
         public void ServiceTest()
         {
-            Moq.Mock<IMailModel> MockMailService = new Moq.Mock<IMailModel>();
+            Mock<IMailModel> MockMailService = new Moq.Mock<IMailModel>();
 
             MockMailService.SetupProperty(mock => mock.Server, "smtp.gmail.com")
                 .SetupProperty(mock => mock.Port, 587);
 
-            MockMailService.Setup(mock => mock.SendEmail(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Returns(true);
+            MockMailService.Setup(mock => mock.SendEmail(
+                It.Is<string>(i => i == "imsuyash97@gmail.com"),
+                It.IsAny<string>(), It.IsAny<string>(),
+                It.IsAny<string>())).Returns(true);
+
 
             ISMTPService sMTPService = new SMTPService()
             {
                 From = "imsushandro@gmail.com",
-                To = "suyash.s@technovert.net",
+                To = "imsuyash97@gmail.com",
                 Body = "If you are reading this message, our testing is successful",
                 Subject = "Testing SMTP",
             };
 
             bool result = sMTPService.SendEmail(MockMailService.Object);
-
             Assert.IsTrue(result);
+
+
 
 
         }

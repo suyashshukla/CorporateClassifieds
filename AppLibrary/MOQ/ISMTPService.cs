@@ -12,8 +12,7 @@
 
     }
 
-    public interface IMailModel
-    {
+    public interface IMailModel    {
 
          string Server { get; set; }
          int Port { get; set; }
