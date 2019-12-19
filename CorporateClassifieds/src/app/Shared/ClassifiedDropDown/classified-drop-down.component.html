@@ -1,0 +1,106 @@
+<div class="row m-0 ml-2 mt-3" style="height:50px">
+
+  <div class="col-6 row">
+    <div class="col-3 p-0 dropdown">
+
+      <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100" data-toggle="dropdown">
+        {{dropData.type}}
+        <i class="text-secondary material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
+      </button>
+
+      <div class="dropdown-menu">
+        <div class="dropdown-item" (click)="change(0)">Sale</div>
+        <div class="dropdown-item" (click)="change(1)">Rent</div>
+        <div class="dropdown-item" (click)="change(2)">Required</div>
+      </div>
+
+    </div>
+
+    <div class="col-3 p-0 dropdown">
+
+      <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100" data-toggle="dropdown">
+        {{dropData.category}}
+        <i class="text-secondary material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
+      </button>
+
+      <div class="dropdown-menu w-100">
+        <div *ngFor="let cat of categories">
+          <div class="dropdown-item d-flex" (click)="dropChange(cat)">
+            <i class="material-icons text-secondary mr-2 d-flex align-items-center">
+              {{cat.icon}}
+            </i>
+            {{cat.name}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-3 p-0 dropdown">
+
+      <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100" data-toggle="dropdown">
+        {{dropData.posted}}
+        <i class="text-secondary material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
+      </button>
+
+      <div class="dropdown-menu">
+
+        <div class="dropdown-item" (click)="change(3)">Last Week</div>
+        <div class="dropdown-item" (click)="change(4)">Last Month</div>
+        <div class="dropdown-item" (click)="change(5)">Last Year</div>
+
+      </div>
+
+    </div>
+
+    <div class="col-3 p-0 dropdown">
+
+      <button class="btn btn-default p-2 type-button border border-black bg-white d-flex w-100 h-100" data-toggle="dropdown">
+        {{dropData.location}}
+        <i class="text-secondary material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
+      </button>
+
+      <div class="dropdown-menu">
+
+        <div class="dropdown-item" (click)="change(6)">Madhapur</div>
+        <div class="dropdown-item" (click)="change(7)">Gachibowli</div>
+        <div class="dropdown-item" (click)="change(8)">Kukatpally</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-6 row">
+
+    <div class="col-6 p-0">
+
+      <input type="text" class="form-control p-2  h-100" placeholder="Search" />
+
+    </div>
+
+    <div class="col-3 p-0 d-flex align-items-center justify-content-center">
+
+      <button class="btn btn-default bg-white border border-black h-100 w-100 d-flex align-items-center justify-content-center" (click)="reset()">
+        <i class="material-icons">refresh</i>
+        Reset
+      </button>
+
+    </div>
+
+    <div class="col-3 p-0 d-flex align-items-center justify-content-center bg-white border border-black">
+
+      <i class="material-icons text-color flex-grow-1 d-flex justify-content-center pointer"
+         id="grid"
+         (click)="toggleGrid()">grid_on</i>
+
+      <i class="material-icons flex-grow-1 d-flex justify-content-center pointer"
+         id="list"
+         (click)="toggleList()">list</i>
+
+    </div>
+
+  </div>
+
+</div>

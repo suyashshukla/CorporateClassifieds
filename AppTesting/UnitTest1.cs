@@ -51,8 +51,7 @@ namespace AppTesting
                 It.Is<string>(i => i == "imsuyash97@gmail.com"),
                 It.IsAny<string>(), It.IsAny<string>(),
                 It.IsAny<string>())).Returns(true);
-
-
+            
             ISMTPService sMTPService = new SMTPService()
             {
                 From = "imsushandro@gmail.com",
@@ -63,9 +62,6 @@ namespace AppTesting
 
             bool result = sMTPService.SendEmail(MockMailService.Object);
             Assert.IsTrue(result);
-
-
-
 
         }
 

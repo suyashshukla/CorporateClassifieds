@@ -1,0 +1,67 @@
+
+<app-classified-drop-down (list)="listFlag=true" (grid)="listFlag=false" (adSource)="updateList($event)"></app-classified-drop-down>
+
+
+<div *ngIf="adData.length==0" class="position-absolute ml-5 pl-5 d-flex justify-content-center" style="top:250px;
+align-items:flex-end;">
+  <span><img class="img-fluid" src="../../../assets/nothing.png" /></span>
+</div>
+
+<div *ngIf="adData.length!=0">
+
+  <div class="row ml-2 mt-3" *ngIf="!listFlag">
+    <div *ngFor="let ad of adData">
+      <div class="col-4 p-0 m-1">
+        <app-advertisement [ad]="ad" (clicked)="makeOffer(ad)"></app-advertisement>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="listFlag">
+
+    <div class="row p-2 m-2 border border-black bg-light">
+      <div class="col-4">ITEM DETAILS</div>
+      <div class="col-1">PRICE</div>
+      <div class="col-2">POSTED BY</div>
+      <div class="col-2">EXPIRY</div>
+      <div class="col-1">OFFERS</div>
+      <div class="col-1">COMMENTS</div>
+    </div>
+
+    <div *ngFor="let ad of adData">
+      <app-ad-list [ad]="ad"></app-ad-list>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="fixed-top fixed-bottom w-100 d-flex align-items-center justify-content-center bg-trans"
+     style="top:0;height:100vh" *ngIf="offerFlag">
+  <div class="card">
+
+    <div class="card-header bg-dark text-white">
+      MAKE AN OFFER
+    </div>
+
+    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+      <h4 class="mb-3">For <i>{{activeAd.title}}</i></h4>
+
+      <div class="row mb-1">
+        <label for="amount" class="col-5 text-left">Amount</label>
+        <input class="col-7 w-100 form-control" placeholder="&#8377; 100" [(ngModel)]="offerData.amount" name="offerData.amount" />
+      </div>
+
+      <div class="row">
+        <label for="comments" class="col-5 text-left">Comments</label>
+        <textarea class="col-7 w-100 form-control" [(ngModel)]="offerData.comments">{{offerData.comments}}</textarea>
+      </div>
+
+      <div>
+        <button class="btn btn-default text-white bg-color mt-3 mr-1" (click)="confirmOffer()">CONFIRM</button>
+        <button class="btn btn-default text-black bg-white mt-3 ml-1 border border-black" (click)="offerFlag=false;">CANCEL</button>
+      </div>
+    </div>
+
+  </div>
+</div>

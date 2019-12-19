@@ -49,7 +49,9 @@ namespace AppLibrary.DI
 
         public int Update(ClassifiedsView ad)
         {
-            return database.Update(ad);
+            ClassifiedData classifiedData = mapper.Map<ClassifiedData>(ad);
+
+            return database.Update(classifiedData);
         }
     }
 }

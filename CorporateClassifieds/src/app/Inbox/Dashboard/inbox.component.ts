@@ -15,9 +15,23 @@ export class InboxComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this.service.refreshData.subscribe(res => {
+      console.log("Printing Again...");
+      this.service.getOffers().subscribe(res => {
+        this.offers = res;
+      });
+    })
+
     this.service.getOffers().subscribe(res => {
       this.offers = res;
     });
+  }
+
+  deleteOffer(offer:Offers) {
+
+    this.service.deleteOffer(offer.id);
+
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-inbox-data',
@@ -8,10 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class InboxDataComponent implements OnInit {
 
   @Input() inbox;
+  @Output() delete = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

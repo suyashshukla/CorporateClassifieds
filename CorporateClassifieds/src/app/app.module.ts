@@ -12,7 +12,7 @@ import { ClassifiedsModule } from './Classifieds/classifieds.module';
 import { LoginComponent } from './login/login.component';
 import { AppService } from './Shared/AppService';
 
-import {} from './Models'
+import {} from './Models';
 
 @NgModule({
   declarations: [

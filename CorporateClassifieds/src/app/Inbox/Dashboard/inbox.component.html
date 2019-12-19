@@ -1,5 +1,5 @@
 <div *ngFor="let offer of offers">
 
-  <app-inbox-data [inbox] ="offer"></app-inbox-data>
+  <app-inbox-data [inbox] ="offer" (delete)="deleteOffer(offer)"></app-inbox-data>
 
 </div>

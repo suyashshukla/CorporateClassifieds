@@ -1,7 +1,9 @@
 
 <div class="card m-2">
-  <div class="card-header">
+  <div class="card-header d-flex">
     Offer # {{inbox.id}}
+    <i class="material-icons text-secondary d-flex flex-grow-1 pointer"
+       style="justify-content:flex-end" (click)="delete.emit()">delete</i>
   </div>
   <div class="card-body">
     <div class="row">

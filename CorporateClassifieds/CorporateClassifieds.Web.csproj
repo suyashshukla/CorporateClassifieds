@@ -157,6 +157,10 @@
     <Content Include="src\app\MyClassifieds\Active\active.component.html" />
     <Content Include="assets\cart.png" />
     <Content Include="assets\keka.jpg" />
+    <Content Include="src\app\Shared\ClassifiedDropDown\classified-drop-down.component.css" />
+    <Content Include="src\app\Shared\ClassifiedDropDown\classified-drop-down.component.html" />
+    <Content Include="src\app\Shared\ClassifiedList\classified-list.component.css" />
+    <Content Include="src\app\Shared\ClassifiedList\classified-list.component.html" />
     <Content Include="src\assets\.gitkeep" />
     <Content Include="src\assets\cart.png" />
     <Content Include="src\assets\keka.jpg" />
@@ -672,6 +676,10 @@
     <TypeScriptCompile Include="src\app\MyClassifieds\myclassified.module.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Slider\index.ts" />
     <TypeScriptCompile Include="src\app\MyClassifieds\Slider\slider.component.ts" />
+    <TypeScriptCompile Include="src\app\Shared\ClassifiedDropDown\classified-drop-down.component.ts" />
+    <TypeScriptCompile Include="src\app\Shared\ClassifiedDropDown\index.ts" />
+    <TypeScriptCompile Include="src\app\Shared\ClassifiedList\classified-list.component.ts" />
+    <TypeScriptCompile Include="src\app\Shared\ClassifiedList\index.ts" />
     <TypeScriptCompile Include="src\app\Shared\index.ts" />
     <TypeScriptCompile Include="src\app\Shared\shared.module.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />

@@ -14,16 +14,22 @@ export class AppService {
     private http: HttpClient
   ) { }
 
-  getClassifieds() {
-    return this.http.get("/api/classifieds");
+  getClassifieds(): Observable<Classified[]> {
+    return this.http.get <Classified[]>("/api/classifieds");
   }
 
   postClassifieds(classified: Classified) {
-    console.log(classified);
     this.http.post("/api/classifieds", classified).subscribe(
       (res: Classified) => {
         console.log(res);
       })
+  }
+
+  putClassifieds(classified: Classified) {
+    this.http.put("/api/classifieds", classified).subscribe(
+      (res: Classified) => {
+        window.alert("Success!");
+      });
   }
 
   getCategories(): Observable<Category[]> {
@@ -37,8 +43,7 @@ export class AppService {
   getUsers() {
     return this.http.get("https://randomuser.me/api/");
   }
-
-
+   
   getExpiry(timestamp: string, expiry: number): string {
 
     var initial: number = +timestamp;
