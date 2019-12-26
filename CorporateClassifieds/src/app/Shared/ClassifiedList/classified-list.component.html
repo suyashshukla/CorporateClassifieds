@@ -1,9 +1,9 @@
 
-<app-classified-drop-down (list)="listFlag=true" (grid)="listFlag=false" (adSource)="updateList($event)"></app-classified-drop-down>
+<app-classified-drop-down (list)="listFlag=true" (grid)="listFlag=false" (adSource)="updateList($event)" (search)="updateList($event)"></app-classified-drop-down>
 
 
-<div *ngIf="adData.length==0" class="position-absolute ml-5 pl-5 d-flex justify-content-center" style="top:250px;
-align-items:flex-end;">
+<div *ngIf="adData.length==0" class="position-absolute ml-5 pl-5 d-flex justify-content-center"
+     style="top:250px;align-items:flex-end;">
   <span><img class="img-fluid" src="../../../assets/nothing.png" /></span>
 </div>
 
@@ -12,7 +12,7 @@ align-items:flex-end;">
   <div class="row ml-2 mt-3" *ngIf="!listFlag">
     <div *ngFor="let ad of adData">
       <div class="col-4 p-0 m-1">
-        <app-advertisement [ad]="ad" (clicked)="makeOffer(ad)"></app-advertisement>
+        <app-advertisement [ad]="ad" (clicked)="makeOffer(ad)" (delete)="deleteAd(ad)"></app-advertisement>
       </div>
     </div>
   </div>

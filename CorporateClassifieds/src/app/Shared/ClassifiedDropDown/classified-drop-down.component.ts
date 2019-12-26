@@ -24,9 +24,12 @@ export class ClassifiedDropDownComponent implements OnInit {
   @Output() list = new EventEmitter();
   @Output() grid = new EventEmitter();
   @Output() adSource = new EventEmitter();
+  @Output() search = new EventEmitter(); 
+
 
   dropData;
   categoryCount;
+  query = "";
   categories: Category[];
 
 
@@ -108,6 +111,10 @@ export class ClassifiedDropDownComponent implements OnInit {
       posted: 'Posted'
     }
     this.adSource.emit({ query: '', type: DropdownSegments.Universal });
+  }
+
+  searchList() {
+    this.search.emit({ query: this.query,type:-1 });
   }
 
 

@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Output, EventEmitter } from "@angular/core";
 import { HttpClient } from "@angular/common/http"
 import { Classified,Category,Offers } from '../Models/';
 import { Observable } from 'rxjs';
@@ -10,9 +10,12 @@ import { Observable } from 'rxjs';
 
 export class AppService {
 
+  @Output() refreshList = new EventEmitter();
+
   constructor(
     private http: HttpClient
   ) { }
+
 
   getClassifieds(): Observable<Classified[]> {
     return this.http.get <Classified[]>("/api/classifieds");
@@ -32,6 +35,10 @@ export class AppService {
       });
   }
 
+  deleteClassifieds(id: string) {
+    return this.http.delete("/api/classifieds/" + id);
+  }
+
   getCategories(): Observable<Category[]> {
     return this.http.get<Category[]>("./api/category");
   }
@@ -40,10 +47,12 @@ export class AppService {
     return this.http.get<Category>("./api/category/" + id);
   }
 
+
   getUsers() {
     return this.http.get("https://randomuser.me/api/");
   }
-   
+
+
   getExpiry(timestamp: string, expiry: number): string {
 
     var initial: number = +timestamp;
@@ -96,6 +105,8 @@ export class AppService {
     return num < 10 ? "0" + num : num + "";
   }
 
-
+  refreshDB() {
+    this.refreshList.emit();
+  }
 
 }

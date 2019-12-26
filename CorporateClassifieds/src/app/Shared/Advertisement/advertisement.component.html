@@ -1,12 +1,14 @@
-<div class="card d-flex m-0 flex-column ad-width overflow-hidden pointer" (click)="clicked.emit()">
+<div class="card d-flex m-0 flex-column ad-width overflow-hidden pointer">
 
   <div class=" card-header row m-0 ad-width px-1 py-2">
     <span class="col-sm-2 "><img class="rounded-circle fit" src={{ad.userdata.pic}} style="height:24px;width:24px"></span>
-    <span class="col-sm-6"> {{ad.userdata.name}}</span>
+    <span class="col-sm-4"> {{ad.userdata.name}}</span>
     <span class="col-sm-4 text-secondary d-flex justify-content-end"> {{ad.timeinfo.date}}</span>
+    <span class="material-icons pointer flex-grow-1 d-flex justify-content-end text-secondary"
+          (click)="delete.emit()">delete</span>
   </div>
 
-  <div class="position-relative">
+  <div class="position-relative" (click)="clicked.emit()">
     <img src={{ad.thumbnail}} class="ad-box"/>
     <div class="position-absolute black-desc ad-width py-2 px-2">
       <div class="row pl-1 pr-1 text-white">

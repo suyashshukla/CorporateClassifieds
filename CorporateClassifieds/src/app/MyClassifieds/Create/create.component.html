@@ -1,14 +1,14 @@
 <div class="container-fluid pt-3">
 
   <button class="btn btn-default bg-transparent text-color" routerLink="/me/classifieds"><i class="material-icons align-bottom">arrow_back</i>&nbsp;Back to List</button>
-  
+
   <div class="row mt-3 ml-3">
 
     <div class="col-sm-8 d-flex flex-column">
 
       <div class="card flex-grow-1 px-3 pt-3">
         <h5 class="text-dark">Item Details</h5>
-      
+
         <form class="form-group labels d-flex flex-column" [formGroup]="adData">
 
           <div class="line-one d-flex flex-grow-2 py-2 m-0 row">
@@ -34,7 +34,7 @@
               <label for="category">Category</label>
               <div class="dropdown">
                 <button class="btn btn-default d-flex w-100 text-left border border-gray" id="dropdownTypebutton" data-toggle="dropdown">
-                 {{formData.details.category}}
+                  {{formData.details.category}}
                   <i class="material-icons d-flex flex-grow-1 justify-content-end">keyboard_arrow_down</i>
                 </button>
                 <div class="dropdown-menu w-100">
@@ -46,8 +46,8 @@
                       </i>
                       {{cat.name}}
                     </div>
-                  </div>              
-              </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -57,7 +57,19 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">&#8377;</span>
                 </div>
-                <input type="text" class="border flex-grow-1 pl-1 border border-gray" aria-describedby="basic-addon1" formControlName="price" />
+                <input type="text"
+                       class="border flex-grow-1 pl-1 border border-gray"
+                       aria-describedby="basic-addon1"
+                       formControlName="price"/>
+              </div>
+
+              <div *ngIf="price.invalid && (price.touched || price.dirty)" class="alert alert-danger">
+                <div *ngIf="price.errors.required || price.errors.minlength">
+                  Price is required!
+                </div>
+                <div *ngIf="price.errors.min">
+                  Price cannot be less that &#8377; 10
+                </div>
               </div>
             </div>
 
@@ -66,18 +78,17 @@
 
         <div class="line-two py-2" [formGroup]="adData">
           <label for="title">Ad Title</label>
-          <input type="text" class="form-control w-100 border border-gray" formControlName = "title"/>
+          <input type="text" class="form-control w-100 border border-gray" formControlName="title" />
         </div>
 
         <div class="line-three py-2 mb-3" [formGroup]="adData">
           <label for="description">Description</label>
-          <textarea class="form-control w-100 border border-gray" rows="3" formControlName = "description">Provide Item Details</textarea>
-        </div>
+          <textarea class="form-control w-100 border border-gray" rows="3" formControlName="description">Provide Item Details</textarea>
         </div>
 
+      </div>
 
       <app-slider></app-slider>
-
 
     </div>
 
@@ -119,8 +130,16 @@
         <div class="mt-2">
           <label for="expiry">Ad Expires in</label>
           <div class="input-group">
-            <input type="text" class="form-control" aria-describedby="basic-addon2" [(ngModel)]="formData.timeinfo.validity" />
+            <input type="text" class="form-control"
+                   aria-describedby="basic-addon2"
+                   required minlength="2"
+                   [(ngModel)]="formData.timeinfo.validity"
+                   #expire="ngModel"
+                   />
             <span class="input-group-append"><span class="input-group-text" id="basic-addon2">days</span></span>
+          </div>
+          <div *ngIf="expire.invalid && (expire.touched || expire.dirty)" class="alert alert-danger">
+            Invalid Expiry Days
           </div>
         </div>
 
@@ -131,7 +150,7 @@
 
       </div>
 
-      </div>
+    </div>
 
 
   </div>

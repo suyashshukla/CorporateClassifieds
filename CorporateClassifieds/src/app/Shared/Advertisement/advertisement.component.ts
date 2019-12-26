@@ -12,6 +12,7 @@ export class AdGridComponent implements OnInit {
 
   @Input() ad: Classified;
   @Output() clicked = new EventEmitter();
+  @Output() delete = new EventEmitter();
 
   category = new Category();
 

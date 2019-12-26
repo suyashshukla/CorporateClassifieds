@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Classified } from "../../Models/ViewModel";
 import { AppService } from "../../Shared/AppService";
 import { Category } from '../../Models/CategoryModel';
@@ -16,9 +16,9 @@ export class CreateComponent implements OnInit {
   ) { }
 
   adData = new FormGroup({
-    price: new FormControl('0'),
-    title: new FormControl('Title for the Classified'),
-    description: new FormControl('Description for the Classified')
+    price: new FormControl('10', [Validators.required, Validators.minLength(1), Validators.min(10)]),
+    title: new FormControl('Title for the Classified', [Validators.required]),
+    description: new FormControl('Description for the Classified', [Validators.required])
   });
 
   formData = new Classified();
@@ -66,8 +66,7 @@ export class CreateComponent implements OnInit {
         this.formData.details.comments = "0";
         this.formData.details.category = this.category[this.category.findIndex(c => c.name == this.formData.details.category)].Id+"";
         this.formData.thumbnail = "https://picsum.photos/seed/" + this.formData.title+"/300/400";
-
-
+        
         this.service.postClassifieds(this.formData);
 
         console.log(timestamp);
@@ -84,7 +83,12 @@ export class CreateComponent implements OnInit {
       this.category = res;
     });
 
+    this.formData.details.category = "Select Category";
+    this.formData.details.type = "Select Ad Type";
+  }
 
+  get price() {
+    return this.adData.get('price');
   }
 
 }

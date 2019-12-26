@@ -76,7 +76,7 @@
 
     <div class="col-6 p-0">
 
-      <input type="text" class="form-control p-2  h-100" placeholder="Search" />
+      <input type="text" class="form-control p-2  h-100" placeholder="Search" [(ngModel)]="query" (keyup)="searchList()"/>
 
     </div>
 

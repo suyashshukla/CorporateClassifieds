@@ -20,7 +20,7 @@ enum DropDownTypes {
 
 
 export class ClassifiedListComponent implements OnInit {
-   
+
   activeAd: Classified;
   adData: Classified[];
   universalData: Classified[];
@@ -35,13 +35,22 @@ export class ClassifiedListComponent implements OnInit {
 
   ngOnInit() {
 
+    this.classifiedsService.refreshList.subscribe(res => {
+      this.updateClassifiedsList();
+    });
+
     this.adData = [new Classified()];
     this.listFlag = false;
+    this.updateClassifiedsList();
+    
+
+  }
+
+  updateClassifiedsList() {
     this.classifiedsService.getClassifieds().subscribe(res => {
       this.adData = res;
       this.universalData = res;
     });
-
   }
 
 
@@ -73,7 +82,7 @@ export class ClassifiedListComponent implements OnInit {
         if (res.length == 0)
           this.offerData.id = 0;
         else
-        this.offerData.id = res[res.length - 1]['id'] + 1;
+          this.offerData.id = res[res.length - 1]['id'] + 1;
 
         this.inboxService.postOffers(this.offerData);
 
@@ -91,22 +100,39 @@ export class ClassifiedListComponent implements OnInit {
   updateList(event) {
 
     console.log(event);
-
+    console.log(this.activeAd);
     var query = event.query;
 
-    switch (event.type) {
+    if (event.type == -1) {
+      this.adData = this.universalData.filter((data) => data.title.toLowerCase().indexOf(query.toString()) >= 0);
+    }
 
-      case DropDownTypes.Type:
-        this.adData = this.universalData.filter((data) => data.details.type == query);
-        break;
-      case DropDownTypes.Universal:
-        this.adData = this.universalData;
-        break;
-      case DropDownTypes.Category:
-        this.adData = this.universalData.filter((data) => data.details.category == query);
-        break;
+    else {
+      switch (event.type) {
+
+        case DropDownTypes.Type:
+          console.log("event triggered!");
+          this.adData = this.universalData.filter((data) => data.details.type == query);
+          break;
+        case DropDownTypes.Universal:
+          this.adData = this.universalData;
+          break;
+        case DropDownTypes.Category:
+          this.adData = this.universalData.filter((data) => data.details.category == query);
+          break;
+      }
+    }
+
   }
 
+
+  deleteAd(ad: Classified) {
+
+    this.classifiedsService.deleteClassifieds(ad.id).subscribe(res => {
+      this.classifiedsService.refreshDB();
+    });
+   
+
   }
-  
+
 }
